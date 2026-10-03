@@ -1,23 +1,43 @@
 # evaluate.py
+"""
+NBA from Call - Evaluation script.
+Checks each lead for evidence validity, groundedness, hallucination risk.
+Outputs evaluation_report.json for app.py sidebar.
+"""
 import json
+import os
 import re
-import feedback_store
 from difflib import SequenceMatcher
 
+import feedback_store
 
-def load_results(path: str = "output_results.json") -> dict:
+RESULTS_PATH = "output_results.json"
+REPORT_PATH = "evaluation_report.json"
+
+
+# ============================================================
+# Load data
+# ============================================================
+def load_results(path: str = RESULTS_PATH) -> dict:
+    if not os.path.exists(path):
+        raise FileNotFoundError(
+            f"{path} not found. Run `python pipeline.py` or `python graph_pipeline.py` first."
+        )
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
+# ============================================================
+# Check 1: Evidence validity
+# ============================================================
 def check_evidence_validity(lead: dict, extractions: list[dict]) -> dict:
-    """檢查 lead 的 supporting_evidence 是否為真實存在的 call_id"""
-    valid_call_ids = {e["call_id"] for e in extractions}
+    """Check whether the lead's supporting_evidence cites real call_ids."""
+    valid_call_ids = {e["call_id"] for e in extractions if "call_id" in e}
     cited = set(lead.get("supporting_evidence", []))
     invalid = cited - valid_call_ids
 
     return {
-        "lead_id": lead["lead_id"],
+        "lead_id": lead.get("lead_id"),
         "cited": list(cited),
         "invalid_citations": list(invalid),
         "has_evidence": len(cited) > 0,
@@ -25,34 +45,53 @@ def check_evidence_validity(lead: dict, extractions: list[dict]) -> dict:
     }
 
 
-def check_rationale_grounded(lead: dict, extractions: list[dict], threshold: float = 0.3) -> dict:
+# ============================================================
+# Check 2: Rationale grounded
+# ============================================================
+def check_rationale_grounded(
+    lead: dict, extractions: list[dict], threshold: float = 0.3
+) -> dict:
     """
-    檢查 lead 的 rationale 是否與 cited evidence 有語意重疊。
-    用簡單的關鍵詞重疊 + 序列相似度做 proxy（POC 階段夠用）。
+    Check semantic overlap between lead's rationale and cited evidence.
+    Uses keyword overlap + sequence similarity as a proxy (sufficient for POC).
     """
     cited_ids = set(lead.get("supporting_evidence", []))
     cited_texts = [
-        e.get("transcript", "") or json.dumps(e, ensure_ascii=False)
+        json.dumps(e, ensure_ascii=False)
         for e in extractions
-        if e["call_id"] in cited_ids
+        if e.get("call_id") in cited_ids
     ]
     combined = " ".join(cited_texts)
     rationale = lead.get("rationale", "")
 
-    # 抽取 rationale 中的關鍵詞（2字以上中文詞 + 英文詞）
+    if not rationale:
+        return {
+            "lead_id": lead.get("lead_id"),
+            "keyword_overlap": 0.0,
+            "seq_similarity": 0.0,
+            "score": 0.0,
+            "grounded": False,
+        }
+
+    # Extract keywords (CJK 2+ chars, English 3+ chars)
     keywords = re.findall(r"[\u4e00-\u9fff]{2,}|[A-Za-z]{3,}", rationale)
     if not keywords:
-        return {"lead_id": lead["lead_id"], "overlap": 0.0, "grounded": False}
+        return {
+            "lead_id": lead.get("lead_id"),
+            "keyword_overlap": 0.0,
+            "seq_similarity": 0.0,
+            "score": 0.0,
+            "grounded": False,
+        }
 
     hits = sum(1 for kw in keywords if kw in combined)
     overlap = hits / len(keywords)
 
-    # 加上序列相似度
     seq_sim = SequenceMatcher(None, rationale, combined).ratio()
     score = max(overlap, seq_sim)
 
     return {
-        "lead_id": lead["lead_id"],
+        "lead_id": lead.get("lead_id"),
         "keyword_overlap": round(overlap, 2),
         "seq_similarity": round(seq_sim, 2),
         "score": round(score, 2),
@@ -60,33 +99,55 @@ def check_rationale_grounded(lead: dict, extractions: list[dict], threshold: flo
     }
 
 
+# ============================================================
+# Check 3: Hallucination indicators
+# ============================================================
 def check_hallucination_indicators(lead: dict, extractions: list[dict]) -> dict:
     """
-    檢查 lead 是否包含通話中沒出現的具體數字/地點（常見幻覺）。
+    Check whether the lead contains specific numbers not present in the calls.
     """
     cited_ids = set(lead.get("supporting_evidence", []))
     cited_texts = " ".join(
         json.dumps(e, ensure_ascii=False)
         for e in extractions
-        if e["call_id"] in cited_ids
+        if e.get("call_id") in cited_ids
     )
 
-    # 抽取 lead 中的數字與地點
-    numbers = re.findall(r"\d+[\d,\.]*\s*(?:萬|億|美金|台幣|加幣|英鎊|元)?", lead.get("rationale", ""))
-    suspicious = [n for n in numbers if n.strip() and n.strip() not in cited_texts]
+    rationale = lead.get("rationale", "")
+    # Extract numbers (with optional units, both English and Chinese)
+    numbers = re.findall(
+        r"\d+[\d,\.]*\s*(?:萬|億|美金|台幣|加幣|英鎊|元|USD|TWD|GBP|CAD|EUR)?",
+        rationale,
+    )
+
+    suspicious = [
+        n.strip() for n in numbers
+        if n.strip() and len(n.strip()) >= 2 and n.strip() not in cited_texts
+    ]
 
     return {
-        "lead_id": lead["lead_id"],
+        "lead_id": lead.get("lead_id"),
         "suspicious_numbers": suspicious,
         "has_hallucination_risk": len(suspicious) > 0,
     }
 
 
+# ============================================================
+# Main evaluation
+# ============================================================
 def evaluate_all(results: dict) -> dict:
     summary = []
+
     for cid, r in results.items():
-        extractions = r["extractions"]
-        leads = r["leads"].get("leads", [])
+        extractions = r.get("extractions", [])
+        leads_container = r.get("leads", {})
+
+        if isinstance(leads_container, dict):
+            leads = leads_container.get("leads", [])
+        elif isinstance(leads_container, list):
+            leads = leads_container
+        else:
+            leads = []
 
         for lead in leads:
             ev = check_evidence_validity(lead, extractions)
@@ -95,7 +156,7 @@ def evaluate_all(results: dict) -> dict:
 
             summary.append({
                 "customer_id": cid,
-                "lead_id": lead["lead_id"],
+                "lead_id": lead.get("lead_id"),
                 "category": lead.get("category"),
                 "priority": lead.get("priority"),
                 "confidence": lead.get("confidence"),
@@ -107,64 +168,69 @@ def evaluate_all(results: dict) -> dict:
                 "suspicious_numbers": ha["suspicious_numbers"],
             })
 
-    # 統計
     total = len(summary)
     if total == 0:
-        return {"summary": [], "stats": {}}
+        return {
+            "summary": [],
+            "stats": {
+                "total_leads": 0,
+                "evidence_valid_rate": 0.0,
+                "grounded_rate": 0.0,
+                "hallucination_rate": 0.0,
+                "avg_confidence": 0.0,
+            },
+        }
 
     stats = {
         "total_leads": total,
-        "evidence_valid_rate": round(sum(1 for s in summary if s["evidence_valid"]) / total, 2),
-        "grounded_rate": round(sum(1 for s in summary if s["grounded"]) / total, 2),
-        "hallucination_rate": round(sum(1 for s in summary if s["hallucination_risk"]) / total, 2),
-        "avg_confidence": round(sum(s["confidence"] or 0 for s in summary) / total, 2),
+        "evidence_valid_rate": round(
+            sum(1 for s in summary if s["evidence_valid"]) / total, 2
+        ),
+        "grounded_rate": round(
+            sum(1 for s in summary if s["grounded"]) / total, 2
+        ),
+        "hallucination_rate": round(
+            sum(1 for s in summary if s["hallucination_risk"]) / total, 2
+        ),
+        "avg_confidence": round(
+            sum(s["confidence"] or 0 for s in summary) / total, 2
+        ),
     }
 
     return {"summary": summary, "stats": stats}
 
 
-def print_report(report: dict):
-    print("\n" + "=" * 60)
-    print("📊 NBA POC 評估報告")
-    print("=" * 60)
-
-    stats = report["stats"]
-    print(f"\n總 Leads 數：{stats['total_leads']}")
-    print(f"✅ Evidence 有效率：{stats['evidence_valid_rate']*100:.0f}%")
-    print(f"✅ Rationale Grounded 率：{stats['grounded_rate']*100:.0f}%")
-    print(f"⚠️  幻覺風險率：{stats['hallucination_rate']*100:.0f}%")
-    print(f"📈 平均 Confidence：{stats['avg_confidence']}")
-
-    print("\n--- 明細 ---")
-    for s in report["summary"]:
-        flag = "✅" if s["evidence_valid"] and s["grounded"] else "❌"
-        print(f"{flag} [{s['customer_id']}] {s['lead_id']} {s['category']} "
-              f"(P:{s['priority']}, C:{s['confidence']}) "
-              f"grounded={s['grounded_score']}")
-        if s["invalid_citations"]:
-            print(f"     ⚠️ 無效引用：{s['invalid_citations']}")
-        if s["suspicious_numbers"]:
-            print(f"     ⚠️ 疑似幻覺數字：{s['suspicious_numbers']}")
-
-
-
-
+# ============================================================
+# Include RM feedback
+# ============================================================
 def evaluate_with_feedback(results: dict) -> dict:
-    """在原評估基礎上，加入 RM 回饋統計"""
+    """Add RM feedback statistics on top of base evaluation."""
     base = evaluate_all(results)
     fb = feedback_store.get_feedback_summary()
 
-    # 按 category 統計採納率
     category_stats = {}
     for cid, r in results.items():
-        for lead in r["leads"].get("leads", []):
+        leads_container = r.get("leads", {})
+        if isinstance(leads_container, dict):
+            leads = leads_container.get("leads", [])
+        elif isinstance(leads_container, list):
+            leads = leads_container
+        else:
+            leads = []
+
+        for lead in leads:
             cat = lead.get("category", "unknown")
-            fb_entry = feedback_store.get_feedback_for_lead(cid, lead["lead_id"])
+            fb_entry = feedback_store.get_feedback_for_lead(cid, lead.get("lead_id"))
+
             if cat not in category_stats:
-                category_stats[cat] = {"total": 0, "adopt": 0}
+                category_stats[cat] = {"total": 0, "adopt": 0, "reject": 0}
+
             category_stats[cat]["total"] += 1
-            if fb_entry and fb_entry["action"] == "adopt":
-                category_stats[cat]["adopt"] += 1
+            if fb_entry:
+                if fb_entry["action"] == "adopt":
+                    category_stats[cat]["adopt"] += 1
+                else:
+                    category_stats[cat]["reject"] += 1
 
     for cat, s in category_stats.items():
         s["adopt_rate"] = round(s["adopt"] / s["total"], 2) if s["total"] else 0.0
@@ -176,32 +242,77 @@ def evaluate_with_feedback(results: dict) -> dict:
     }
 
 
+# ============================================================
+# Reporting
+# ============================================================
+def print_report(report: dict):
+    print("\n" + "=" * 60)
+    print("NBA POC Evaluation Report")
+    print("=" * 60)
+
+    stats = report["stats"]
+    print(f"\nTotal leads: {stats['total_leads']}")
+    print(f"Evidence valid rate: {stats['evidence_valid_rate'] * 100:.0f}%")
+    print(f"Rationale grounded rate: {stats['grounded_rate'] * 100:.0f}%")
+    print(f"Hallucination risk rate: {stats['hallucination_rate'] * 100:.0f}%")
+    print(f"Average confidence: {stats['avg_confidence']}")
+
+    print("\n--- Details ---")
+    for s in report["summary"]:
+        flag = "[OK]" if s["evidence_valid"] and s["grounded"] else "[!!]"
+        print(
+            f"{flag} [{s['customer_id']}] {s['lead_id']} {s['category']} "
+            f"(P:{s['priority']}, C:{s['confidence']}) "
+            f"grounded={s['grounded_score']}"
+        )
+        if s["invalid_citations"]:
+            print(f"      [WARN] Invalid citations: {s['invalid_citations']}")
+        if s["suspicious_numbers"]:
+            print(f"      [WARN] Suspicious numbers: {s['suspicious_numbers']}")
+
+
 def print_full_report(report: dict):
     print_report(report["base_evaluation"])
 
     print("\n" + "=" * 60)
-    print("📈 RM 回饋統計")
+    print("RM Feedback Summary")
     print("=" * 60)
     fb = report["feedback_summary"]
-    print(f"總回饋數：{fb['total']}")
-    print(f"採納：{fb['adopt']} ｜ 拒絕：{fb['reject']}")
-    print(f"採納率：{fb['adopt_rate']*100:.0f}%")
+    print(f"Total feedbacks: {fb['total']}")
+    print(f"Adopted: {fb['adopt']} | Rejected: {fb['reject']}")
+    print(f"Adoption rate: {fb['adopt_rate'] * 100:.0f}%")
 
-    print("\n--- 各類別採納率 ---")
-    for cat, s in report["category_stats"].items():
-        print(f"  {cat}: {s['adopt']}/{s['total']} ({s['adopt_rate']*100:.0f}%)")
+    if report["category_stats"]:
+        print("\n--- Adoption rate by category ---")
+        for cat, s in report["category_stats"].items():
+            print(
+                f"  {cat}: {s['adopt']}/{s['total']} "
+                f"({s['adopt_rate'] * 100:.0f}%)"
+            )
 
-    if fb["recent_rejects"]:
-        print("\n--- 最近被拒絕的 leads ---")
+    if fb.get("recent_rejects"):
+        print("\n--- Recent rejected leads ---")
         for r in fb["recent_rejects"]:
-            print(f"  [{r['customer_id']}] {r['lead_id']} 原因：{r.get('reason', '(未填)')}")
+            print(
+                f"  [{r['customer_id']}] {r['lead_id']} "
+                f"reason: {r.get('reason', '(none)')}"
+            )
 
 
+# ============================================================
+# Main
+# ============================================================
 if __name__ == "__main__":
-    results = load_results()
+    try:
+        results = load_results()
+    except FileNotFoundError as e:
+        print(f"[ERROR] {e}")
+        raise SystemExit(1)
+
     report = evaluate_with_feedback(results)
     print_full_report(report)
 
-    with open("evaluation_report.json", "w", encoding="utf-8") as f:
+    with open(REPORT_PATH, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
+    print(f"\n[OK] Evaluation report written to {REPORT_PATH}")

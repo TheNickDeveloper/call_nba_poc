@@ -29,15 +29,15 @@
         "date": "2024-03-12",
         "life_events": [
           {
-            "type": "子女教育",
-            "detail": "小孩今年高二，客戶考慮送小孩去英國念書，已在看學校",
-            "timeline": "高二在學，推估1-2年內出國"
+            "type": "children_education",
+            "detail": "小孩今年高二，考慮送他去英國念書",
+            "timeline": "約1-2年後"
           }
         ],
         "financial_needs": [
           {
-            "type": "教育基金",
-            "detail": "英國留學學費與生活費，客戶表示想早點規劃，但資金安排方式尚未細想",
+            "type": "education_fund",
+            "detail": "英國留學學費與生活費",
             "amount": "每年約200多萬台幣；若念三年約600-700萬台幣",
             "status": "need"
           }
@@ -45,38 +45,38 @@
         "locations": [
           {
             "country": "英國",
-            "purpose": "子女留學就讀"
+            "purpose": "子女留學"
           }
         ],
         "amounts": [
           {
             "value": "200多萬",
-            "currency": "台幣",
-            "purpose": "英國留學一年學費加生活費"
+            "currency": "TWD",
+            "purpose": "英國留學每年學費與生活費"
           },
           {
             "value": "600-700萬",
-            "currency": "台幣",
-            "purpose": "英國留學三年總費用推估"
+            "currency": "TWD",
+            "purpose": "英國留學三年學費與生活費"
           }
         ],
         "timeline": [
           {
-            "event": "小孩高二在學",
-            "horizon": "距出國約1-2年"
+            "event": "小孩高二，考慮送英國念書",
+            "horizon": "約1-2年後"
           },
           {
             "event": "英國留學期間",
-            "horizon": "約3年"
+            "horizon": "3年"
           }
         ],
         "risk_signals": [],
         "constraints": [],
         "unresolved": [
-          "留學資金如何安排（一次換匯、分批換匯、投資累積等）尚未討論",
-          "英國學校尚未鎖定",
-          "是否就讀三年（學制長度）未確認",
-          "客戶表示『先看看狀況』，整體規劃意願深度待釐清"
+          "是否確定送小孩去英國念書",
+          "預計就讀學校與科系",
+          "留學資金如何安排",
+          "留學年限是否為三年"
         ],
         "rm_commitments": []
       },
@@ -85,26 +85,26 @@
         "date": "2024-06-20",
         "life_events": [
           {
-            "type": "子女教育",
-            "detail": "小孩去英國念書，家長規劃在英國看房",
+            "type": "children_education",
+            "detail": "小孩去英國念書",
             "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "海外置產",
-            "detail": "在英國看房，主要供小孩念書時自住，平常出租補貼學費",
-            "amount": "一千萬台幣左右",
+            "type": "overseas_property",
+            "detail": "在英國看房，主要讓小孩念書時可住，平常可出租補貼學費",
+            "amount": "約1,000萬台幣",
             "status": "need"
           },
           {
-            "type": "教育基金/學費補貼",
-            "detail": "透過英國房產出租補貼小孩學費",
+            "type": "education_fund",
+            "detail": "希望以英國房產租金補貼小孩學費",
             "amount": "",
             "status": "mentioned"
           },
           {
-            "type": "資產配置",
+            "type": "asset_allocation",
             "detail": "資金一部分在定存、一部分在股票，尚未決定如何調整",
             "amount": "",
             "status": "mentioned"
@@ -113,12 +113,16 @@
         "locations": [
           {
             "country": "英國",
-            "purpose": "小孩念書；購屋自住及出租；考慮倫敦以外區域"
+            "purpose": "小孩念書與購屋/出租"
+          },
+          {
+            "country": "英國倫敦",
+            "purpose": "房產考慮地點之一，但不想全部集中在同一地方，倫敦以外也可看"
           }
         ],
         "amounts": [
           {
-            "value": "1000萬",
+            "value": "約10,000,000",
             "currency": "TWD",
             "purpose": "英國房產預算"
           }
@@ -127,28 +131,22 @@
         "risk_signals": [
           {
             "quote": "我不想要全部壓在同一個地方，倫敦以外也可以看看。",
-            "interpretation": "偏好分散風險，不集中單一區域或標的"
+            "interpretation": "偏好分散配置，避免集中單一地點/市場"
           }
         ],
         "constraints": [
           {
-            "type": "地理分散",
-            "detail": "不想全部壓在同一個地方，倫敦以外也可考慮"
-          },
-          {
-            "type": "用途限制",
-            "detail": "房產主要供小孩念書時自住，平常出租補貼學費"
+            "type": "分散配置",
+            "detail": "不想要全部壓在同一個地方，倫敦以外也可以看看"
           }
         ],
         "unresolved": [
-          "英國房產的具體地點與標的（倫敦以外區域）",
-          "1000萬台幣預算的房產類型、區位與購買時程",
-          "定存與股票資金如何調度以支付英國房產",
-          "小孩赴英念書的具體時間與購屋需求時間",
-          "房產自住與出租的比例及後續管理方式"
+          "英國房產具體選址（倫敦或倫敦以外何處）",
+          "定存與股票資金如何調整、投入房產的金額與時程",
+          "小孩赴英國念書的確切時間"
         ],
         "rm_commitments": [
-          "下次整理一些英國房產市場的資訊給您"
+          "下次整理一些英國房產市場的資訊給客戶"
         ]
       },
       {
@@ -157,20 +155,20 @@
         "life_events": [],
         "financial_needs": [
           {
-            "type": "資產配置",
-            "detail": "股票部位已減碼，想尋找較穩健的投資標的",
+            "type": "投資配置",
+            "detail": "股票部位最近有在減碼，想找穩一點的標的",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "資產配置",
-            "detail": "希望投資分散，不要集中在單一市場",
+            "type": "分散投資",
+            "detail": "希望分散一點，不要都集中在一個市場",
             "amount": "",
             "status": "need"
           },
           {
             "type": "英國房產資金安排",
-            "detail": "對於英國房產相關資金的後續運用尚未細想，RM 主動詢問",
+            "detail": "RM詢問英國房產那筆資金如何安排；客戶表示還沒細想",
             "amount": "",
             "status": "mentioned"
           }
@@ -178,42 +176,37 @@
         "locations": [
           {
             "country": "英國",
-            "purpose": "房產（相關資金待安排）"
+            "purpose": "房產資金安排"
           }
         ],
         "amounts": [],
         "timeline": [],
         "risk_signals": [
           {
-            "quote": "我股票部位最近有在減碼，想找穩一點的標的",
-            "interpretation": "風險偏好轉趨保守，偏好穩健型標的，可能對市場波動敏感"
+            "quote": "我股票部位最近有在減碼，想找穩一點的標的。",
+            "interpretation": "風險偏好趨向穩健，希望降低股票部位波動"
           },
           {
-            "quote": "我不想動到緊急預備金，那筆錢要留著",
-            "interpretation": "高度重視流動性與資金安全，要求保留應急資金不動用"
-          },
-          {
-            "quote": "我希望分散一點，不要都集中在一個市場",
-            "interpretation": "偏好分散配置、降低單一市場集中風險"
+            "quote": "我希望分散一點，不要都集中在一個市場。",
+            "interpretation": "偏好分散投資，避免單一市場集中風險"
           }
         ],
         "constraints": [
           {
-            "type": "流動性需求",
-            "detail": "緊急預備金必須保留，不可動用"
+            "type": "緊急預備金",
+            "detail": "不想動到緊急預備金，那筆錢要留著"
           },
           {
-            "type": "風險限制",
-            "detail": "不想將資金集中於單一市場，需維持分散"
+            "type": "流動性",
+            "detail": "客戶確認流動性很重要"
           }
         ],
         "unresolved": [
-          "英國房產那筆資金的具體安排方式尚未討論（客戶尚未細想）",
-          "客戶想找的『穩一點標的』具體類型與目標報酬未釐清",
-          "分散配置的目標市場與比例未討論"
+          "英國房產那筆資金的具體安排方式",
+          "適合的穩健投資標的與配置方案"
         ],
         "rm_commitments": [
-          "下次帶一些投資方案與客戶討論"
+          "下次帶一些方案跟客戶討論"
         ]
       }
     ],
@@ -221,55 +214,65 @@
       "customer_id": "CUST_001",
       "name": "陳建宏",
       "profile": {
-        "life_stage": "中年成家育兒階段，子女教育後期（小孩2024-03為高二，2024-06前後赴英念書）；具一定資產基礎（定存＋股票），推估約45-55歲，處於子女教育金支出高峰與資產重新配置的過渡期",
-        "risk_preference": "近期（2024-09）轉趨穩健保守：股票部位已減碼、主動尋找『穩一點的標的』，高度重視緊急預備金不動用，並要求分散、不集中單一市場；但2024-06曾主動規劃1000萬台幣海外置產（相對積極、另類實體資產），兩者並存，整體可歸為「穩健偏保守、但接受具目的性的實體/海外配置」",
-        "liquidity_need": "高：明確要求緊急預備金必須保留、不可動用；同時面臨大額支出（英國留學600-700萬台幣、英國房產約1000萬台幣），現金流與資金調度彈性需求大",
-        "estimated_capacity": "推估可運用資產至少約2000萬台幣以上（英國房產預算1000萬台幣＋留學3年推估600-700萬台幣＋定存部位＋股票部位＋另保留之緊急預備金）；實際總資產規模未揭露，為推估值",
+        "life_stage": "子女教育/留學規劃期；小孩高二，約1-2年後可能赴英國念書",
+        "risk_preference": "近期趨向穩健型（依2024-09最新訊號）：股票部位減碼、想找穩健標的、重視流動性與分散；但同時有英國房產購置計畫，完整風險屬性待確認",
+        "liquidity_need": "高：明確表示不想動到緊急預備金，並確認流動性很重要",
+        "estimated_capacity": "已知需求規模約1,600-1,700萬TWD（英國房產約1,000萬TWD＋三年教育金約600-700萬TWD）；實際可運用資產未揭露",
         "locations_of_interest": [
-          "英國（子女留學就讀）",
-          "英國（購屋自住及出租，明確考慮倫敦以外區域）"
+          "英國",
+          "英國倫敦",
+          "英國倫敦以外（尚未選定）"
         ]
       },
       "needs_timeline": [
         {
-          "need": "子女英國留學教育基金（學費＋生活費）",
-          "urgency": "高",
-          "horizon": "1-2年內啟動（小孩高二，推估2025-2026出國），支出延續約3年",
+          "need": "子女英國留學教育金（每年約200多萬TWD；三年約600-700萬TWD）",
+          "urgency": "high",
+          "horizon": "約1-2年後開始，留學期間約3年",
           "evidence": [
             "C001_1",
             "C001_2"
           ]
         },
         {
-          "need": "英國置產（供小孩念書自住、平常出租補貼學費），預算約1000萬台幣",
-          "urgency": "高",
-          "horizon": "需與子女赴英時間配合，推估1-2年內；地點鎖定倫敦以外區域",
+          "need": "英國房產購置（約1,000萬TWD，供子女住宿並出租補貼學費）",
+          "urgency": "medium",
+          "horizon": "配合留學前，約1-2年內（未定）",
           "evidence": [
-            "C001_2"
-          ]
-        },
-        {
-          "need": "英國房產相關資金安排（換匯、定存/股票資金調度、一次或分批）",
-          "urgency": "中",
-          "horizon": "短期至中期，客戶尚未細想，待RM引導",
-          "evidence": [
-            "C001_1",
             "C001_2",
             "C001_3"
           ]
         },
         {
-          "need": "資產配置調整：股票減碼後尋找穩健型標的並分散市場",
-          "urgency": "中",
-          "horizon": "短期（2024下半年起）",
+          "need": "英國房產資金來源與安排方案",
+          "urgency": "medium",
+          "horizon": "需在購屋/留學前決定，約1-2年內",
+          "evidence": [
+            "C001_2",
+            "C001_3"
+          ]
+        },
+        {
+          "need": "股票部位減碼，轉向穩健投資標的",
+          "urgency": "high",
+          "horizon": "近期/短期（約3-6個月）",
           "evidence": [
             "C001_3"
           ]
         },
         {
-          "need": "保留緊急預備金、維持流動性安全",
-          "urgency": "高",
-          "horizon": "持續性需求，不可動用",
+          "need": "分散投資配置，避免集中單一市場",
+          "urgency": "medium",
+          "horizon": "持續/中長期",
+          "evidence": [
+            "C001_2",
+            "C001_3"
+          ]
+        },
+        {
+          "need": "保留緊急預備金並維持流動性",
+          "urgency": "high",
+          "horizon": "持續/隨時",
           "evidence": [
             "C001_3"
           ]
@@ -277,151 +280,138 @@
       ],
       "contradictions": [
         {
-          "signal_a": "2024-06 主動規劃1000萬台幣英國房產，屬相對積極、非流動性的海外實體資產配置",
-          "signal_b": "2024-09 股票減碼、想找穩健標的，偏好保守、重視流動性與分散",
-          "note": "可能為不同資金池與不同目的（教育/自住用途的房產 vs 一般投資部位），非必然衝突；但因近期訊號權重較高，整體風險偏好宜以『穩健保守、但接受具明確目的之海外配置』呈現，並保留此矛盾待下次確認"
+          "signal_a": "2024-06-20：希望分散投資，不要都集中在一個市場，倫敦以外也可看",
+          "signal_b": "2024-06-20：規劃約1,000萬TWD購置英國房產，屬單一國家/市場不動產配置",
+          "note": "分散偏好與英國房產集中配置存在張力；客戶僅表示倫敦以外也可看，尚未決定如何分散。"
         },
         {
-          "signal_a": "2024-03 客戶表示想『早點規劃』留學資金，但資金安排方式與學校選擇皆未細想，整體規劃意願深度待釐清",
-          "signal_b": "2024-06 已進展到實際在英國看房、設定1000萬預算與出租補貼學費的具體構想",
-          "note": "投資行動力與規劃深度前後不一致，可能是意向升溫，也可能為不同家庭成員主導（如另一半），需釐清決策者與實際執行節奏"
-        },
-        {
-          "signal_a": "2024-06 房產構想為自住為主、出租補貼學費",
-          "signal_b": "2024-09 對英國房產後續資金運用尚未細想、RM需主動詢問",
-          "note": "需求已被提出但資金落地路徑仍空轉，存在『有意願、缺執行方案』的落差"
+          "signal_a": "2024-06-20：計畫投入約1,000萬TWD購置英國房產，兼具自住與出租",
+          "signal_b": "2024-09-18：股票減碼、想找穩健標的，並強調不想動緊急預備金、流動性很重要",
+          "note": "高額且低流動性的房產配置與近期穩健/流動性偏好存在矛盾；客戶表示英國房產資金尚未細想，需後續釐清。"
         }
       ]
     },
     "leads": {
       "customer_id": "CUST_001",
-      "generated_at": "2024-09-19T10:00:00+08:00",
+      "generated_at": "2026-10-03T16:50:00Z",
       "leads": [
         {
           "lead_id": "L1",
-          "category": "子女教育基金規劃（英國留學）",
-          "rationale": "客戶自2024-03起即明確表示小孩高二、考慮赴英念書，並主動提到『想早點規劃』，但資金安排方式完全未定；2024-06 進一步以房產出租補貼學費作為財務構想，顯示教育金為其真實且高順位的支出目標。推估三年總費用600-700萬台幣、每年200多萬，屬於可預期的大額、多期現金流，而其風險偏好已轉為穩健保守、且堅持不動用緊急預備金，因此教育金必須以『專款專用、低波動、分批換匯』的方式獨立於其他投資部位管理，不能用高波動的股票部位去承擔。",
-          "suggested_action": "約客戶進行一次60分鐘的教育金專案會議：先確認1) 出國年度與學制長度（3年或4年）2) 學校與城市3) 每年預算是否需要加計通膨。會後提供一份三年現金流試算表（含學費、住宿、生活費、匯率假設），並提出『教育金專戶＋分批換匯＋到期階梯式定存/短債』的執行架構初稿。",
-          "priority": "高",
-          "confidence": 0.9,
+          "category": "子女教育金規劃",
+          "rationale": "客戶明確表示小孩高二，約1-2年後赴英，每年約200多萬TWD，三年約600-700萬TWD。客戶風險偏好趨穩、流動性要求高，教育金需與緊急預備金隔離，並以英鎊現金流階梯降低匯率與市場波動風險。",
+          "suggested_action": "以C001_1/C001_2的金額與時間軸建立三年英鎊教育金需求表，試算學費、生活費與匯率區間；規劃分年換匯與定存階梯，並保留至少一筆緊急預備金不動。",
+          "priority": "high",
+          "confidence": 0.95,
           "supporting_evidence": [
             "C001_1",
             "C001_2"
           ],
           "suggested_products": [
-            "外幣（英鎊）定期存款",
-            "目標到期債券/短天期債券基金",
-            "教育金信託或專款專用戶頭",
-            "分批換匯（定期定額換匯）服務"
+            "英鎊定存階梯",
+            "外幣優利定存",
+            "短天期英鎊投資級債",
+            "貨幣市場基金"
           ],
           "talking_points": [
-            "陳先生，上次您提到小孩在英國念書三年大約需要六、七百萬，我想先把這筆錢的『時間表』跟『匯率風險』拆開來看，這樣才不會排擠到您不想動的那筆預備金。"
+            "您三月和六月提到小孩約1-2年後赴英，每年學費生活費約200多萬，我們可以先試算三年600-700萬的英鎊現金流，並用階梯換匯降低匯率風險。"
           ]
         },
         {
           "lead_id": "L2",
-          "category": "英國置產與跨境資金安排（含融資可行性）",
-          "rationale": "2024-06 客戶已具體到『在英國看房、預算約1000萬台幣、自住＋出租補貼學費』，且明確要求分散、不集中單一區域（倫敦以外也可），RM 當時也已承諾提供英國房產市場資訊；但 2024-09 通話顯示這筆資金的後續運用客戶『尚未細想』，形成『有意願、缺執行方案』的落差。此案金額大、涉及跨境匯款、稅務（印花稅、租金所得）、貸款成數與現金流，必須在購屋時程前先確定資金是走『全額自有資金』或『部分英國本地房貸＋自有資金』，並同步檢視其流動性緩衝是否足夠，避免為買房而動到緊急預備金。",
-          "suggested_action": "先履行上次承諾，提供2-3個倫敦以外區域（如曼徹斯特、伯明罕、里茲等）的房價、租金報酬與學區通勤資訊簡報；同時安排一次跨境資金架構討論，釐清1) 購屋時程與決策者（是否為配偶主導）2) 全額自有或部分英國房貸 3) 資金從定存/股票哪個池子出。會後產出一頁式資金調度方案（含分年匯出節奏、稅費預估、備用流動性保留額）。",
-          "priority": "高",
-          "confidence": 0.85,
+          "category": "英國房產購置與資金安排",
+          "rationale": "客戶計畫以約1,000萬TWD購置英國房產，供子女住宿並出租補貼學費；但九月表示資金尚未細想，且強調流動性與不動緊急預備金。此為高額、低流動性配置，需先釐清自備款、貸款、稅費、租金現金流與跨境匯款，避免排擠教育金與緊急預備金。",
+          "suggested_action": "安排一次英國房產資金專題會議，釐清倫敦/非倫敦選址、購屋時間、自備款比例、是否申貸、租金預估與持有成本；提供跨境匯款與英國房貸初步方案。",
+          "priority": "high",
+          "confidence": 0.9,
           "supporting_evidence": [
             "C001_2",
             "C001_3"
           ],
           "suggested_products": [
-            "英國在地房貸轉介/跨境融資方案",
-            "跨境匯款與外幣帳戶服務",
-            "海外不動產稅務/法律諮詢轉介",
-            "房產租金收入管理帳戶"
+            "英國房貸/海外房產貸款",
+            "跨境匯款",
+            "英鎊換匯",
+            "房產出租收益管理"
           ],
           "talking_points": [
-            "陳先生，您六月提到想看倫敦以外的房子，我整理了幾個區域的房價跟租金表現；今天想先跟您確認一件事——這1000萬是打算全額自有資金，還是搭配英國當地貸款？這會決定您後續要留多少現金在手上。"
+            "您六月提到英國房產約1,000萬台幣、九月還沒細想資金安排，我們可以先從自備款、貸款成數和租金補貼學費的現金流開始釐清。"
           ]
         },
         {
           "lead_id": "L3",
-          "category": "資產配置穩健化與跨市場分散",
-          "rationale": "2024-09 客戶明確表示『股票部位最近有在減碼，想找穩一點的標的』，並要求『分散一點，不要都集中在一個市場』，顯示風險偏好已由先前的積極（主動規劃海外實體資產）轉為穩健保守，且對波動敏感。客戶目前資金分散於定存與股票兩個池子、尚未決定如何調整，正是把『減碼後的股票資金』重新定位到低波動、跨區域資產的時機；同時須避免把資金全部再集中到單一市場（含英國），以呼應其分散訴求與既有的區位分散原則。",
-          "suggested_action": "在下次會議帶入2-3組穩健型配置提案（例如：全球投資級債＋短天期債＋高評等股息組合），並附上各方案的歷史波動度、最大回撤與預期收益率區間，協助客戶把『穩一點』量化成可接受的波動上限。同時先做風險屬性再確認（問卷）與投資部位現況盤點，確認減碼後可運用的資金規模。",
-          "priority": "高",
-          "confidence": 0.85,
+          "category": "投資組合穩健化/股票減碼",
+          "rationale": "客戶九月明確表示股票部位減碼、想找穩健標的，且希望分散、不動緊急預備金、流動性重要。反映風險偏好短期趨穩，需將部分股票轉向低波動、高流動性工具，同時保留未來教育金/房產的資金調度彈性。",
+          "suggested_action": "檢視現有股票部位與成本，提出三層配置：緊急預備金（現金/貨幣基金）、3-6個月穩健收益（短天期債/投資級債）、1-2年教育與房產專款（英鎊階梯定存/短債）；先減碼高波動持股，再分批轉入。",
+          "priority": "high",
+          "confidence": 0.9,
           "supporting_evidence": [
             "C001_3"
           ],
           "suggested_products": [
-            "全球投資等級公司債基金",
-            "短天期債券基金/貨幣市場基金",
-            "多重資產/平衡型基金",
-            "高評等股息股票組合"
+            "貨幣市場基金",
+            "短天期投資級債券基金",
+            "全球投資級債",
+            "英鎊短天期債"
           ],
           "talking_points": [
-            "陳先生，您提到股票有在減碼、想找穩一點的標的，我想請教您一句：如果一個方案一年最大波動大概5%以內，這樣的『穩』對您來說可以接受嗎？我們可以用這個標準來挑。"
+            "您九月提到股票減碼、想找穩一點的標的，我們可以先以不動緊急預備金為前提，把資金分成緊急、短期穩健、教育/房產專款三層來調整。"
           ]
         },
         {
           "lead_id": "L4",
-          "category": "流動性分層與緊急預備金守護機制",
-          "rationale": "客戶在2024-09 明確且強烈表示『我不想動到緊急預備金，那筆錢要留著』，這是其所有決策的硬約束。然而其未來兩年同時面對留學600-700萬與英國房產1000萬的雙重大額支出，若沒有先把資金分成『不可動用預備金／教育金專款／置產資金／一般投資』四層，執行時極容易為支應支出而侵蝕預備金。因此應先建立流動性分層架構，作為L1、L2、L3所有方案的共同前提。",
-          "suggested_action": "與客戶共同定義四層資金架構與金額（例如：預備金＝6-12個月家庭支出，獨立帳戶且不列入任何投資或購屋計算），並約定此帳戶不可作為匯款或投資來源。將此架構寫成一頁資金地圖，作為後續所有交易的檢核依據。",
-          "priority": "中",
-          "confidence": 0.8,
+          "category": "流動性與緊急預備金隔離",
+          "rationale": "客戶明確表示不想動到緊急預備金，並確認流動性很重要；但同時有1,000萬TWD英國房產與600-700萬TWD教育金需求，若未先隔離預備金，恐因房產自備款或換匯需求排擠流動性。需先確認預備金金額與放置工具，再談其他配置。",
+          "suggested_action": "與客戶確認緊急預備金目標金額（建議6-12個月生活與房貸支出）與現有存放位置；將其獨立於教育金/房產專款，並以高流動性工具持有，設定不動用原則。",
+          "priority": "high",
+          "confidence": 0.9,
           "supporting_evidence": [
-            "C001_3"
+            "C001_3",
+            "C001_2"
           ],
           "suggested_products": [
-            "高流動性台幣/外幣活存與定存",
-            "貨幣市場基金",
-            "資金分層管理（多帳戶架構）"
+            "高流動性貨幣基金",
+            "定存",
+            "活存優利"
           ],
           "talking_points": [
-            "陳先生，您說緊急預備金絕對不能動，我完全同意——所以我想先幫您把那筆錢『隔離』出來，之後不管是留學還是買房，我們都不會碰到它，這樣您比較安心。"
+            "您特別提到緊急預備金不能動、流動性很重要，我們先把它獨立出來，確認金額和工具，再來安排教育和房產資金。"
           ]
         },
         {
           "lead_id": "L5",
-          "category": "英鎊換匯節奏與匯率風險管理",
-          "rationale": "留學費用與英國房產兩筆支出皆以英鎊計價，但客戶自2024-03 起對『一次換匯或分批換匯』始終未討論（C001_1 unresolved），至2024-09 仍對英國房產相關資金運用『尚未細想』。考量支出金額大（合計可能超過1,600萬台幣以上）且時程集中於未來1-2年，匯率波動將直接影響實際成本，屬於必須在支出前先行規劃的執行細節；同時分批換匯也符合客戶保守、重視可預期性的偏好。",
-          "suggested_action": "依L1確認的支出時間表，設計分批換匯計畫（例如：出國前12-18個月起每月或每季固定換匯，比例分配），並設定匯率警示通知；若客戶對匯率風險更為在意，可進一步評估遠期外匯或外幣定存鎖息的可行性。先以模擬試算呈現『一次性換匯 vs 分批換匯』的成本差異供客戶決策。",
-          "priority": "中",
-          "confidence": 0.7,
+          "category": "跨市場分散配置（含英國市場內分散）",
+          "rationale": "客戶九月明確表示希望分散、不要都集中在一個市場（C001_3），六月亦提過不想全部壓在同一個地方、倫敦以外也可看（C001_2）。通話證據中並無「客戶仍想以英國市場為主」之陳述，該假設不應作為規劃前提，否則可能與客戶的分散意圖相左。應以分散為主軸，先釐清客戶對分散的定義與範圍（僅限英國市場內的不同工具，或需跨區域、跨幣別），再據以提出配置建議；同時保留教育金與英國房產所需的英鎊部位。",
+          "suggested_action": "先與客戶確認分散的範圍：是英國市場內以不同風險/流動性工具分散，或需跨區域、跨幣別配置。準備跨市場多元資產清單（含英國與其他區域、不同幣別與資產類別），標示風險等級、流動性、幣別與預期收益；並在配置中保留教育金/房產所需的英鎊現金流部位，再討論各層比重。",
+          "priority": "medium",
+          "confidence": 0.8,
           "supporting_evidence": [
-            "C001_1",
             "C001_2",
             "C001_3"
           ],
           "suggested_products": [
-            "定期定額換匯/外幣帳戶",
-            "外幣（英鎊）定存",
-            "遠期外匯避險（視客戶意願）",
-            "匯率到價通知服務"
+            "全球投資級債券基金",
+            "全球股票ETF/多元資產基金",
+            "英鎊定存",
+            "貨幣市場基金"
           ],
           "talking_points": [
-            "陳先生，留學跟買房加起來要換的英鎊不是小數目，匯率差一塊錢可能就是幾十萬——我想先做一個試算，讓您看看分批換匯跟一次換匯的差別在哪裡。"
+            "您提到希望分散一點、不要都集中在一個市場，我們先釐清您想要的分散範圍——是英國市場內用不同工具分散，還是跨區域、跨幣別的配置，再來安排比重；教育金和英國房產需要的英鎊部位我們會另外保留。"
           ]
         }
       ]
     },
     "critic_reviews": [
       {
-        "type": "json_object",
-        "content": {
-          "issues": [
-            {
-              "lead_id": "L5",
-              "issue": "信心度 0.7 相對其他 leads 略低，且遠期外匯避險對保守型客戶的適配性可再斟酌，但屬可優化範圍，非嚴重問題。",
-              "severity": "low"
-            },
-            {
-              "lead_id": "L1",
-              "issue": "talking_points 使用『陳先生』稱謂，原始通話證據未提供客戶姓氏，屬可接受的推測性稱呼。",
-              "severity": "low"
-            }
-          ],
-          "overall_quality": 0.9,
-          "needs_revision": false,
-          "revision_notes": "全部 leads 的 supporting_evidence（C001_1、C001_2、C001_3）皆存在且對應正確；rationale 均能對應通話中的 life_events、financial_needs、risk_signals 與 unresolved 項目，無幻覺情形；suggested_action 具體可執行，且與客戶『不動用緊急預備金』『分散』『轉趨穩健』等硬約束一致。僅有零星用詞與信心度可微調之處，未達嚴重問題門檻，無需修正。"
-        }
+        "issues": [
+          {
+            "lead_id": "L1",
+            "issue": "rationale 提及『風險偏好趨穩、流動性要求高』，該訊號實際來自 C001_3（九月通話），但 supporting_evidence 僅列 C001_1、C001_2；屬證據歸屬不精確，非重大問題。",
+            "severity": "low"
+          }
+        ],
+        "overall_quality": 0.9,
+        "needs_revision": false,
+        "revision_notes": "所有 lead 的 supporting_evidence（C001_1、C001_2、C001_3）皆為真實存在的 call_id，rationale 與 suggested_action 均可對應通話內容（教育金 600-700 萬、英國房產約 1,000 萬、股票減碼求穩、分散配置、緊急預備金不動與流動性要求），未見明顯幻覺或不可執行之建議。僅 L1 有輕微證據歸屬不精確（風險趨穩訊號出自 C001_3 但未列入），屬可接受的細節優化，不需強制修訂。"
       }
     ]
   },
@@ -455,32 +445,32 @@
         "date": "2024-02-08",
         "life_events": [
           {
-            "type": "移民",
-            "detail": "客戶先生正在考慮是否移民加拿大，主要為了小孩教育",
-            "timeline": "可能兩三年內，仍在評估"
+            "type": "immigration",
+            "detail": "客戶的先生正在考慮移民加拿大，主要目的是為了小孩教育",
+            "timeline": "可能兩三年內"
           },
           {
-            "type": "子女教育",
-            "detail": "移民加拿大的主要考量是小孩教育",
-            "timeline": "與移民時程相關，可能兩三年內"
+            "type": "children_education",
+            "detail": "為了小孩教育而考慮移民加拿大",
+            "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "移民相關資金/生活成本",
-            "detail": "客戶提及擔心加拿大生活成本，尚未討論具體資金需求",
+            "type": "asset_allocation",
+            "detail": "RM詢問資產如何配置，客戶表示還沒想過",
             "amount": "",
             "status": "mentioned"
           },
           {
-            "type": "資產配置",
-            "detail": "RM詢問資產配置，客戶表示還沒想過，先顧店裡現金流",
+            "type": "education_fund",
+            "detail": "因小孩教育而考慮移民，惟未具體提及教育資金安排",
             "amount": "",
             "status": "mentioned"
           },
           {
-            "type": "營運資金/現金流管理",
-            "detail": "客戶強調先把店裡的現金流顧好比較重要",
+            "type": "business_cash_flow",
+            "detail": "客戶表示先把店裡的現金流顧好比較重要",
             "amount": "",
             "status": "need"
           }
@@ -488,51 +478,33 @@
         "locations": [
           {
             "country": "加拿大",
-            "purpose": "移民及小孩教育"
+            "purpose": "移民、小孩教育、生活"
           }
         ],
         "amounts": [],
         "timeline": [
           {
-            "event": "移民加拿大/評估移民",
-            "horizon": "可能兩三年內，仍在評估"
-          },
-          {
-            "event": "小孩教育安排",
-            "horizon": "與移民時程相關，可能兩三年內"
+            "event": "移民加拿大",
+            "horizon": "兩三年內（仍在評估）"
           }
         ],
-        "risk_signals": [
-          {
-            "quote": "還沒，先把店裡的現金流顧好比較重要。",
-            "interpretation": "對資產配置尚未有規劃，優先重視事業現金流與流動性，可能偏好保守/穩健、先確保資金靈活。"
-          },
-          {
-            "quote": "主要是擔心那邊的生活成本。",
-            "interpretation": "對移民後的生活支出與財務負擔有顧慮，顯示成本敏感與謹慎態度。"
-          }
-        ],
+        "risk_signals": [],
         "constraints": [
           {
-            "type": "流動性/現金流優先",
-            "detail": "客戶要先顧好店裡的現金流，短期內資金可能需保留於事業營運"
+            "type": "liquidity",
+            "detail": "以店裡的現金流為優先，資金需保持流動性"
           },
           {
-            "type": "移民決策未定",
-            "detail": "先生仍在考慮是否移民加拿大，還在評估"
-          },
-          {
-            "type": "生活成本顧慮",
-            "detail": "擔心加拿大生活成本"
+            "type": "cost_concern",
+            "detail": "擔心加拿大的生活成本"
           }
         ],
         "unresolved": [
-          "是否確定移民加拿大尚未決定",
-          "移民時程僅可能兩三年內，仍評估中",
-          "加拿大生活成本與移民後總資金需求未估算",
-          "小孩教育的具體階段、學校與費用未討論",
-          "資產配置尚未規劃",
-          "店內現金流狀況及可動用資金未了解"
+          "是否確定移民加拿大尚未決定，仍在評估中",
+          "移民時程尚未確定（可能兩三年內）",
+          "資產如何配置尚未規劃",
+          "對加拿大生活成本的具體顧慮未進一步說明",
+          "小孩教育的具體階段與資金需求未釐清"
         ],
         "rm_commitments": []
       },
@@ -542,97 +514,69 @@
         "life_events": [],
         "financial_needs": [
           {
-            "type": "海外置產",
-            "detail": "先生在加拿大看中一間房子，約加幣150萬，正在評估購置",
+            "type": "overseas property",
+            "detail": "Husband recently viewed a house in Canada; considering purchase, with payment possibly from selling a Taiwan property or taking a loan",
             "amount": "CAD 1,500,000",
             "status": "need"
           },
           {
-            "type": "購屋資金來源規劃",
-            "detail": "可能賣掉台灣一間房或辦理貸款，客戶表示還在考慮",
+            "type": "tax planning",
+            "detail": "Customer does not understand tax implications of using Taiwan assets to support overseas property and asked RM to help review",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "稅務規劃",
-            "detail": "以台灣資產支撐海外置產所涉及的稅務問題，客戶表示不懂並請RM協助了解",
+            "type": "foreign exchange",
+            "detail": "Customer does not understand FX considerations for using Taiwan assets to support overseas property and asked RM to help review",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "匯率／換匯規劃",
-            "detail": "跨境資金移動涉及匯率問題，客戶表示不懂並請RM協助了解",
-            "amount": "",
-            "status": "need"
-          },
-          {
-            "type": "資產結構盤點",
-            "detail": "台灣資產為兩間房（一間自住、一間出租）及部分定存現金，實際金額未提及",
+            "type": "asset allocation",
+            "detail": "Current Taiwan assets: two properties (one self-occupied, one rented) and some cash in fixed deposits; considering using them for overseas property",
             "amount": "",
             "status": "mentioned"
           }
         ],
         "locations": [
           {
-            "country": "加拿大",
-            "purpose": "購置不動產（先生看房）"
+            "country": "Canada",
+            "purpose": "Overseas property purchase/viewing"
           },
           {
-            "country": "台灣",
-            "purpose": "現有資產所在地（自住房、出租房、定存）"
+            "country": "Taiwan",
+            "purpose": "Current property assets and potential funding source"
           }
         ],
         "amounts": [
           {
-            "value": "150萬",
+            "value": "1,500,000",
             "currency": "CAD",
-            "purpose": "加拿大房屋看屋價"
-          },
-          {
-            "value": "未提及",
-            "currency": "TWD",
-            "purpose": "台灣兩間房產價值"
-          },
-          {
-            "value": "未提及",
-            "currency": "TWD",
-            "purpose": "定存現金部位"
+            "purpose": "Canada house price"
           }
         ],
         "timeline": [],
-        "risk_signals": [
-          {
-            "quote": "可能要賣掉台灣一間房，或者貸款，還在想。",
-            "interpretation": "資金安排尚未定案，處於評估階段，尚無明確決策"
-          },
-          {
-            "quote": "還有一些現金在定存。",
-            "interpretation": "現金部位以定存停放，顯示資金運用偏保守（屬推論）"
-          },
-          {
-            "quote": "對啊，這部分我不太懂，你可以幫我看看嗎？",
-            "interpretation": "對跨境匯率與稅務議題缺乏了解，需專業協助與說明"
-          }
-        ],
+        "risk_signals": [],
         "constraints": [
           {
-            "type": "資金來源未定",
-            "detail": "尚在「賣台灣房產」與「貸款」之間搖擺，未決定籌資方式"
+            "type": "funding source undecided",
+            "detail": "May sell one Taiwan property or take a loan; still thinking"
           },
           {
-            "type": "資產流動性",
-            "detail": "資產以不動產為主（自住＋出租各一），現金僅部分定存，跨境購屋資金可能需處分不動產或舉債"
+            "type": "tax/FX complexity",
+            "detail": "Using Taiwan assets for overseas property requires consideration of exchange rate and tax; customer lacks understanding"
           }
         ],
         "unresolved": [
-          "加拿大購屋款項究竟以出售台灣房產或貸款支應，尚未決定",
-          "若出售台灣房產，應處分自住或出租物件、對租金收入之影響未討論",
-          "海外置產涉及之匯率操作方式與時點未討論",
-          "跨境購屋與資金移動之稅務影響（台灣與加拿大）未討論",
-          "台灣資產的實際金額與配置比例未盤點"
+          "How to fund the Canada house purchase (sell Taiwan property or take loan)?",
+          "Which Taiwan property, if any, would be sold?",
+          "Amount and currency of cash held in fixed deposits?",
+          "Tax and FX implications of using Taiwan assets for overseas property?",
+          "Whether the Canada property purchase will proceed and on what timeline?",
+          "Full Taiwan asset structure and values?"
         ],
         "rm_commitments": [
-          "下次整理匯率與稅務相關資訊，回覆客戶並協助了解"
+          "Next time organize/prepare review of FX and tax implications"
         ]
       },
       {
@@ -640,27 +584,27 @@
         "date": "2024-08-22",
         "life_events": [
           {
-            "type": "海外移居/短住評估",
-            "detail": "計劃明年先赴加拿大短住，若喜歡就置產",
+            "type": "海外短住/置產評估",
+            "detail": "明年先到加拿大短住看看，若真的喜歡就買房",
             "timeline": "明年"
           }
         ],
         "financial_needs": [
           {
             "type": "海外置產",
-            "detail": "考慮在加拿大購置不動產，資金來源尚在規劃",
+            "detail": "加拿大置產，尚在評估，明年短住後再決定是否購買",
             "amount": "",
-            "status": "need"
+            "status": "mentioned"
           },
           {
             "type": "跨境資產配置",
-            "detail": "希望在保留台灣資產的同時支撐海外置產，需跨境配置方案",
+            "detail": "RM提出下次帶跨境資產配置方案，客戶同意了解",
             "amount": "",
-            "status": "need"
+            "status": "mentioned"
           },
           {
-            "type": "現金流規劃",
-            "detail": "擬保留一間台灣房產出租，作為穩定現金流",
+            "type": "現金流",
+            "detail": "留一間台灣房出租作為現金流",
             "amount": "",
             "status": "need"
           }
@@ -668,308 +612,257 @@
         "locations": [
           {
             "country": "加拿大",
-            "purpose": "短住評估與可能的置產"
+            "purpose": "短期居住評估/海外置產"
           },
           {
             "country": "台灣",
-            "purpose": "保留既有房產，其中一間出租創造現金流"
+            "purpose": "保留資產、出租收取現金流"
           }
         ],
         "amounts": [],
         "timeline": [
           {
-            "event": "赴加拿大短住看環境",
+            "event": "前往加拿大短住看看",
             "horizon": "明年"
           },
           {
-            "event": "若滿意則購置加拿大房產",
-            "horizon": "短住評估後（未明確）"
+            "event": "若喜歡則購買加拿大房產",
+            "horizon": "未定，可能明年之後"
           }
         ],
         "risk_signals": [
           {
             "quote": "我不想承擔太高風險，穩定最重要",
-            "interpretation": "風險偏好保守，重視資產穩定性，宜以穩健型、低波動配置為主"
+            "interpretation": "風險偏好偏低，重視穩定性"
           },
           {
             "quote": "不要把台灣的房都賣掉，留一間出租當現金流",
-            "interpretation": "偏好資產分散與保留在地資產，不願一次清空單一市場部位，重視租金現金流"
+            "interpretation": "偏好分散與保留現金流，不願一次性處分全部台灣不動產"
           }
         ],
         "constraints": [
           {
-            "type": "不想處分全部台灣房產",
-            "detail": "明確表示不要把台灣的房都賣掉"
+            "type": "不動產處分限制",
+            "detail": "不要賣掉全部台灣房產，保留一間出租"
           },
           {
             "type": "現金流需求",
-            "detail": "保留一間房出租以維持現金流"
-          },
-          {
-            "type": "風險承受度低",
-            "detail": "不願承擔太高風險，以穩定為優先"
+            "detail": "留一間台灣房出租以產生現金流"
           }
         ],
         "unresolved": [
-          "加拿大置產的預算與資金來源（是否需動用台灣資產或貸款）未討論",
-          "短住後的置產決策條件與時間點未定",
-          "跨境資產配置的具體方案內容與比重尚未提出",
-          "稅務、匯率與跨境資金移轉安排未涉及"
+          "加拿大置產的資金來源與金額尚未討論",
+          "是否購買加拿大房產取決於明年短住後的意願",
+          "跨境資產配置方案的具體內容尚未討論"
         ],
         "rm_commitments": [
-          "下次拜訪時帶跨境資產配置方案"
+          "下次帶跨境資產配置的方案"
         ]
       }
     ],
     "profile": {
-      "type": "json_object",
       "customer_id": "CUST_002",
       "name": "林雅婷",
       "profile": {
-        "life_stage": "中年已婚有子女；子女教育為核心家庭議題；擁有並經營店面事業（重視店內現金流）；名下有兩間台灣房產（一間自住、一間出租）及部分定存現金；正處於『是否移居加拿大／海外置產』的家庭重大決策評估期",
-        "risk_preference": "保守—穩健（偏保守）。Evidence：(1) C002_3 明言『我不想承擔太高風險，穩定最重要』；(2) C002_2 現金以定存停放；(3) C002_2/C002_3 強調保留出租房產創造穩定租金現金流、不願一次清空台灣部位；(4) C002_1 對資產配置未規劃、優先確保事業現金流與流動性。惟須注意其同時評估 CAD 150 萬單一海外不動產，實際風險承受度與集中度待釐清",
-        "liquidity_need": "高。事業營運現金流為第一優先（C002_1『先把店裡的現金流顧好比較重要』）；跨境購屋需大額資金但客戶明確不願處分全部台灣房產，故須在保留租金現金流的前提下籌措頭期款（C002_2、C002_3）",
-        "estimated_capacity": "可推估為高資產等級：已知具體標的為加拿大房產 CAD 1,500,000（C002_2）。可動用來源為台灣兩間房產（價值未盤點）＋定存現金（金額未提及）＋店鋪事業現金流；實際淨資產與可動用額度尚未盤點，屬檔案缺口",
+        "life_stage": "Married with children; family considering Canada immigration/education; business owner with store cash flow; Taiwan property owner.",
+        "risk_preference": "Low; values stability and diversification. Evidence: 2024-08 quote '我不想承擔太高風險，穩定最重要'; prefers not to sell all Taiwan properties and keep one rented for cash flow (C002_3).",
+        "liquidity_need": "High; prioritizes store cash flow (C002_1) and retaining a rented Taiwan property for cash flow (C002_3); funds need to remain liquid/available.",
+        "estimated_capacity": "Target Canada property CAD 1,500,000 under consideration; Taiwan assets include two properties (one self-occupied, one rented) and fixed deposits, values unknown; funding source undecided (sell Taiwan property or loan) (C002_2, C002_3).",
         "locations_of_interest": [
-          "加拿大（移民／子女教育／短住評估／購置不動產）",
-          "台灣（現有兩間房產與定存資產所在地；擬保留一間出租創造現金流）"
+          "Canada",
+          "Taiwan"
         ]
       },
       "needs_timeline": [
         {
-          "need": "加拿大置產資金來源規劃（出售台灣房產 vs. 貸款 vs. 混合）",
-          "urgency": "高",
-          "horizon": "2025 年（明年赴加短住後決策）",
-          "evidence": [
-            "C002_2",
-            "C002_3"
-          ]
-        },
-        {
-          "need": "跨境資產配置方案（保留台灣資產同時支撐海外置產）",
-          "urgency": "高",
-          "horizon": "6–12 個月，短住前成形",
-          "evidence": [
-            "C002_3"
-          ]
-        },
-        {
-          "need": "現金流規劃：保留一間台灣房產出租作為穩定租金收入",
-          "urgency": "高",
-          "horizon": "持續性需求，購屋前後均適用",
-          "evidence": [
-            "C002_3"
-          ]
-        },
-        {
-          "need": "事業營運資金／店內現金流管理",
-          "urgency": "高",
-          "horizon": "短期且持續",
-          "evidence": [
-            "C002_1"
-          ]
-        },
-        {
-          "need": "跨境匯率／換匯時點與操作規劃",
-          "urgency": "中",
-          "horizon": "與購屋資金調度同步（約 6–12 個月）",
-          "evidence": [
-            "C002_2"
-          ]
-        },
-        {
-          "need": "跨境購屋稅務規劃（台灣與加拿大雙邊）",
-          "urgency": "中",
-          "horizon": "與購屋資金調度同步（約 6–12 個月）",
-          "evidence": [
-            "C002_2"
-          ]
-        },
-        {
-          "need": "台灣資產結構盤點（兩間房產市值、出租收益、定存部位與配置比例）",
-          "urgency": "中",
-          "horizon": "短期（作為所有規劃的基礎）",
-          "evidence": [
-            "C002_2"
-          ]
-        },
-        {
-          "need": "移民／子女教育安排評估（含加拿大生活成本估算）",
-          "urgency": "中",
-          "horizon": "2–3 年（已由『移民』軟化為『明年短住試水溫』）",
+          "need": "Maintain liquidity and ongoing cash flow (store cash flow; keep one Taiwan property rented)",
+          "urgency": "high",
+          "horizon": "Ongoing/immediate",
           "evidence": [
             "C002_1",
             "C002_3"
           ]
         },
         {
-          "need": "加拿大短住之生活成本與資金準備估算",
-          "urgency": "中",
-          "horizon": "明年短住前",
-          "evidence": [
-            "C002_3",
-            "C002_1"
-          ]
-        },
-        {
-          "need": "海外置產總預算與頭期款／貸款比例試算",
-          "urgency": "中",
-          "horizon": "短住後決策前",
+          "need": "Evaluate Canada overseas property purchase (CAD 1,500,000 house viewed)",
+          "urgency": "medium",
+          "horizon": "Next year short stay, then decide",
           "evidence": [
             "C002_2",
             "C002_3"
+          ]
+        },
+        {
+          "need": "Cross-border asset allocation planning",
+          "urgency": "medium",
+          "horizon": "Near-term/next meeting",
+          "evidence": [
+            "C002_3"
+          ]
+        },
+        {
+          "need": "Tax and FX review for using Taiwan assets to fund Canada property",
+          "urgency": "medium",
+          "horizon": "Before property purchase/next RM review",
+          "evidence": [
+            "C002_2",
+            "C002_3"
+          ]
+        },
+        {
+          "need": "Canada immigration and children education planning",
+          "urgency": "medium",
+          "horizon": "2-3 years (unconfirmed); short stay next year may inform",
+          "evidence": [
+            "C002_1",
+            "C002_3"
+          ]
+        },
+        {
+          "need": "Education fund arrangement",
+          "urgency": "low",
+          "horizon": "Tied to children education/immigration timeline (2-3 years, unconfirmed)",
+          "evidence": [
+            "C002_1"
           ]
         }
       ],
       "contradictions": [
         {
-          "signal_a": "C002_2（2024-05）：可能賣掉台灣一間房，或辦理貸款，以支應加拿大購屋款項",
-          "signal_b": "C002_3（2024-08）：明確表示『不要把台灣的房都賣掉，留一間出租當現金流』",
-          "note": "資金來源策略由『可能處分一間台灣房產』轉為『保留出租、不全數處分』，顯示優先保全在地現金流。惟尚未排除貸款或其他籌資方式，賣房選項亦未正式否決，須於方案中並列兩種情境。C002_3 較近期，權重較高。"
+          "signal_a": "2024-02: husband considering immigration to Canada for children's education, possibly within 2-3 years (C002_1)",
+          "signal_b": "2024-08: plan to short stay in Canada next year and decide on buying house if likes it (C002_3)",
+          "note": "Immigration intent remains unresolved; recent signal is exploratory short stay/property evaluation rather than confirmed immigration. Recent signal weighs more."
         },
         {
-          "signal_a": "C002_1（2024-02）：以小孩教育為主要考量，評估『移民加拿大』（定居性質）",
-          "signal_b": "C002_3（2024-08）：計劃『明年先赴加拿大短住，若喜歡就置產』（試水溫性質）",
-          "note": "計畫性質由『移民定居』軟化為『短住評估』，是否長期移居、是否以移民身分持有房產仍未定；此差異將直接影響稅務身分、持有架構與資金移轉安排，須保留兩種情境規劃。C002_3 較近期，權重較高。"
-        },
-        {
-          "signal_a": "口頭風險偏好保守：『我不想承擔太高風險，穩定最重要』，現金以定存停放，重視租金現金流",
-          "signal_b": "實際擬投入 CAD 1,500,000 於單一海外不動產（高度集中、低流動性、跨境風險）",
-          "note": "聲明風險偏好與擬進行之投資行為存在張力。可能解釋：不動產被客戶視為『看得見的穩定資產』而非高風險投資。仍須以問卷＋情境分析驗證真實風險承受度，並提醒單一海外物件之集中度與流動性風險。"
-        },
-        {
-          "signal_a": "C002_1（2024-02）：資產配置『還沒想過』，優先顧店裡現金流",
-          "signal_b": "C002_2（2024-05）起：主動要求 RM 協助稅務、匯率與跨境資產結構規劃",
-          "note": "客戶對理財規劃由被動轉為主動，且需求複雜度快速上升；此為需求演進而非衝突，但顯示客戶專業知識不足（自述稅務、匯率『不懂』），對 RM 的專業依賴度高，需留意說明義務與適當性。"
-        },
-        {
-          "signal_a": "投資決策多以『先生』為主體（先生考慮移民、先生看房）",
-          "signal_b": "RM 對話對象為客戶本人，且客戶為資金與稅務議題的主要提問者",
-          "note": "家庭決策結構未釐清：實質決策者、出資者與帳戶持有人可能不同。後續方案須確認決策鏈與簽署權限，否則規劃易反覆。"
+          "signal_a": "2024-05: may fund Canada house by selling a Taiwan property or taking a loan (C002_2)",
+          "signal_b": "2024-08: do not sell all Taiwan properties; keep one rented for cash flow (C002_3)",
+          "note": "Tension between liquidating Taiwan property for overseas purchase and preserving rental cash flow. May be reconcilable if only one property is sold, but recent signal prioritizes retaining a cash-flowing property."
         }
       ]
     },
     "leads": {
       "customer_id": "CUST_002",
-      "generated_at": "2025-06-13",
+      "generated_at": "2026-10-03T17:00:00Z",
       "leads": [
         {
           "lead_id": "L1",
-          "category": "跨境資產配置／購屋資金來源規劃",
-          "rationale": "C002_2 顯示先生看中加拿大約 CAD 1,500,000 房產，客戶在『賣台灣一間房』與『貸款』間搖擺；C002_3 更明確表示不要把台灣房都賣掉、要留一間出租當現金流。客戶風險偏保守、重視穩定租金與事業現金流，因此不能只推單一賣房或全額貸款方案，須在保留出租房前提下比較部分處分、貸款與混合籌資，並釐清短住vs移民兩種情境對稅務與持有成本的影響。",
-          "suggested_action": "安排一次資產盤點與資金來源工作坊，針對 CAD 1,500,000 標的製作四情境：賣自住、賣出租、貸款、混合；量化頭期款、月付、租金覆蓋率、稅負與匯率敏感度。同步確認家庭決策者、出資者與簽署權限，並提供跨境融資預審選項。",
-          "priority": "高",
-          "confidence": 0.95,
+          "category": "跨境資產配置 (Cross-border asset allocation)",
+          "rationale": "客戶風險偏好偏低（C002_3『我不想承擔太高風險，穩定最重要』），2024-02 曾表示還沒想過資產如何配置（C002_1），2024-08 RM 主動提出帶跨境資產配置方案且客戶同意了解（C002_3）。此為 RM 已承諾且客戶已買單的近期需求，兼顧分散與穩定最貼合其屬性。",
+          "suggested_action": "於下次會議前備妥一份以『穩定+分散』為主軸的跨境配置草案，納入台灣(不動產／定存)與加拿大(未來置產／生活費)雙邊曝險，明確標示各資產流動性層級，並預留店內現金流與台灣出租房收益為安全緩衝。",
+          "priority": "high",
+          "confidence": 0.8,
           "supporting_evidence": [
-            "C002_2",
-            "C002_3"
+            "C002_3",
+            "C002_1"
           ],
           "suggested_products": [
-            "跨境房貸／融資",
-            "財務規劃",
-            "資產配置",
-            "房產處分與貸款試算"
+            "全球多元平衡型基金",
+            "投資級債券組合",
+            "多幣別存款",
+            "貨幣市場基金"
           ],
           "talking_points": [
-            "我們先守住您想留的出租房，再比較貸款與部分處分台灣房產，哪一種最能兼顧加拿大購屋與店裡現金流？"
+            "上次您提到想看跨境資產配置方案，我依照您『穩定優先、分散風險』的方向先準備了一版，今天想跟您一起確認方向對不對。"
           ]
         },
         {
           "lead_id": "L2",
-          "category": "台灣資產盤點與現金流規劃",
-          "rationale": "C002_1 客戶強調先把店裡的現金流顧好，C002_2 指出台灣資產為兩間房（自住＋出租）及部分定存，但實際金額未盤點；C002_3 要求保留一間出租創造穩定現金流。若不先盤點事業、租金與定存三條現金流，就無法判斷可動用資金、安全水位與跨境購屋頭期款來源，容易做出影響營運的決策。",
-          "suggested_action": "向客戶索取近 6-12 個月店鋪損益與現金流、兩間房市值／貸款餘額／租金、定存明細；建立流動性水庫與緊急預備金，標示可動用、不可動用及可抵押資產，作為後續跨境置產與貸款方案的基礎。",
-          "priority": "高",
-          "confidence": 0.9,
+          "category": "加拿大置產資金規劃 (Funding strategy for Canada property)",
+          "rationale": "先生已看中約 CAD 1,500,000 的加拿大房產（C002_2），資金來源仍在『賣台灣房或貸款』之間未定（C002_2），且 2024-08 明確表示不願賣光台灣房、要保留一間出租（C002_3）。資金缺口與來源未決是成交關鍵瓶頸，需先量化再談工具。",
+          "suggested_action": "製作『賣房 vs 貸款 vs 混合』三情境現金流試算表（含 CAD/台幣匯率、貸款成數與月付、對店內現金流的影響），下一次會議逐案比較，並確認預計出售或不動用哪一間台灣房。",
+          "priority": "high",
+          "confidence": 0.85,
           "supporting_evidence": [
-            "C002_1",
             "C002_2",
             "C002_3"
           ],
           "suggested_products": [
-            "資產盤點報告",
-            "現金流管理",
-            "階梯式定存",
-            "循環型融資額度",
-            "租金收益帳戶"
+            "跨境房貸／海外不動產貸款",
+            "外幣擔保貸款",
+            "匯率避險工具"
           ],
           "talking_points": [
-            "您之前說店裡現金流最重要，我們先把事業、租金、定存三條現金流拆開，看看加拿大頭期款可以從哪裡來又不影響營運。"
+            "您先生看的那間 CAD 150 萬的房子，我先幫您把『賣一間台灣房』和『貸款』兩條路的每月現金流都算出來，看哪一種不會影響到店裡的周轉。"
           ]
         },
         {
           "lead_id": "L3",
-          "category": "風險屬性校準與集中度風險評估",
-          "rationale": "C002_3 客戶自述『我不想承擔太高風險，穩定最重要』，但 C002_2 擬投入 CAD 1,500,000 於單一海外不動產，屬高集中、低流動性且帶跨境風險。聲明風險偏好與實際擬進行行為存在張力，需以問卷與壓力情境驗證真實風險承受度，並提醒若保留台灣出租房，海外房產占淨資產比重可能過高。",
-          "suggested_action": "安排風險問卷與壓力情境分析：房價下跌 10-20%、CAD/TWD 匯率波動、租金空置、利率上升。檢視海外房產占比與流動性緩衝，必要時調整購屋預算、貸款比例、持有方式或延後決策，並留下適當性紀錄。",
-          "priority": "高",
-          "confidence": 0.9,
+          "category": "流動性與現金流保全 (Liquidity & cash-flow preservation)",
+          "rationale": "客戶多次強調店內現金流優先（C002_1）與保留一間台灣房出租收租（C002_3），屬高即期需求（high urgency, immediate）。在不確定是否處分不動產前，需先把安全緩衝層建立好，避免配置方案侵蝕流動性。",
+          "suggested_action": "為客戶建立分層流動性架構：第一層(3-6個月店內營運+生活預備金)放高流動性工具，第二層(出租房收益再投資)配置短天期穩健商品，並明確標示哪些資金不可鎖定。",
+          "priority": "high",
+          "confidence": 0.8,
           "supporting_evidence": [
-            "C002_2",
+            "C002_1",
             "C002_3"
           ],
           "suggested_products": [
-            "風險屬性評估",
-            "壓力測試／情境分析",
-            "資產配置再平衡",
-            "流動性緩衝規劃"
+            "高利活存／優利定存",
+            "短天期債券基金",
+            "貨幣市場基金"
           ],
           "talking_points": [
-            "您說穩定最重要，但加拿大那間房金額很集中，我們先用房價跌、租金空、匯率波動三個情境，看看現金流能不能承受。"
+            "您說過店裡的現金流最重要，我先把一部分資金留在隨時可動用的位置，確保店面跟家裡都不受影響，剩下的再來談收益。"
           ]
         },
         {
           "lead_id": "L4",
-          "category": "跨境稅務與匯率操作規劃",
-          "rationale": "C002_2 客戶明言對稅務與匯率『不太懂』並請 RM 協助；跨境購屋涉及台灣資產支撐海外置產、資金匯出申報、加拿大持有與未來出售稅負，以及 CAD/TWD 換匯時點。C002_3 仍未討論稅務與匯率安排，且『短住評估』與『移民定居』會改變稅務身分與持有架構，需並列規劃。",
-          "suggested_action": "安排稅務與外匯專家聯合諮詢，就短住／移民兩情境製作稅負與換匯清單；討論分批換匯、外幣帳戶、資金匯出申報、贈與/繼承與持有架構（個人、公司或信託）成本，並約定下一次檢視時間。",
-          "priority": "中",
+          "category": "稅務與外匯檢視 (Tax & FX review)",
+          "rationale": "客戶明確表示不了解用台灣資產支應海外置產的稅務與外匯影響，並要求 RM 協助檢視（C002_2，rm_commitments 已承諾下次準備）。這是 RM 既有承諾，須兌現以維持信任。",
+          "suggested_action": "整理一頁式重點：台灣不動產處分稅負、匯出外匯申報與額度、CAD/台幣換匯時點與分批策略，於下次會議前提供並確認客戶持有定存的金額與幣別（C002_2 之 unresolved）。",
+          "priority": "medium",
           "confidence": 0.7,
           "supporting_evidence": [
             "C002_2",
             "C002_3"
           ],
           "suggested_products": [
-            "稅務規劃",
-            "分批換匯／外匯避險",
-            "跨境資金移轉",
-            "持有架構諮詢",
-            "外幣帳戶"
+            "分批換匯規劃",
+            "外匯遠期避險",
+            "稅務諮詢轉介服務"
           ],
           "talking_points": [
-            "您上次提到稅和匯率不懂，我們先用短住和移民兩套情境，把要繳的稅和換匯節奏整理成一張表。"
+            "上次答應您要幫忙看的稅務跟換匯問題，我整理成一份重點，先帶您弄清楚匯出跟換匯的節奏，再決定資金怎麼走。"
           ]
         },
         {
           "lead_id": "L5",
-          "category": "加拿大短住／子女教育與生活成本評估",
-          "rationale": "C002_1 顯示移民加拿大主要為小孩教育，客戶擔心加拿大生活成本；C002_3 計畫明年先赴加拿大短住，若喜歡就置產，決策由『移民定居』軟化為『短住試水溫』。教育時程與生活成本是購屋預算的上游變數，須先估算，避免過早鎖定大型置產。",
-          "suggested_action": "準備加拿大短住 6-12 個月生活成本、租屋／購屋成本、學校與醫療保險估算；與客戶夫妻確認子女教育時程與短住後決策門檻，並將教育基金與購屋頭期款分帳管理。",
-          "priority": "中",
-          "confidence": 0.85,
+          "category": "教育金與移民時程規劃 (Education fund & immigration timeline)",
+          "rationale": "2024-02 提及為小孩教育而考慮移民加拿大（可能兩三年內），但未具體討論教育資金安排（C002_1）。屬低急迫、時程未確認之需求，適合作為長期鋪陳而非立即成交。",
+          "suggested_action": "先以『明年加拿大短住』為切入，協助客戶釐清小孩教育階段、預計在加停留年限與年度支出概算，再依 2-3 年時程設計定期定額教育金方案，暫不下決定。",
+          "priority": "low",
+          "confidence": 0.5,
           "supporting_evidence": [
-            "C002_1",
-            "C002_3"
+            "C002_1"
           ],
           "suggested_products": [
-            "教育基金",
-            "目標導向儲蓄",
-            "外幣帳戶",
-            "生活成本估算",
-            "短住預算規劃"
+            "目標日期基金",
+            "定期定額全球股票基金",
+            "外幣教育金儲蓄計畫"
           ],
           "talking_points": [
-            "明年短住可以先當成教育與生活成本測試，我們把學費、租金、生活費抓出來，再決定要不要買房。"
+            "您明年先去加拿大短住看看，不如趁這趟把小孩未來幾年的教育花費抓個大概，我幫您先規劃一個穩定的教育金準備方向。"
           ]
         }
       ]
     },
     "critic_reviews": [
       {
-        "issues": [],
-        "overall_quality": 0.96,
+        "issues": [
+          {
+            "lead_id": "L4",
+            "issue": "supporting_evidence 包含 C002_3，但該通話未涉及稅務與外匯議題，僅 C002_2 直接相關；屬輕微引證冗餘，不影響結論正確性。",
+            "severity": "low"
+          },
+          {
+            "lead_id": "L5",
+            "issue": "suggested_action 提及『明年加拿大短住』，該資訊實源於 C002_3 而非所引 C002_1；為輕微來源標註不精確，需求本身仍有據。",
+            "severity": "low"
+          }
+        ],
+        "overall_quality": 0.88,
         "needs_revision": false,
-        "revision_notes": ""
+        "revision_notes": "所有 lead 的 supporting_evidence 均引用存在之 call_id（C002_1/C002_2/C002_3），rationale 皆有通話事實依據，無明顯幻覺；suggested_action 皆具體可執行。僅 L4、L5 有輕微引證來源標註不精確之細節問題，屬可接受範圍，不需強制修訂。"
       }
     ]
   },
@@ -1003,107 +896,87 @@
         "date": "2024-01-20",
         "life_events": [
           {
-            "type": "傳承",
-            "detail": "張董正在思考傳承，小孩不想接，可能要賣掉公司",
-            "timeline": ""
+            "type": "inheritance",
+            "detail": "張董思考傳承，小孩不想接公司，可能賣掉公司",
+            "timeline": "未提及"
           },
           {
-            "type": "退休",
-            "detail": "出售公司後一部分資金想作為自己退休用",
-            "timeline": ""
+            "type": "retirement",
+            "detail": "賣掉公司後，一部分資金想作為自己退休用",
+            "timeline": "未提及"
           },
           {
-            "type": "子女教育",
-            "detail": "一名小孩在美國念書",
+            "type": "children_education",
+            "detail": "一個小孩在美國念書",
             "timeline": "目前"
           },
           {
-            "type": "子女海外定居",
+            "type": "immigration",
             "detail": "在美國的小孩有可能留在美國",
-            "timeline": ""
+            "timeline": "未提及"
           }
         ],
         "financial_needs": [
           {
-            "type": "傳承",
-            "detail": "一部分資金想留給小孩",
-            "amount": "",
+            "type": "inheritance",
+            "detail": "賣掉公司後，一部分資金想留給小孩",
+            "amount": "未提及",
             "status": "need"
           },
           {
-            "type": "退休規劃",
-            "detail": "一部分資金想供自己退休使用",
-            "amount": "",
+            "type": "retirement",
+            "detail": "賣掉公司後，一部分資金想自己退休用",
+            "amount": "未提及",
             "status": "need"
           },
           {
-            "type": "海外置產",
-            "detail": "因美國小孩可能留美，考慮在美國買房給他",
-            "amount": "",
+            "type": "overseas_property",
+            "detail": "考慮在美國買房給在美國的小孩",
+            "amount": "未提及",
             "status": "mentioned"
           },
           {
-            "type": "子女教育基金",
-            "detail": "一名小孩在美國念書，可能衍生教育費用需求",
-            "amount": "",
-            "status": "mentioned"
-          },
-          {
-            "type": "資產配置/資金安排",
-            "detail": "公司可能出售後的資金安排尚未具體，僅表示分成留給小孩與自己退休兩部分",
-            "amount": "",
+            "type": "education_fund",
+            "detail": "一個小孩在美國念書",
+            "amount": "未提及",
             "status": "mentioned"
           }
         ],
         "locations": [
           {
             "country": "美國",
-            "purpose": "子女念書"
-          },
-          {
-            "country": "美國",
-            "purpose": "子女可能留美定居"
-          },
-          {
-            "country": "美國",
-            "purpose": "考慮購置房產給小孩"
+            "purpose": "小孩念書、可能定居、考慮買房"
           },
           {
             "country": "台灣",
-            "purpose": "子女工作"
+            "purpose": "另一個小孩工作"
           }
         ],
         "amounts": [],
-        "timeline": [],
-        "risk_signals": [
+        "timeline": [
           {
-            "quote": "一部分想留給小孩，一部分想自己退休用",
-            "interpretation": "偏好將資金依用途分流，可能重視傳承與退休兩種目標的平衡，但尚未觸及投資風險偏好"
+            "event": "美國小孩念書",
+            "horizon": "目前"
+          },
+          {
+            "event": "台灣小孩工作",
+            "horizon": "目前"
           }
         ],
+        "risk_signals": [],
         "constraints": [
           {
-            "type": "傳承限制",
-            "detail": "小孩不想接公司，可能需要出售公司"
-          },
-          {
-            "type": "資金用途限制",
-            "detail": "資金需同時支應留給小孩與自己退休使用"
-          },
-          {
-            "type": "決策未定",
-            "detail": "美國小孩是否留美、是否買房僅在考慮中"
+            "type": "succession",
+            "detail": "小孩不想接公司，可能需賣掉公司"
           }
         ],
         "unresolved": [
-          "公司出售的時程、價格與稅務影響",
-          "出售後資金分配給小孩與退休的具體比例",
-          "美國小孩是否確定留在美國",
-          "是否在美國買房、購買時機、金額與資金來源",
-          "退休時程與所需退休金額",
-          "傳承給小孩的方式（如贈與、信託、保險等）",
-          "子女教育費用是否需另行規劃",
-          "台灣工作小孩是否也有財務安排需求"
+          "公司是否確定出售、出售時程與價格？",
+          "出售後資金留給小孩與退休用的比例與金額？",
+          "美國小孩是否確定留在美國？",
+          "是否確定在美國買房？地點、預算與時程？",
+          "傳承給小孩的具體方式（如贈與、信託、保險）未討論。",
+          "另一個在台灣工作小孩的需求未提及。"
         ],
         "rm_commitments": []
       },
@@ -1112,75 +985,70 @@
         "date": "2024-04-10",
         "life_events": [
           {
-            "type": "企業退出/職涯轉換",
-            "detail": "公司賣掉，將有一筆處分所得可運用",
-            "timeline": "未明確（資金尚未到手）"
+            "type": "company_sale",
+            "detail": "Proceeds from selling the company may be used to fund a US property purchase.",
+            "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "海外置產",
-            "detail": "已在美國看中一間約80萬美金的房產，正在評估是否購入及資金來源",
-            "amount": "800,000 美金",
+            "type": "overseas_property",
+            "detail": "Considering purchasing a house in the US; viewed one priced at about USD 800,000; may use proceeds from selling the company.",
+            "amount": "800,000 USD",
             "status": "need"
           },
           {
-            "type": "稅務規劃",
-            "detail": "購屋與資金安排涉及台灣、美國兩地稅務，客戶明確表示頭痛、需要處理",
+            "type": "tax_planning",
+            "detail": "Tax issues need to be handled in both Taiwan and the US; customer finds this troubling.",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "資產配置/資產持有形式",
-            "detail": "RM 詢問希望資產以何種形式持有，客戶尚未給出具體形式，僅表達希望簡單穩健",
+            "type": "asset_allocation",
+            "detail": "When asked how assets should be held, customer said he wants it simple, not too complex, and stable.",
             "amount": "",
             "status": "mentioned"
           }
         ],
         "locations": [
           {
-            "country": "美國",
-            "purpose": "購置房產"
+            "country": "US",
+            "purpose": "buying a house"
           },
           {
-            "country": "台灣",
-            "purpose": "稅務申報與處理（與美國雙邊）"
+            "country": "Taiwan",
+            "purpose": "tax handling"
           }
         ],
         "amounts": [
           {
             "value": "800,000",
             "currency": "USD",
-            "purpose": "美國房產標的價格"
+            "purpose": "US home purchase"
           }
         ],
-        "timeline": [
-          {
-            "event": "美國購屋",
-            "horizon": "未明確，仍在評估階段"
-          }
-        ],
+        "timeline": [],
         "risk_signals": [
           {
             "quote": "我希望簡單一點，不要搞得太複雜，穩穩的就好。",
-            "interpretation": "偏好低複雜度、穩健型配置，對複雜結構或高波動商品接受度低"
+            "interpretation": "Prefers simplicity, low complexity, and stability; likely conservative and averse to complex structures."
           }
         ],
         "constraints": [
           {
-            "type": "複雜度限制",
-            "detail": "要求資產持有方式簡單、不複雜"
+            "type": "complexity_aversion",
+            "detail": "Does not want things to be too complicated; wants simple and stable."
           },
           {
-            "type": "風險偏好限制",
-            "detail": "要求穩健（穩穩的就好）"
+            "type": "funding_source",
+            "detail": "May rely on proceeds from selling the company to fund the US property purchase."
           }
         ],
         "unresolved": [
-          "美國購屋資金是否確實從公司出售所得支應",
-          "台灣與美國兩地稅務如何具體處理、由誰處理",
-          "資產應以何種形式持有（RM 提問後客戶未具體回答）",
-          "公司出售的金額規模與入帳時點"
+          "How to handle the US home purchase and its funding; customer is still thinking and may use company sale proceeds.",
+          "How to handle tax issues between Taiwan and the US.",
+          "Preferred asset holding form/structure has not been specified beyond simple and stable.",
+          "Whether to proceed with the USD 800,000 property viewed."
         ],
         "rm_commitments": []
       },
@@ -1189,33 +1057,34 @@
         "date": "2024-07-05",
         "life_events": [
           {
-            "type": "公司出售／事業退出",
-            "detail": "公司有買家在談，出售後將有資金進來",
+            "type": "business_sale",
+            "detail": "公司出售有買家在談，預期年底前有結果",
             "timeline": "年底前"
-          },
-          {
-            "type": "子女海外置產",
-            "detail": "要給小孩在美國買房",
-            "timeline": "未明確"
           }
         ],
         "financial_needs": [
           {
-            "type": "海外置產",
+            "type": "overseas_property",
             "detail": "一部分資金要給小孩在美國買房",
-            "amount": "未提及",
+            "amount": "",
             "status": "need"
           },
           {
-            "type": "穩定收益資產配置",
-            "detail": "一部分資金想做穩定收益，不要太冒險；期待比定存好",
-            "amount": "未提及",
+            "type": "stable_income",
+            "detail": "一部分資金做穩定收益，不要太冒險",
+            "amount": "",
             "status": "need"
           },
           {
-            "type": "傳承規劃",
-            "detail": "尚未想過傳承工具，希望RM提供建議",
-            "amount": "未提及",
+            "type": "asset_allocation",
+            "detail": "公司出售資金進來後，分一部分給小孩美國買房、一部分做穩定收益",
+            "amount": "",
+            "status": "need"
+          },
+          {
+            "type": "inheritance_planning",
+            "detail": "尚未想過傳承工具，請RM提供建議",
+            "amount": "",
             "status": "need"
           }
         ],
@@ -1230,47 +1099,33 @@
           {
             "event": "公司出售結果",
             "horizon": "年底前"
-          },
-          {
-            "event": "出售資金進來後配置",
-            "horizon": "公司出售後／年底前後"
           }
         ],
         "risk_signals": [
           {
-            "quote": "一部分我想做穩定的收益，不要太冒險。",
-            "interpretation": "偏好穩定收益、低風險，風險承受度偏保守"
+            "quote": "我想做穩定的收益，不要太冒險",
+            "interpretation": "偏好穩定收益、低風險，風險承受度保守"
           },
           {
-            "quote": "比定存好就好，我不貪心。",
-            "interpretation": "收益期待保守，只要求優於定存，不追求高報酬"
-          },
-          {
-            "quote": "一部分要給小孩在美國買房，一部分我想做穩定的收益",
-            "interpretation": "資金傾向分流配置，兼顧指定用途與穩定收益，而非集中單一用途"
+            "quote": "比定存好就好，我不貪心",
+            "interpretation": "收益期望溫和，只要求優於定存，不追求高報酬"
           }
         ],
         "constraints": [
           {
-            "type": "風險限制",
+            "type": "risk",
             "detail": "不要太冒險"
           },
           {
-            "type": "收益期待",
-            "detail": "比定存好即可，不貪心"
-          },
-          {
-            "type": "資金用途指定",
-            "detail": "一部分資金需用於小孩在美國買房"
+            "type": "return",
+            "detail": "收益率比定存好即可"
           }
         ],
         "unresolved": [
-          "公司出售買家與最終成交金額尚未確定",
-          "出售資金投入各用途的比例尚未討論",
-          "穩定收益的具體工具與產品尚未討論",
-          "小孩在美國買房的金額與時程尚未確認",
-          "傳承工具與規劃建議尚未討論",
-          "收益率目標僅表示比定存好，尚未量化"
+          "公司出售資金進來的確切金額與幣別",
+          "小孩在美國買房的預算、地點與時間",
+          "穩定收益配置的具體工具、比例與收益率目標",
+          "傳承規劃適合使用哪些工具"
         ],
         "rm_commitments": []
       }
@@ -1279,20 +1134,29 @@
       "customer_id": "CUST_003",
       "name": "張文傑",
       "profile": {
-        "life_stage": "企業主／事業退出期：正洽談出售公司，規劃退休與傳承，子女已成年（一名在美國念書、可能留美定居，一名在台灣工作）",
-        "risk_preference": "保守穩健型（低複雜度、低波動、收益期待僅需優於定存）",
-        "liquidity_need": "高：公司出售資金尚未到手，但短期內需支應美國置產（約80萬美金）及後續配置，資金來源與時點高度依賴出售成交",
-        "estimated_capacity": "未明確揭露。已知單一美國房產標的約800,000 USD，主要資金來源為公司出售處分所得；推論可運用資產規模達數百萬美元等級，惟金額、入帳時點與分配比例均未確認（推論，未經客戶證實）",
+        "life_stage": "企業主退休前期；公司可能出售，子女已成年（一在美國念書/可能定居，一在台灣工作）",
+        "risk_preference": "保守型；偏好簡單、穩定、低複雜度，收益只求比定存好，不追求高報酬（C003_2、C003_3）",
+        "liquidity_need": "公司出售前後需流動性支應美國購房、台美稅務、退休穩定收益與可能傳承安排；美國購房曾看約 USD 800,000 物件",
+        "estimated_capacity": "總資產未明確；已知美國購房預算約 USD 800,000，且公司出售後將有資金入帳，推估具中高資產/高淨值潛力",
         "locations_of_interest": [
-          "美國（子女念書、可能定居、置產購屋）",
-          "台灣（居住地、子女工作、稅務申報）"
+          "美國",
+          "台灣"
         ]
       },
       "needs_timeline": [
         {
-          "need": "美國置產購屋（約800,000 USD，標的已看中；C003_3 明確表述為『給小孩在美國買房』）",
-          "urgency": "高",
-          "horizon": "公司出售後／年底前後（2024年底前資金到位後啟動）",
+          "need": "公司出售與傳承安排（子女無意接班）",
+          "urgency": "high",
+          "horizon": "2024年底前",
+          "evidence": [
+            "C003_1",
+            "C003_3"
+          ]
+        },
+        {
+          "need": "美國不動產購置（為在美小孩買房，曾看約 USD 800,000 物件）",
+          "urgency": "high",
+          "horizon": "公司出售後；可能2024年底前後，地點/預算待定",
           "evidence": [
             "C003_1",
             "C003_2",
@@ -1300,53 +1164,44 @@
           ]
         },
         {
-          "need": "台美跨境稅務規劃（購屋與公司出售所得的兩地申報與稅負處理，客戶明言『頭痛、需要處理』）",
-          "urgency": "高",
-          "horizon": "立即～公司出售與購屋前（隨交易同步處理）",
+          "need": "退休與穩定收益規劃（收益比定存好、低風險）",
+          "urgency": "high",
+          "horizon": "公司出售後至退休期間",
+          "evidence": [
+            "C003_1",
+            "C003_3"
+          ]
+        },
+        {
+          "need": "台美跨境稅務規劃（台灣與美國兩地稅務）",
+          "urgency": "high",
+          "horizon": "立即/美國購房前",
           "evidence": [
             "C003_2"
           ]
         },
         {
-          "need": "公司出售／事業退出之資金安排與分流配置（出售所得分配至購屋、穩定收益、退休與傳承）",
-          "urgency": "高",
-          "horizon": "2024年底前出售成交後立即執行",
-          "evidence": [
-            "C003_1",
-            "C003_2",
-            "C003_3"
-          ]
-        },
-        {
-          "need": "穩定收益資產配置（要求不冒險、比定存好，可接受簡單穩健的持有形式）",
-          "urgency": "中",
-          "horizon": "出售資金入帳後之中短期配置（2024年底～2025年）",
-          "evidence": [
-            "C003_2",
-            "C003_3"
-          ]
-        },
-        {
-          "need": "傳承規劃（尚未想過工具，希望RM提供贈與／信託／保險等建議，一部分資金留給小孩）",
-          "urgency": "中",
-          "horizon": "中長期（出售完成後啟動，屬規劃性需求）",
+          "need": "傳承/贈與/信託等工具規劃",
+          "urgency": "medium",
+          "horizon": "公司出售後至中長期",
           "evidence": [
             "C003_1",
             "C003_3"
           ]
         },
         {
-          "need": "退休規劃（一部分資金供自己退休使用；退休時程與所需金額未定）",
-          "urgency": "中",
-          "horizon": "中長期（公司出售後陸續規劃）",
+          "need": "資產配置與簡化持有結構（簡單、穩定、不複雜）",
+          "urgency": "medium",
+          "horizon": "公司出售後",
           "evidence": [
-            "C003_1"
+            "C003_2",
+            "C003_3"
           ]
         },
         {
-          "need": "子女教育基金（一名小孩在美國念書，可能衍生教育費用）",
-          "urgency": "低",
-          "horizon": "短期至中期（念書期間滾動支應）",
+          "need": "子女教育基金（美國念書）",
+          "urgency": "medium",
+          "horizon": "目前",
           "evidence": [
             "C003_1"
           ]
@@ -1354,58 +1209,22 @@
       ],
       "contradictions": [
         {
-          "signal_a": "C003_1：美國買房僅止於『考慮中』，且為『買給他（小孩）』的構想",
-          "signal_b": "C003_2：已在美國看中約80萬美金具體標的，評估是否購入，未說明是為子女或自用／投資；C003_3 又稱『一部分資金要給小孩在美國買房』",
-          "note": "購屋標的、目的（子女置產 vs 自用／投資）與決策成熟度在不同通話間跳動，需向客戶確認產權歸屬與用途"
-        },
-        {
-          "signal_a": "C003_2：『我希望簡單一點，不要搞得太複雜，穩穩的就好』；C003_3：收益期待只求比定存好",
-          "signal_b": "實際需求涉及台美跨境稅務、傳承工具（信託／保險／贈與）與公司出售所得分流，本質上屬高度複雜架構",
-          "note": "客戶主觀偏好簡單，但客觀需求複雜；建議以單一窗口、整合式且低操作頻率的方式呈現方案，降低客戶感知複雜度"
-        },
-        {
-          "signal_a": "C003_1：小孩是否留在美國尚未確定，僅『有可能』",
-          "signal_b": "C003_2／C003_3：已進入看屋、評估購入階段，彷彿定居前提已成立",
-          "note": "行動速度超前於關鍵前提（子女是否留美、是否留美工作），存在前提未定但已投入置產決策的風險"
-        },
-        {
-          "signal_a": "C003_1：資金用途分流（留給小孩 vs 自己退休）為原則性表態，未觸及投資風險偏好",
-          "signal_b": "C003_2／C003_3：明確表述穩健、保守、不貪心",
-          "note": "非實質矛盾，而是風險偏好由未表態收斂為明確保守；以近期（2024-07）訊號為準，權重較高"
+          "signal_a": "C003_2：希望簡單一點，不要搞得太複雜，穩穩的就好；C003_3：比定存好就好，我不貪心",
+          "signal_b": "C003_2/C003_3：需求涉及台美跨境稅務、美國購房、公司出售資金配置與傳承工具建議",
+          "note": "客戶主觀偏好低複雜度與穩定，但客觀需求具跨境與傳承複雜性；此為偏好與需求複雜度的張力，需以簡化方案與單一窗口降低複雜感，同時保留合規處理。"
         }
       ]
     },
     "leads": {
       "customer_id": "CUST_003",
-      "generated_at": "2026-05-07T12:00:00+08:00",
+      "generated_at": "2024-07-05T00:00:00Z",
       "leads": [
         {
           "lead_id": "L1",
-          "category": "台美跨境稅務規劃",
-          "rationale": "C003_2 客戶明確表示購屋與資金安排涉及台美兩地稅務，『頭痛、需要處理』；C003_3 公司出售預計年底前成交，出售所得與美國置產將同步產生申報與稅負問題。客戶風險偏好保守、要求簡單，需以單一窗口整合稅務，避免自行處理複雜跨境申報。",
-          "suggested_action": "安排跨境稅務專家與 RM 共同會議，先盤點公司出售的台灣稅負、出售所得匯出/匯入美國的申報路徑、美國購屋持有稅（房產稅、租金所得、未來出售稅）及贈與稅風險；會後提供一頁式稅務時程與文件清單。",
-          "priority": "高",
-          "confidence": 0.75,
-          "supporting_evidence": [
-            "C003_2",
-            "C003_3"
-          ],
-          "suggested_products": [
-            "跨境稅務諮詢",
-            "台美申報服務",
-            "贈與稅/遺產稅規劃",
-            "美國房產持有結構諮詢"
-          ],
-          "talking_points": [
-            "張董，您上次提到台美兩地稅務讓您頭痛，我們可以先幫您把公司出售與美國購屋的稅務時程整理成一張表，讓您不用自己面對兩邊申報。"
-          ]
-        },
-        {
-          "lead_id": "L2",
-          "category": "公司出售所得分流與流動性管理",
-          "rationale": "C003_1 客戶已思考出售後資金分為留給小孩與自己退休；C003_2 公司賣掉將有處分所得但資金尚未到手；C003_3 買家在談、年底前成交，出售後一部分要給小孩在美國買房、一部分做穩定收益。客戶保守且要求簡單，需先處理資金到位前的流動性與到位後的分流順序，避免購屋時點與資金入帳錯配。",
-          "suggested_action": "製作『出售所得資金分流藍圖』：確認成交金額與入帳時點，預留購屋款與稅款，其餘依比例分配至穩定收益、退休與傳承；若購屋早於出售入帳，先評估短期橋接資金或調整購屋時程。",
-          "priority": "高",
+          "category": "企業出售與傳承退場規劃",
+          "rationale": "公司出售為客戶核心流動性事件，子女無意接班，且出售時程預期年底前，資金將用於美國購房、退休與傳承；需先釐清出售金額、幣別、稅務與分配順序，避免資金到位後才規劃。客戶保守且怕複雜，應以單一窗口與簡化流程處理。",
+          "suggested_action": "安排一次『出售後資金地圖』會議，與客戶確認買家進度、預估出售淨額、資金分配比例（退休/購房/傳承），並同步轉介企業併購/稅務律師，建立過渡性現金管理方案。",
+          "priority": "high",
           "confidence": 0.95,
           "supporting_evidence": [
             "C003_1",
@@ -1413,78 +1232,97 @@
             "C003_3"
           ],
           "suggested_products": [
-            "現金流規劃",
-            "短期貨幣市場工具",
-            "外幣定存",
-            "橋接融資評估"
+            "企業出售稅務/法律諮詢轉介",
+            "過渡性現金管理（定存/貨幣市場基金）",
+            "傳承信託架構"
           ],
           "talking_points": [
-            "張董，公司出售的資金還沒到手，但美國購屋與後續配置都有時程，我們可以先幫您把『錢什麼時候進來、什麼時候要出去』排成一張現金流表。"
+            "張董，您提到公司出售預期年底前有結果，我們可以先幫您把出售後的資金分配與稅務時程畫成一張藍圖，確保購房、退休與傳承三塊都兼顧。"
           ]
         },
         {
-          "lead_id": "L3",
-          "category": "美國置產購屋資金與跨境安排",
-          "rationale": "C003_2 已在美國看中約 80 萬美金標的並評估資金來源；C003_3 明確說一部分資金要給小孩在美國買房；C003_1 則僅止於考慮中。客戶保守、要求簡單，且購屋目的（子女置產 vs 自用/投資）與產權歸屬未定，需先釐清再安排跨境匯款、貸款與稅務，避免前提未定即投入大額資金。",
-          "suggested_action": "與客戶確認購屋目的、產權登記人、子女是否留美、預計交屋時程；提供三種資金路徑比較：全額自有資金匯出、美國當地貸款+部分自備款、出售入帳後再購；同步試算匯率與匯款成本。",
-          "priority": "高",
-          "confidence": 0.9,
+          "lead_id": "L2",
+          "category": "美國不動產購置與跨境資金安排",
+          "rationale": "客戶明確考慮為在美小孩買房，曾看 USD 800,000 物件，且可能以公司出售款支應。涉及跨境匯款、外匯時機、美國房貸或現金購置、稅務申報與資金來源證明；客戶偏好簡單穩定，需一次整合金流與文件。",
+          "suggested_action": "請客戶確認購屋地點、預算、時程與產權登記人，並提供台美兩地匯款/稅務檢核清單；評估美元分批換匯、跨境匯款額度、美國房貸轉介與購屋現金流。",
+          "priority": "high",
+          "confidence": 0.95,
           "supporting_evidence": [
-            "C003_2",
-            "C003_3",
-            "C003_1"
-          ],
-          "suggested_products": [
-            "跨境匯款服務",
-            "美國房貸轉介",
-            "外幣帳戶",
-            "匯率避險/分批換匯"
-          ],
-          "talking_points": [
-            "張董，美國那間約 80 萬美金的房子，我們可以先確認是登記在小孩還是您名下，再幫您比較全額匯出、當地貸款或等出售款到位後再買哪一種最簡單。"
-          ]
-        },
-        {
-          "lead_id": "L4",
-          "category": "穩定收益資產配置",
-          "rationale": "C003_2 客戶表示『希望簡單一點，不要搞得太複雜，穩穩的就好』；C003_3 明確說『一部分做穩定收益，不要太冒險』、『比定存好就好，不貪心』。客戶風險偏好保守、低複雜度、低波動，且出售資金入帳後需要中短期停泊與收益，不宜推薦高波動或結構複雜商品。",
-          "suggested_action": "以低複雜度、低波動為原則，提供 2-3 組收益組合試算（如定存/短天期債券/投資級債/貨幣市場工具/儲蓄型保險），比較收益率、流動性與持有期限；會後讓客戶勾選偏好，不主動推銷複雜衍生品。",
-          "priority": "中",
-          "confidence": 0.9,
-          "supporting_evidence": [
+            "C003_1",
             "C003_2",
             "C003_3"
           ],
           "suggested_products": [
-            "外幣定存",
-            "投資級短債/公債",
-            "貨幣市場基金",
-            "儲蓄型保險",
-            "債券梯"
+            "跨境匯款服務",
+            "外匯避險/分批換匯",
+            "美國房貸轉介",
+            "美元貨幣市場基金"
           ],
           "talking_points": [
-            "張董，您說過比定存好就好、不要冒險，我準備了三種簡單的穩定收益組合，風險和流動性都標清楚，您看哪一種比較順眼。"
+            "張董，您之前看的美國房子約 USD 800,000，我們可以先確認地點與時程，然後把換匯、匯款和美國稅務一次排好，讓買房流程簡單化。"
+          ]
+        },
+        {
+          "lead_id": "L3",
+          "category": "台美跨境稅務規劃",
+          "rationale": "客戶明確表示台美兩地稅務問題困擾，且美國購房與公司出售款將觸發申報與稅務居民議題；若未提前處理，可能影響購房資金來源與傳承效率。客戶怕複雜，需以顧問統籌方式降低負擔。",
+          "suggested_action": "轉介熟悉台美稅務的會計師/律師，針對公司出售款、美國購房資金、小孩身分（可能定居美國）進行稅務居民、贈與稅、遺產稅與申報義務盤點，並產出時程表。",
+          "priority": "high",
+          "confidence": 0.7,
+          "supporting_evidence": [
+            "C003_2"
+          ],
+          "suggested_products": [
+            "台美稅務諮詢轉介",
+            "贈與/遺產稅規劃",
+            "稅務居民身分檢視"
+          ],
+          "talking_points": [
+            "張董，您提到台美兩地稅務讓您困擾，我們可以先安排熟悉兩地稅務的專家，把公司出售和美國買房會遇到的稅務問題一次釐清。"
+          ]
+        },
+        {
+          "lead_id": "L4",
+          "category": "退休穩定收益與低複雜度資產配置",
+          "rationale": "客戶保守型、要求比定存好、不貪心、不要太冒險，且公司出售後一部分資金要作為退休穩定收益。需在低波動、高流動性與簡單持有結構之間取得平衡，避免複雜衍生品或高風險商品。",
+          "suggested_action": "依出售後可投資金額，規劃『定存/貨幣市場 + 投資級短債梯 + 保守型收益保單』的簡化組合，設定流動性預備金與年度收益目標，並定期檢視。",
+          "priority": "high",
+          "confidence": 0.9,
+          "supporting_evidence": [
+            "C003_1",
+            "C003_2",
+            "C003_3"
+          ],
+          "suggested_products": [
+            "美元定存",
+            "貨幣市場基金",
+            "投資級債券梯",
+            "儲蓄型保險/年金",
+            "保守型多重資產基金"
+          ],
+          "talking_points": [
+            "張董，您希望收益比定存好、又不要太冒險，我們可以用定存、短債和保守型收益保單做一個簡單組合，先把退休現金流顧好。"
           ]
         },
         {
           "lead_id": "L5",
-          "category": "傳承與退休規劃",
-          "rationale": "C003_1 客戶表示一部分資金想留給小孩、一部分供自己退休；C003_3 則說尚未想過傳承工具，希望 RM 提供贈與／信託／保險等建議。客戶保守且要求簡單，傳承與退休屬中長期規劃，需先確認金額、對象與稅務身份，再用低複雜度工具落地。",
-          "suggested_action": "先與客戶確認退休時程、所需金額、傳承對象與分配比例；再就台灣與美國稅務身份，提供贈與、信託、人壽保險等 2-3 種簡單架構比較，並提醒跨境贈與申報義務。",
-          "priority": "中",
-          "confidence": 0.8,
+          "category": "傳承/贈與/信託工具規劃",
+          "rationale": "客戶思考傳承，小孩不想接公司，且 C003_3 明確請 RM 提供傳承工具建議；需考量一子在美可能定居、一子在台，跨境贈與與信託涉及不同稅務與法律。客戶偏好簡單，工具不宜過度複雜但需合規。",
+          "suggested_action": "與客戶討論傳承目標（給兩個小孩的比例、時間點、控制權），並會同稅務/法律顧問評估贈與、信託、保險與遺囑等工具，先從最簡單且可執行的架構開始。",
+          "priority": "medium",
+          "confidence": 0.85,
           "supporting_evidence": [
             "C003_1",
             "C003_3"
           ],
           "suggested_products": [
-            "人壽保險",
-            "信託規劃",
-            "贈與稅規劃",
-            "退休年金/收益型保單"
+            "信託架構",
+            "贈與規劃",
+            "人壽保險/年金",
+            "遺囑/傳承文件服務"
           ],
           "talking_points": [
-            "張董，您提到一部分留給小孩、一部分自己退休，我們可以先不談複雜工具，先確認您希望留多少、什麼時候用，再挑最簡單的贈與或保險方式。"
+            "張董，您提到還沒想過傳承工具，我們可以先從兩個小孩的需求和稅務身分出發，用最簡單的贈與或信託架構，把傳承安排逐步做好。"
           ]
         }
       ]
@@ -1492,9 +1330,9 @@
     "critic_reviews": [
       {
         "issues": [],
-        "overall_quality": 0.92,
+        "overall_quality": 0.95,
         "needs_revision": false,
-        "revision_notes": "五則 leads 的 supporting_evidence 皆引用真實存在的 call_id（C003_1、C003_2、C003_3），rationale 與原始通話內容一致（稅務頭痛、80萬美金標的、年底前出售、穩定收益不貪心、傳承尚未規劃等），suggested_action 具體可執行，優先順序與信心度合理。無嚴重問題，不需修正。"
+        "revision_notes": "No serious issues found. All supporting_evidence call_ids exist, rationales are grounded in the call evidence, and suggested actions are clear and actionable. Minor wording or prioritization improvements could be considered but do not require revision."
       }
     ]
   },
@@ -1528,83 +1366,69 @@
         "date": "2024-03-05",
         "life_events": [
           {
-            "type": "職涯轉換／進修",
-            "detail": "規劃赴歐洲念 MBA，鎖定英國或法國學校（尚在評估）",
-            "timeline": "兩年後出發"
-          },
-          {
-            "type": "海外就學",
-            "detail": "客戶本人出國進修，非子女教育",
-            "timeline": "約 2 年內"
+            "type": "education",
+            "detail": "客戶本人計劃兩年後赴歐洲念MBA",
+            "timeline": "兩年後"
           }
         ],
         "financial_needs": [
           {
-            "type": "教育／進修基金",
-            "detail": "MBA 學費約三四百萬，客戶表示「還沒」想過怎麼準備",
-            "amount": "三四百萬（幣別未確認）",
-            "status": "mentioned"
+            "type": "education_fund",
+            "detail": "歐洲MBA學費，學校未定（英國或法國）",
+            "amount": "三四百萬（幣別未指明）",
+            "status": "need"
           },
           {
-            "type": "資產配置調整",
-            "detail": "目前資金全部放股票，客戶主動表示「最近想調整一下」",
+            "type": "asset_allocation",
+            "detail": "目前資金都放股票，最近想調整資產配置",
             "amount": "",
             "status": "need"
           }
         ],
         "locations": [
           {
+            "country": "歐洲",
+            "purpose": "念MBA"
+          },
+          {
             "country": "英國",
-            "purpose": "MBA 就讀候選地"
+            "purpose": "MBA可能就讀國家"
           },
           {
             "country": "法國",
-            "purpose": "MBA 就讀候選地"
-          },
-          {
-            "country": "歐洲",
-            "purpose": "進修地區（客戶統稱）"
+            "purpose": "MBA可能就讀國家"
           }
         ],
         "amounts": [
           {
             "value": "三四百萬",
-            "currency": "未指明（語境推測為新台幣）",
-            "purpose": "歐洲 MBA 學費"
+            "currency": "未指明",
+            "purpose": "MBA學費"
           }
         ],
         "timeline": [
           {
-            "event": "赴歐洲念 MBA",
-            "horizon": "兩年後（約 2 年內）"
+            "event": "赴歐洲念MBA",
+            "horizon": "兩年後"
           },
           {
-            "event": "學費資金需到位",
-            "horizon": "約 2 年內，須與就學時程搭配"
+            "event": "股票資產調整",
+            "horizon": "近期"
           }
         ],
         "risk_signals": [
           {
-            "quote": "我現在錢都放股票",
-            "interpretation": "資產高度集中於單一資產類別（股票），風險集中度偏高，缺乏分散"
-          },
-          {
-            "quote": "最近想調整一下",
-            "interpretation": "客戶已具調整意願，但方向與目標配置未明，可能對現有波動或集中度有隱憂"
+            "quote": "我現在錢都放股票，最近想調整一下。",
+            "interpretation": "資金集中於股票，客戶近期有意調整配置；未明確說出風險偏好方向。"
           }
         ],
-        "constraints": [
-          {
-            "type": "流動性需求",
-            "detail": "兩年後需動用學費資金（三四百萬），屬中期確定性支出，資金不宜鎖定過久或承擔過高波動"
-          }
-        ],
+        "constraints": [],
         "unresolved": [
-          "英國或法國學校尚未決定，就學國家與城市未定",
-          "學費三四百萬的幣別未確認，亦未確認是否含生活費",
-          "學費資金來源與準備方式（是否變現股票、分批布局）尚未討論",
-          "現有股票部位要如何調整、調整到什麼目標配置未討論",
-          "是否已有其他帳戶、保單、預備金可支應，未了解"
+          "MBA學校與國家尚未確定（英國或法國）",
+          "學費資金如何準備尚未決定",
+          "三四百萬的幣別未確認",
+          "股票資產調整的方向、比例與時程未明",
+          "是否需要換匯或海外帳戶/資金安排未討論"
         ],
         "rm_commitments": []
       },
@@ -1613,21 +1437,21 @@
         "date": "2024-06-12",
         "life_events": [
           {
-            "type": "海外教育/進修",
-            "detail": "計畫去歐洲念書",
-            "timeline": "未明確，近期思考中"
+            "type": "海外教育",
+            "detail": "考慮去歐洲念書",
+            "timeline": "最近考慮中，未明確"
           }
         ],
         "financial_needs": [
           {
             "type": "海外置產",
-            "detail": "在歐洲當地買小公寓，主要自住，回台灣後可出租",
-            "amount": "兩三百萬台幣",
-            "status": "need"
+            "detail": "考慮在歐洲念書當地買小公寓，主要自住，之後若回台灣可出租",
+            "amount": "200-300萬台幣",
+            "status": "mentioned"
           },
           {
-            "type": "資產配置/分散投資",
-            "detail": "RM詢問是否考慮分散，客戶表示有想過但不太懂、怕被騙",
+            "type": "資產配置/分散",
+            "detail": "考慮分散投資，但不太懂且怕被騙",
             "amount": "",
             "status": "mentioned"
           }
@@ -1635,69 +1459,68 @@
         "locations": [
           {
             "country": "歐洲",
-            "purpose": "念書與置產（自住/出租）"
+            "purpose": "念書、購買小公寓自住/出租"
           },
           {
             "country": "台灣",
-            "purpose": "回台後居住與出租房產"
+            "purpose": "未來可能回台，將歐洲公寓出租"
           }
         ],
         "amounts": [
           {
-            "value": "兩三百萬",
-            "currency": "台幣",
-            "purpose": "歐洲置產預算"
+            "value": "200-300萬",
+            "currency": "TWD",
+            "purpose": "歐洲小公寓購屋預算"
           }
         ],
         "timeline": [
           {
-            "event": "去歐洲念書",
-            "horizon": "未明確（近期考慮中）"
+            "event": "去歐洲念書並購置小公寓",
+            "horizon": "未明確（僅表示最近在想）"
           },
           {
-            "event": "購買歐洲小公寓",
-            "horizon": "若去歐洲念書時"
-          },
-          {
-            "event": "回台灣",
-            "horizon": "未來不確定"
+            "event": "回台灣後將公寓出租",
+            "horizon": "未明確"
           }
         ],
         "risk_signals": [
           {
-            "quote": "可能兩三百萬台幣吧，不想花太多。",
-            "interpretation": "對置產預算有明確上限，偏好控制成本，風險承受度可能有限"
+            "quote": "不想花太多",
+            "interpretation": "購屋預算有限，價格敏感，偏保守"
           },
           {
-            "quote": "大部分在股票，還有些現金，沒有房產。",
-            "interpretation": "資產高度集中於股票，缺乏不動產與多元分散"
+            "quote": "我不太懂，怕被騙",
+            "interpretation": "投資知識不足，對理財/顧問有信任顧慮，需透明說明與教育"
           },
           {
-            "quote": "有想過，但我不太懂，怕被騙。",
-            "interpretation": "對分散投資有潛在意願，但缺乏知識且對交易安全有戒心，需要建立信任與教育"
+            "quote": "有想過（分散）",
+            "interpretation": "對分散投資有初步意願，但未形成明確需求"
           },
           {
-            "quote": "主要自住，之後如果回台灣也可以租出去。",
-            "interpretation": "購置房產兼具自住與潛在收益，重視用途彈性"
+            "quote": "大部分在股票，還有些現金，沒有房產",
+            "interpretation": "資產集中於股票，缺乏不動產與分散，可能需留意集中度風險"
           }
         ],
         "constraints": [
           {
-            "type": "預算限制",
-            "detail": "歐洲置產預算約兩三百萬台幣，不想花太多"
+            "type": "預算上限",
+            "detail": "歐洲購屋預算約兩三百萬台幣，不想花太多"
           },
           {
-            "type": "信任與資訊障礙",
-            "detail": "對投資分散不太懂，怕被騙"
+            "type": "資訊/信任",
+            "detail": "不太懂投資，怕被騙"
+          },
+          {
+            "type": "房產用途",
+            "detail": "主要自住，回台灣後可出租，非純投資"
           }
         ],
         "unresolved": [
-          "去歐洲念書的具體國家、學校與時間",
-          "歐洲置產的具體地點、產權、貸款、稅務與管理方式",
-          "資產分散的具體方式與標的",
-          "購屋資金來源（是否需變賣股票或使用現金）",
-          "回台灣後出租的管理安排",
-          "兩三百萬台幣預算是否足夠及可購買標的"
+          "是否確定前往歐洲念書？具體國家/城市為何？",
+          "購屋預算200-300萬台幣的資金來源、是否需要貸款？",
+          "歐洲購屋後自住/出租的稅務、法規、匯率與管理安排？",
+          "客戶希望如何分散資產？可承受風險程度與投資知識？",
+          "何時需要動用資金？"
         ],
         "rm_commitments": []
       },
@@ -1706,26 +1529,26 @@
         "date": "2024-09-02",
         "life_events": [
           {
-            "type": "海外教育",
-            "detail": "歐洲念書相關費用",
+            "type": "overseas_education",
+            "detail": "歐洲念書",
             "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "投資調整/資產配置",
-            "detail": "考慮將一部分股票獲利了結，並尋找穩定但報酬不會太低的投資標的",
+            "type": "asset_allocation",
+            "detail": "考慮將部分股票獲利了結，轉往較穩定但報酬不太低的標的",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "教育基金/海外念書準備",
+            "type": "education_fund",
             "detail": "提前準備歐洲念書那筆錢",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "換匯",
+            "type": "fx_planning",
             "detail": "分批換匯，不要一次換",
             "amount": "",
             "status": "need"
@@ -1742,40 +1565,32 @@
         "risk_signals": [
           {
             "quote": "想找穩定一點的，但又不想報酬太低",
-            "interpretation": "風險偏好偏穩健，但要求一定報酬，可能適合平衡型或穩定收益型配置"
+            "interpretation": "偏保守但要求一定收益，風險報酬偏好中等"
           },
           {
             "quote": "中等吧，可以接受一點波動，但不要大虧",
-            "interpretation": "風險承受度中等，可承受部分波動，但對重大虧損敏感"
+            "interpretation": "自評風險承受度中等，可接受小幅波動，但重視避免重大虧損"
           },
           {
-            "quote": "我最近在想要不要把一部分股票獲利了結",
-            "interpretation": "考慮降低股票部位、鎖定獲利，可能反映對市場波動的擔憂"
-          },
-          {
-            "quote": "我想說分批換匯，不要一次換",
-            "interpretation": "偏好分批執行以分散匯率風險，不傾向單筆重壓"
+            "quote": "分批換匯，不要一次換",
+            "interpretation": "傾向分批進場以降低匯率時點風險"
           }
         ],
         "constraints": [
           {
-            "type": "收益要求",
-            "detail": "不想報酬太低"
+            "type": "execution",
+            "detail": "換匯需分批，不要一次換完"
           },
           {
-            "type": "虧損容忍",
-            "detail": "可接受一點波動，但不要大虧"
-          },
-          {
-            "type": "執行方式",
-            "detail": "換匯要分批，不要一次換"
+            "type": "risk",
+            "detail": "可接受波動但不要大虧"
           }
         ],
         "unresolved": [
-          "股票獲利了結後具體要轉到哪些投資標的或產品",
-          "歐洲念書費用的總金額、幣別、需用時間與分批換匯頻率",
-          "風險接受度的具體可承受虧損幅度或股債比例",
-          "是否已決定要將一部分股票獲利了結"
+          "股票獲利了結的比例與金額未確認",
+          "轉往的穩定型產品或資產配置未確認",
+          "歐洲念書的國家、幣別、金額與時間點未確認",
+          "分批換匯的頻率、金額與幣別未確認"
         ],
         "rm_commitments": []
       }
@@ -1784,213 +1599,187 @@
       "customer_id": "CUST_004",
       "name": "黃淑芬",
       "profile": {
-        "life_stage": "職涯轉換／進修階段：規劃赴歐洲（英國或法國）念 MBA，預計約兩年後出發；目前在台工作累積資金，名下無房產，處於資產集中、尚未進行多元配置的階段。",
-        "risk_preference": "口頭自述為穩健偏中等（C004_3：「中等吧，可以接受一點波動，但不要大虧」、「想找穩定一點的，但又不想報酬太低」），可承受部分波動但對重大虧損敏感；然而實際資產行為與此不一致（C004_1、C004_2：資金大部分放股票、無房產、無其他分散），顯示『宣稱偏好』與『實際暴露』存在落差，真實風險胃納需以行為驗證。",
-        "liquidity_need": "中期流動性需求明確且金額不小：約 2 年內需動用歐洲念書費用（學費三四百萬，幣別未確認，是否含生活費未確認），另有歐洲置產規劃（兩三百萬台幣）。兩筆合計可能達 500～700 萬台幣區間，屬 2 年內的確定性與半確定性支出，資金不宜長期鎖定或承擔高波動；客戶亦主動要求換匯分批執行（C004_3）。",
-        "estimated_capacity": "可運用資產總額未揭露（未了解是否有其他帳戶、保單、預備金）。已知：大部分資產為股票部位＋部分現金、無不動產。中期資金需求推估約新台幣 500～700 萬（學費 300～400 萬＋置產 200～300 萬），客戶對置產明示『不想花太多』並設定上限，暗示整體可調度資源可能落在數百萬至千萬台幣級別，但缺乏直接證據，須進一步核實。",
+        "life_stage": "規劃赴歐洲進修MBA/海外教育階段，原提及約兩年後，後續時間點未再確認",
+        "risk_preference": "中等偏保守：可接受小幅波動但不要大虧，偏穩定型但要求報酬不太低（C004_3）；早期自述不太懂投資、怕被騙，需透明說明（C004_2）。",
+        "liquidity_need": "中期需準備歐洲教育金，並傾向分批換匯、不一次投入；可能需將部分股票獲利了結以取得流動性（C004_1、C004_3）。",
+        "estimated_capacity": "持有股票為主並有部分現金，無房產；教育金需求約三四百萬（幣別未確認），歐洲購屋預算約200-300萬台幣（C004_1、C004_2）。實際可動用資產與幣別未完整確認。",
         "locations_of_interest": [
+          "歐洲",
           "英國",
           "法國",
-          "歐洲",
           "台灣"
         ]
       },
       "needs_timeline": [
         {
-          "need": "歐洲 MBA 進修基金（學費約三四百萬，幣別未確認；是否含生活費待釐清）",
-          "urgency": "高",
-          "horizon": "約 2 年內（自 2024-03 起算，推估 2026 年前需到位，需與就學時程搭配）",
+          "need": "歐洲MBA/海外教育金準備（學費與相關費用）",
+          "urgency": "high",
+          "horizon": "約兩年後（2026年前後）；學校、國家、幣別與金額未確認，後續時間點亦未再確認",
           "evidence": [
             "C004_1",
-            "C004_3"
-          ]
-        },
-        {
-          "need": "資產配置調整：將部分股票獲利了結，轉入穩定但報酬不太低的標的（降低集中度、鎖定獲利）",
-          "urgency": "高",
-          "horizon": "短期（3～6 個月內啟動；2024-09 為最近期且主動提出之訊號，權重較高）",
-          "evidence": [
-            "C004_1",
-            "C004_3"
-          ]
-        },
-        {
-          "need": "分批換匯（外幣，供歐洲念書費用使用，避免單筆重壓匯率風險）",
-          "urgency": "中",
-          "horizon": "中期，配合學費資金到位時程分批執行（約 2 年內）",
-          "evidence": [
-            "C004_3"
-          ]
-        },
-        {
-          "need": "歐洲置產：當地購買小公寓（主要自住，回台後可出租），預算兩三百萬台幣",
-          "urgency": "中",
-          "horizon": "中期，與就學時程連動（若赴歐念書時購入，約 2 年內）；具體地點、產權、貸款、稅務與管理方式未定",
-          "evidence": [
-            "C004_2"
-          ]
-        },
-        {
-          "need": "投資教育與信任建立：對分散投資有興趣但『不太懂、怕被騙』，需釐清可承受虧損幅度與股債比例",
-          "urgency": "中",
-          "horizon": "短期至中期（為 2024-09 配置調整的前置條件）",
-          "evidence": [
             "C004_2",
             "C004_3"
+          ]
+        },
+        {
+          "need": "股票獲利了結與資產配置調整，轉向較穩定但報酬不太低的標的",
+          "urgency": "medium",
+          "horizon": "近期/短期；比例與標的未確認",
+          "evidence": [
+            "C004_1",
+            "C004_2",
+            "C004_3"
+          ]
+        },
+        {
+          "need": "分批換匯以準備歐洲念書資金，避免單一時點匯率風險",
+          "urgency": "medium",
+          "horizon": "中期，配合教育金準備；頻率、金額、幣別未確認",
+          "evidence": [
+            "C004_3"
+          ]
+        },
+        {
+          "need": "歐洲小公寓購置（自住，回台後可出租）",
+          "urgency": "low",
+          "horizon": "未明確；若赴歐洲念書才考慮，近期未再提及",
+          "evidence": [
+            "C004_2"
           ]
         }
       ],
       "contradictions": [
         {
-          "signal_a": "口頭風險偏好穩健偏中等，可接受一點波動但不要大虧，想找穩定但報酬不低的標的（C004_3）",
-          "signal_b": "實際資產幾乎全數集中於股票，無房產、無其他分散（C004_1『我現在錢都放股票』；C004_2『大部分在股票，還有些現金，沒有房產』）",
-          "note": "宣稱偏好與實際風險暴露不一致：行為上承受了單一資產類別的高集中風險，口頭上卻要求穩健。保留矛盾，不強行統一；可能反映過去未被引導、或口頭偏好為近期市場波動後的新態度，需以實際可承受虧損幅度驗證。"
+          "signal_a": "C004_1：客戶本人計劃兩年後赴歐洲念MBA",
+          "signal_b": "C004_2：最近考慮中、未明確；C004_3：僅提歐洲念書，未再確認時間",
+          "note": "教育規劃時間點由明確『兩年後』轉為未明確；近期訊號較弱，但準備教育金需求仍存在，需向客戶確認是否維持原時程。"
         },
         {
-          "signal_a": "2024-03 對學費準備表示『還沒』想過怎麼準備（C004_1，準備狀態為 mentioned）",
-          "signal_b": "2024-09 主動提出要提前準備歐洲念書那筆錢、獲利了結、分批換匯（C004_3，準備狀態為 need）",
-          "note": "屬需求成熟度演進而非真正的矛盾；依『近期訊號權重較高』原則，以 C004_3 的積極準備態度為主，但須確認是否已實際執行。"
-        },
-        {
-          "signal_a": "就學時程明確：規劃兩年後出發（C004_1，約 2026 年）",
-          "signal_b": "2024-06 表示去歐洲念書『未明確，近期思考中』，回台時間亦不確定（C004_2）",
-          "note": "時程描述前後不一，可能為評估中導致的不確定，或國家／學校尚未確定所致。資金到位時點須重新確認。"
-        },
-        {
-          "signal_a": "歐洲購屋規劃為自住（C004_2）",
-          "signal_b": "回台後可出租、用途具彈性（C004_2）",
-          "note": "非嚴格矛盾，但購屋決策同時綁定『就學地點』與『未來是否留台』兩個未定變數，任一變動都會使該需求失效或改變性質，須待就學國家確定後再推進。"
-        },
-        {
-          "signal_a": "置產預算上限明確且保守：兩三百萬台幣，不想花太多（C004_2）",
-          "signal_b": "同時存在三四百萬學費支出（C004_1）",
-          "note": "兩筆中期支出合計可能超出目前可運用流動性（股票＋現金，金額未揭露）；『預算上限』與『資金總需求』之間的缺口尚未被討論，可能是後續最主要的財務壓力點。"
+          "signal_a": "C004_1/C004_2：資金大部分集中於股票，且C004_1提到錢都放股票",
+          "signal_b": "C004_2：不太懂投資、怕被騙、不想花太多；C004_3：自評中等風險、可接受小幅波動但不要大虧、要穩定但報酬不太低",
+          "note": "實際股票集中度 vs 自述偏保守/中等風險不完全一致；可能是過去配置慣性或尚未調整，需釐清真實風險承受度與可接受波動。"
         }
       ]
     },
     "leads": {
       "customer_id": "CUST_004",
-      "generated_at": "2026-05-07",
+      "generated_at": "2024-09-03T10:00:00",
       "leads": [
         {
           "lead_id": "L1",
-          "category": "教育基金規劃",
-          "rationale": "客戶規劃約2年內赴歐洲念MBA，學費約三四百萬，C004_1提及但尚未準備，C004_3已轉為主動要求提前準備歐洲念書費用。其口頭風險偏好為穩健偏中等、可接受小波動但不要大虧，且這筆錢屬中期確定性支出，不宜長期鎖定或承擔高波動；需先盤點股票與現金可變現部位，建立低波動、目標到期式教育基金，避免為準備學費而被迫在市場不佳時賣股。",
-          "suggested_action": "先與客戶確認就學國家、學校、學費幣別、是否含生活費、總金額與用款時間表；盤點現有股票與現金可支應比例；建立教育基金專戶，以2年內到期或短天期低波動工具為主，並與分批換匯計畫整合，設定每季檢視頻率。",
-          "priority": "高",
-          "confidence": 0.92,
+          "category": "教育金準備與目標規劃",
+          "rationale": "客戶在三次通話中皆提到赴歐洲念書（可能為英國或法國MBA），教育金需求約三四百萬（幣別未確認），且C004_3明確表示要『提前準備歐洲念書那筆錢』。此為高急迫性且跨年度目標，但時間點由『兩年後』轉為未明確，學校、國家、幣別、金額等關鍵參數皆待確認。客戶風險偏好中等偏保守、可接受小幅波動但不要大虧，教育金屬中期必須用錢，需以穩健、目標到期導向方式布局，並盡早鎖定參數以建立紀律性準備計畫。",
+          "suggested_action": "約客戶進行一次教育金目標試算會議：確認就讀國家/城市、預計出發時間、學費與生活費幣別及總金額，計算自現在起需每月/每季投入金額，並提供穩健型教育金組合（含目標到期債、全球平衡型）試算表供客戶選擇，同時說明費用與波動範圍。",
+          "priority": "high",
+          "confidence": 0.85,
           "supporting_evidence": [
             "C004_1",
+            "C004_2",
             "C004_3"
           ],
           "suggested_products": [
-            "外幣階梯式定存",
-            "短天期投資級債券基金",
-            "貨幣市場基金",
             "目標到期債券基金",
-            "教育基金專戶"
+            "全球平衡型基金",
+            "教育金定期定額專案",
+            "外幣定存（歐元/英鎊）"
           ],
           "talking_points": [
-            "黃小姐，您提到兩年後想去歐洲念MBA，學費三四百萬，我們先把這筆錢的幣別、時間和可承受波動確認清楚，再決定哪些股票部位要提前獲利了結。"
+            "淑芬您好，上次您提到想到歐洲念書，這筆三四百萬的教育金我想先幫您把時間、國家和金額定下來，這樣我們才能算出每個月要準備多少，好嗎？"
           ]
         },
         {
           "lead_id": "L2",
-          "category": "資產配置調整",
-          "rationale": "C004_1顯示客戶資金都放股票且主動想調整，C004_2顯示大部分在股票、有些現金、沒有房產，C004_3更具體提到想把一部分股票獲利了結，並尋找穩定但報酬不會太低的標的。客戶口頭自述中等風險、可接受一點波動但不要大虧，實際卻高度集中股票，宣稱偏好與實際暴露有落差；建議以行為驗證真實風險胃納，先設定可承受虧損幅度與股債比例，再分批降低集中度。",
-          "suggested_action": "安排一次投資組合檢視，列出持股產業、成本、損益與稅費；用情境分析確認客戶可承受的最大回撤與股債比；將預計2年內要用的資金優先移出股票，其餘資金分批轉入平衡型、多重資產或投資級債，並約定3個月後檢視。",
-          "priority": "高",
-          "confidence": 0.9,
+          "category": "資產配置調整與股票獲利了結",
+          "rationale": "客戶實際資產大部分集中於股票（C004_1『錢都放股票』、C004_2『大部分在股票，還有些現金，沒有房產』），但自述風險偏好為中等偏保守、不太懂投資且怕被騙（C004_2），並在C004_3明確表示想『將部分股票獲利了結，轉往較穩定但報酬不太低的標的』。此為實際集中度與自述風險態度不一致的矛盾點，需將股票獲利逐步轉移至穩定型但收益合理的配置，兼顧降波動與報酬期待，並在透明說明下建立信任。",
+          "suggested_action": "先與客戶檢視現有股票部位明細（標的、成本、集中度、未實現損益），依其風險屬性建議分批減碼比例（如先了結三至五成），轉入穩定型多重資產或投資級債券組合，並提供透明的產品說明與風險揭露，約定後續每季檢視再平衡。",
+          "priority": "high",
+          "confidence": 0.8,
           "supporting_evidence": [
             "C004_1",
             "C004_2",
             "C004_3"
           ],
           "suggested_products": [
-            "全球平衡型基金",
             "多重資產基金",
-            "投資級公司債基金",
-            "全球債券基金",
-            "股息成長型ETF"
+            "投資等級公司債基金",
+            "全球平衡型基金",
+            "高股息/低波動ETF"
           ],
           "talking_points": [
-            "您說想把部分股票獲利了結，又希望穩定但報酬不要太低，我們先不買產品，先把您可接受的虧損金額和目標股債比例訂出來。"
+            "您提到想把部分股票獲利了結、轉到穩一點但又不想報酬太低的標的，我們可以先看看您目前持股的集中狀況，再一起決定分幾批調整會比較安心。"
           ]
         },
         {
           "lead_id": "L3",
-          "category": "外幣換匯與現金管理",
-          "rationale": "C004_3客戶主動要求分批換匯、不要一次換，C004_1則有歐洲MBA學費三四百萬的中期需求。客戶對匯率風險有意識，偏好分批執行以降低單筆重壓，且這筆錢屬2年內要用的確定性支出，換匯節奏需與學費到位時程搭配；同時可透過外幣定存階梯提高資金停留期間的收益，但不應承擔過高波動。",
-          "suggested_action": "確認學費與生活費的幣別（英鎊或歐元）、總金額與用款月份；設定12至24個月的分批換匯計畫，例如每月或每季固定金額換入外幣帳戶，搭配到價通知與外幣階梯定存，並在每次檢視時依匯率區間微調。",
-          "priority": "中",
-          "confidence": 0.75,
+          "category": "分批換匯與外幣資金安排",
+          "rationale": "C004_3客戶明確要求『分批換匯，不要一次換』，以降低匯率時點風險，顯示其對匯率風險有意識且偏好穩健執行方式。惟歐洲念書的國家、幣別（歐元/英鎊）、金額與分批頻率皆未確認，需先確認目標幣別與時程後，設計分批換匯機制，避免單一時點換匯風險，並可搭配外幣定存或階梯式換匯提升資金效率。",
+          "suggested_action": "向客戶確認就讀國家對應幣別（英國=英鎊、法國=歐元）及預計用款時程，設計為期12-24個月的分批換匯計畫（如每月或每季定額），並提供外幣帳戶與到價通知服務，視情況搭配外幣定存分批鎖利。",
+          "priority": "medium",
+          "confidence": 0.6,
           "supporting_evidence": [
-            "C004_3",
-            "C004_1"
+            "C004_3"
           ],
           "suggested_products": [
-            "外幣綜合存款帳戶",
-            "定期定額換匯",
-            "匯率到價通知",
-            "外幣階梯式定存"
+            "外幣活存/定存帳戶",
+            "階梯式換匯方案",
+            "匯率到價通知服務"
           ],
           "talking_points": [
-            "您提到想分批換匯、不要一次換，我們可以先用外幣帳戶設定每月固定換一點，並搭配到價通知，把學費的匯率風險分散掉。"
+            "您希望分批換匯、不要一次換，我可以先幫您設定每月固定換一筆，並開好外幣帳戶，這樣匯率好或不好都不會一次承受風險，您覺得如何？"
           ]
         },
         {
           "lead_id": "L4",
-          "category": "海外置產與跨境融資",
-          "rationale": "C004_2客戶提到在歐洲當地買小公寓，主要自住、回台後可出租，預算約兩三百萬台幣且明示不想花太多。此需求同時綁定就學地點、未來是否留台與自住/出租用途，且兩三百萬預算是否足夠、是否需要當地貸款、稅務與管理安排皆未定；客戶風險偏好穩健，購屋若需變賣股票或跨境匯款，須先做總成本與現金流試算，避免排擠學費。",
-          "suggested_action": "先待客戶確認就學國家與城市，再進行購屋總成本試算（房價、稅費、管理費、貸款成數與利率、匯率）；比較現金購屋與當地貸款之現金流；引介當地房產、稅務與法務顧問；確認兩三百萬預算缺口與資金來源，避免與教育基金衝突。",
-          "priority": "中",
-          "confidence": 0.65,
+          "category": "風險屬性釐清與投資信任建立",
+          "rationale": "客戶存在明顯矛盾：實際資產高度集中於股票（C004_1、C004_2），卻自述不太懂投資、怕被騙（C004_2）、風險偏好中等偏保守、可接受小幅波動但不要大虧（C004_3）。此落差可能源自過去配置慣性或對投資管道的不信任。若未先釐清真實風險承受度與可接受波動，後續任何配置建議都可能被質疑或中途變卦，因此需優先透過透明、教育性的溝通建立信任基礎。",
+          "suggested_action": "安排一次純諮詢（不推銷）會議，以風險屬性問卷搭配情境式提問（如遇市場下跌10%、20%的反應）釐清可承受波動，並用白話說明各類產品風險與費用結構，建立長期信任後再進入配置建議。",
+          "priority": "medium",
+          "confidence": 0.6,
           "supporting_evidence": [
-            "C004_2"
+            "C004_1",
+            "C004_2",
+            "C004_3"
           ],
           "suggested_products": [
-            "海外房貸轉介",
-            "跨境匯款服務",
-            "海外不動產稅務顧問轉介",
-            "外幣貸款評估"
+            "風險屬性評估服務",
+            "投資教育說明會"
           ],
           "talking_points": [
-            "您提到想在歐洲買小公寓自住、之後可出租，我們先等學校和城市確定後，一起算清楚總成本、貸款和稅務，再看兩三百萬預算要怎麼搭配。"
+            "您之前提過不太懂投資、也怕被騙，這次我們不談買什麼產品，先花二十分鐘聊聊您能接受的波動有多大，我再用白話把風險和費用講清楚，好嗎？"
           ]
         },
         {
           "lead_id": "L5",
-          "category": "投資教育與風險屬性校準",
-          "rationale": "C004_2客戶表示對分散投資有想過但不太懂、怕被騙；C004_3則說自己中等風險、可接受一點波動但不要大虧，想找穩定但報酬不低的標的；C004_1卻顯示資金全放股票。這反映客戶需要的不只是產品，而是信任建立與風險屬性校準，否則後續資產配置調整難以執行。應先以教育與情境溝通釐清可承受虧損，再談配置。",
-          "suggested_action": "安排一次非銷售導向的投資教育會談，用最大回撤、歷史情境與實際金額說明波動；完成風險屬性問卷與可承受虧損金額/比例；設定股債比例與檢視頻率；建議先以小額定期定額試行，建立信任後再逐步調整。",
-          "priority": "中",
-          "confidence": 0.88,
+          "category": "歐洲不動產購置與跨境資金安排",
+          "rationale": "C004_2客戶提到考慮在歐洲念書當地購買小公寓（預算約200-300萬台幣，主要自住、回台後出租），惟屬『mentioned』階段、時間與地點未明確，近期亦未再提及，急迫性低。若客戶確定赴歐念書，將衍生購屋資金來源、跨境匯款、當地貸款可行性、稅務法規與日後出租管理等複雜議題，需先確認是否維持此規劃再深入。",
+          "suggested_action": "於教育金會議中一併確認客戶是否仍考慮歐洲購屋，若有意願，先提供跨境資金安排（購屋款匯出）與當地貸款/稅務概覽資料，並評估是否需與海外合作機構諮詢，暫不主動推銷。",
+          "priority": "low",
+          "confidence": 0.4,
           "supporting_evidence": [
-            "C004_2",
-            "C004_3",
-            "C004_1"
+            "C004_2"
           ],
           "suggested_products": [
-            "風險屬性評估",
-            "情境分析報告",
-            "小額定期定額平衡型基金",
-            "投資教育素材"
+            "跨境匯款服務",
+            "海外不動產融資諮詢"
           ],
           "talking_points": [
-            "您說過怕被騙、不太懂分散，我們今天可以先不談買什麼，先一起把您能承受多少虧損、想放多少在股票講清楚。"
+            "您先前提到如果去歐洲念書，可能會在當地買一間小公寓自住、之後出租，這部分現在還有在考慮嗎？如果有的話我可以幫您先了解跨國資金和當地法規怎麼安排。"
           ]
         }
       ]
     },
     "critic_reviews": [
       {
-        "type": "json_object",
-        "content": {
-          "issues": [],
-          "overall_quality": 0.9,
-          "needs_revision": false,
-          "revision_notes": "五筆 leads 的 supporting_evidence 均引用真實存在的 call_id（C004_1、C004_2、C004_3），rationale 與 suggested_action 皆有通話依據且可執行，產品建議與客戶需求相符。L4（海外置產）信心度 0.65 偏低但因就學城市未定、預算缺口未確認，屬合理保守設定；L3 匯率與 L5 投資教育之推論亦與 C004_3、C004_2 訊號一致。未發現幻覺、無效引用或不可執行之建議，無須修正。"
-        }
+        "issues": [
+          {
+            "lead_id": "L1",
+            "issue": "rationale 稱『三次通話中皆提到赴歐洲念書』略有誇大，C004_2 僅為『最近考慮中』，屬可接受的措辭寬鬆，非嚴重問題。",
+            "severity": "low"
+          }
+        ],
+        "overall_quality": 0.9,
+        "needs_revision": false,
+        "revision_notes": "所有 lead 的 supporting_evidence 均對應真實存在的 call_id（C004_1、C004_2、C004_3），rationale 與 suggested_action 皆有通話內容支撐且具體可執行。僅有極輕微措辭與信心值可微調空間，未達需修訂門檻，建議直接採用。"
       }
     ]
   },
@@ -2034,48 +1823,37 @@
         "date": "2024-01-15",
         "life_events": [
           {
-            "type": "企業出售/職涯轉換",
-            "detail": "考慮把公司賣掉，已有兩三家買家在接觸，其中一家是外資",
+            "type": "business sale",
+            "detail": "因年紀到了，考慮是否把公司賣掉；已有兩三家買家在接觸，其中一家為外資",
+            "timeline": "未定/正在接觸買家"
+          },
+          {
+            "type": "retirement",
+            "detail": "出售公司後一部分資金作為自己退休用",
             "timeline": ""
           },
           {
-            "type": "退休",
-            "detail": "年紀到了，出售公司後一部分資金想作為自己退休用",
-            "timeline": ""
-          },
-          {
-            "type": "傳承",
-            "detail": "出售公司後一部分資金想留給小孩",
-            "timeline": ""
-          },
-          {
-            "type": "子女海外定居",
-            "detail": "兩個小孩一個在美國、一個在台灣；在美國的小孩應該會長期留在美國，因為太太是美國人",
+            "type": "children settlement",
+            "detail": "兩個小孩一個在美國、一個在台灣；美國的小孩應會長期留在美國，因其太太是美國人",
             "timeline": "長期"
           }
         ],
         "financial_needs": [
           {
-            "type": "出售後資金規劃",
-            "detail": "出售公司後的資金一部分留給小孩，一部分自己退休用",
+            "type": "retirement fund",
+            "detail": "出售公司後一部分資金留作自己退休用",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "傳承/財富移轉",
-            "detail": "一部分出售資金想留給小孩",
+            "type": "inheritance/wealth transfer",
+            "detail": "出售公司後一部分資金想留給小孩；兩個小孩分別在美國與台灣",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "退休規劃",
-            "detail": "一部分出售資金作為自己退休用",
-            "amount": "",
-            "status": "need"
-          },
-          {
-            "type": "跨境稅務規劃",
-            "detail": "出售給外資買家可能會有跨境稅務問題",
+            "type": "tax planning",
+            "detail": "買家之一為外資，可能會有跨境稅務問題",
             "amount": "",
             "status": "mentioned"
           }
@@ -2083,49 +1861,37 @@
         "locations": [
           {
             "country": "美國",
-            "purpose": "子女居住/長期定居；該子女太太是美國人"
+            "purpose": "其中一個小孩居住地；應會長期留在美國；其太太是美國人"
           },
           {
             "country": "台灣",
-            "purpose": "子女居住"
+            "purpose": "另一個小孩居住地"
           }
         ],
         "amounts": [],
         "timeline": [
           {
             "event": "公司出售",
-            "horizon": "已有兩三家在接觸，尚未定案"
+            "horizon": "未定/正在考慮，已有買家接觸"
           },
           {
-            "event": "美國小孩長期留美",
+            "event": "美國的小孩長期留美",
             "horizon": "長期"
-          },
-          {
-            "event": "退休",
-            "horizon": "年紀到了，未明確時程"
           }
         ],
         "risk_signals": [],
         "constraints": [
           {
-            "type": "稅務",
-            "detail": "出售給外資可能會有跨境稅務問題"
-          },
-          {
-            "type": "家庭/地理",
-            "detail": "兩個小孩分居美國與台灣，美國小孩可能長期留美"
-          },
-          {
-            "type": "資金用途",
-            "detail": "出售後資金需兼顧留給小孩與自己退休用"
+            "type": "tax",
+            "detail": "外資買家可能帶來跨境稅務問題"
           }
         ],
         "unresolved": [
-          "公司出售對象與時程未定",
-          "出售後資金分配比例與金額未討論",
-          "跨境稅務問題的具體影響與處理方式未討論",
-          "美國小孩長期留美後的財務與傳承安排未討論",
-          "退休時程與所需退休金金額未討論"
+          "是否出售公司",
+          "買家選擇與交易條件（兩三家接觸中，其中一家為外資）",
+          "出售後資金如何分配給小孩與退休使用",
+          "跨境稅務問題如何處理",
+          "兩個小孩（美國、台灣）的財富傳承安排與比例"
         ],
         "rm_commitments": []
       },
@@ -2134,50 +1900,56 @@
         "date": "2024-03-20",
         "life_events": [
           {
-            "type": "企業出售／退出",
-            "detail": "律師提醒若賣公司給外資，可能涉及美國 CFIUS 審查及台灣房地合一稅問題",
-            "timeline": "未明確"
+            "type": "business_sale",
+            "detail": "Potential sale of company to foreign investors, triggering possible CFIUS review and Taiwan real estate tax issues",
+            "timeline": ""
           },
           {
-            "type": "子女海外事業",
-            "detail": "兒子在美國有公司",
-            "timeline": "現況"
+            "type": "child_overseas_property_purchase",
+            "detail": "Son's company is in the US; customer is considering remitting money to son to buy a house",
+            "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "稅務規劃",
-            "detail": "跨境稅務規劃需求：賣公司給外資的 CFIUS 審查、台灣房地合一稅，現有會計師僅懂台灣部分，美國稅務無可靠支援",
+            "type": "cross_border_tax_planning",
+            "detail": "US tax implications are not covered by Taiwan-only accountant; customer lacks confidence in US-side tax handling",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "贈與稅規劃",
-            "detail": "打算直接匯錢給在美國的兒子買房，擔心被課贈與稅",
+            "type": "overseas_property",
+            "detail": "Considering remitting money to son in the US for house purchase",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "海外置產",
-            "detail": "資助兒子在美國購屋（資金由台灣匯出）",
+            "type": "gift_tax_planning",
+            "detail": "Concerned about gift tax if directly remitting money to son for buying a house",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "資產配置／隱私性持有",
-            "detail": "不希望資產全部曝光，希望部分資產以較具隱私性的方式持有",
+            "type": "privacy_asset_holding",
+            "detail": "Does not want all assets exposed; wants part of assets held in a more private manner",
             "amount": "",
             "status": "need"
+          },
+          {
+            "type": "tax_planning",
+            "detail": "Taiwan房地合一稅 issue mentioned in connection with potential company sale",
+            "amount": "",
+            "status": "mentioned"
           }
         ],
         "locations": [
           {
-            "country": "美國",
-            "purpose": "兒子事業所在地、購屋地點、贈與稅與 CFIUS 相關稅務／審查"
+            "country": "US",
+            "purpose": "Son's company is located there; potential remittance for son's house purchase; US tax concerns"
           },
           {
-            "country": "台灣",
-            "purpose": "房地合一稅、會計師所在地、資金匯出來源"
+            "country": "Taiwan",
+            "purpose": "Accountant jurisdiction; real estate tax (房地合一稅) concern"
           }
         ],
         "amounts": [],
@@ -2185,33 +1957,46 @@
         "risk_signals": [
           {
             "quote": "我不想讓資產全部曝光，希望有一部分可以用比較隱私的方式持有",
-            "interpretation": "高度重視資產隱私與資訊揭露控制，對透明架構有顧慮，可能接受較複雜或具隱私性的持有結構"
+            "interpretation": "Values asset privacy and confidentiality; may prefer less transparent holding structures."
           },
           {
-            "quote": "我兒子公司在那，我想說直接匯錢過去給他買房，但又怕被課贈與稅",
-            "interpretation": "稅務成本敏感，偏好合法節稅安排；行動傾向直接匯款，顯示對跨境稅務規則認識有限"
+            "quote": "又怕被課贈與稅",
+            "interpretation": "Tax-risk sensitive; wants to avoid gift tax exposure."
           },
           {
-            "quote": "有，但會計師只懂台灣的，美國那邊我不放心",
-            "interpretation": "對現有顧問信任度不足，需要跨境專業團隊；決策上傾向多方諮詢後才行動"
+            "quote": "美國那邊我不放心",
+            "interpretation": "Lacks confidence in US tax advice; concerned about cross-border tax compliance."
           }
         ],
         "constraints": [
           {
-            "type": "專業能力限制",
-            "detail": "現有會計師僅熟悉台灣稅務，美國稅務部分無可靠支援"
+            "type": "regulatory",
+            "detail": "Potential CFIUS review if company is sold to foreign investors"
           },
           {
-            "type": "隱私需求",
-            "detail": "不希望資產全部曝光，需保留部分非公開持有安排"
+            "type": "tax",
+            "detail": "Taiwan房地合一稅 issue in connection with company sale"
+          },
+          {
+            "type": "tax",
+            "detail": "Gift tax exposure if remitting money directly to son for house purchase"
+          },
+          {
+            "type": "privacy",
+            "detail": "Does not want all assets exposed; wants part held privately"
+          },
+          {
+            "type": "advisory",
+            "detail": "Current accountant only knows Taiwan tax, not US tax"
           }
         ],
         "unresolved": [
-          "美國跨境稅務（含贈與稅）由誰處理、如何規劃尚未確定",
-          "匯款給兒子購屋的贈與稅規避或申報方式未討論",
-          "賣公司給外資的時程、CFIUS 審查影響與房地合一稅處理未討論",
-          "「較隱私方式持有」的具體架構與合規邊界未討論",
-          "資金匯出金額、幣別與時間點未確認"
+          "US tax implications of remitting money to son for house purchase",
+          "How to structure remittance to avoid gift tax",
+          "How to hold part of assets in a more private manner",
+          "CFIUS review impact on selling company to foreign investors",
+          "Taiwan房地合一稅 treatment in company sale",
+          "Need for cross-border tax planning"
         ],
         "rm_commitments": []
       },
@@ -2220,100 +2005,86 @@
         "date": "2024-06-10",
         "life_events": [
           {
-            "type": "企業出售/職涯轉換",
-            "detail": "公司正在進行盡職調查，預計 Q4 簽約，出售金額約 8 億台幣",
-            "timeline": "Q4 簽約（約數個月內）"
-          },
-          {
-            "type": "傳承",
-            "detail": "想透過信託留給小孩，但不想一次給太多",
-            "timeline": "資金到位後規劃，未明確"
+            "type": "company sale",
+            "detail": "公司出售正在盡調，預計 Q4 簽約，金額約 8 億台幣",
+            "timeline": "Q4"
           }
         ],
         "financial_needs": [
           {
-            "type": "穩定收益",
-            "detail": "出售所得一部分做穩定收益配置，期望報酬只要比定存好",
-            "amount": "8 億台幣之一部分",
+            "type": "stable income",
+            "detail": "資金一部分做穩定收益",
+            "amount": "部分（總資金約 8 億台幣）",
             "status": "need"
           },
           {
-            "type": "信託傳承",
-            "detail": "透過信託將資產留給小孩，希望分批而非一次給付",
-            "amount": "",
+            "type": "trust/inheritance",
+            "detail": "一部分透過信託留給小孩，但不想一次給太多",
+            "amount": "部分（總資金約 8 億台幣）",
             "status": "need"
           },
           {
-            "type": "稅務規劃",
-            "detail": "評估境內信託較透明但稅務較重、境外較隱私但怕被查，涉及稅務與隱私權衡",
-            "amount": "",
-            "status": "mentioned"
-          },
-          {
-            "type": "資產配置",
-            "detail": "擬將出售資金拆分為穩定收益與傳承信託兩部分",
+            "type": "asset allocation",
+            "detail": "資金進來後想分為穩定收益與信託留給小孩兩部分",
             "amount": "8 億台幣",
-            "status": "mentioned"
+            "status": "need"
           }
         ],
         "locations": [
           {
-            "country": "境外（未指定國家）",
-            "purpose": "信託設立地點選項之一，考量隱私性"
+            "country": "境外",
+            "purpose": "考慮設立信託，較隱私但怕被查"
+          },
+          {
+            "country": "境內",
+            "purpose": "考慮設立信託，較透明但稅務重"
           }
         ],
         "amounts": [
           {
             "value": "8 億",
             "currency": "台幣",
-            "purpose": "公司出售價金總額"
+            "purpose": "公司出售價金"
           }
         ],
         "timeline": [
           {
             "event": "公司出售簽約",
-            "horizon": "Q4（約數個月內）"
-          },
-          {
-            "event": "資金到位後進行配置與信託安排",
-            "horizon": "簽約後，未明確"
+            "horizon": "Q4"
           }
         ],
         "risk_signals": [
           {
-            "quote": "比定存好就好，我這個年紀不冒險了",
-            "interpretation": "風險偏好偏低、保守型，以保本與穩定現金流為優先，不追求高報酬"
+            "quote": "一部分做穩定收益",
+            "interpretation": "偏好穩定收益、低波動"
           },
           {
-            "quote": "不想一次給太多",
-            "interpretation": "對傳承採階段性、可控節奏，重視資產控制權與避免子女一次性取得大額資產"
+            "quote": "比定存好就好",
+            "interpretation": "收益期望不高，只要優於定存即可"
           },
           {
-            "quote": "境外比較隱私但怕被查，境內比較透明但稅務重",
-            "interpretation": "在隱私與合規／稅務成本間權衡，對法遵與查核風險敏感"
+            "quote": "我這個年紀不冒險了",
+            "interpretation": "風險趨避，重視本金安全"
           }
         ],
         "constraints": [
           {
-            "type": "傳承給付限制",
-            "detail": "不願一次將大額資產給小孩，需分批或附條件的信託設計"
+            "type": "distribution control",
+            "detail": "信託留給小孩，但不想一次給太多"
           },
           {
-            "type": "報酬期待上限",
-            "detail": "收益率只要優於定存即可，不願承擔高風險"
+            "type": "privacy/regulatory",
+            "detail": "境外信託較隱私但怕被查"
           },
           {
-            "type": "資金尚未到位",
-            "detail": "公司出售尚在盡職調查階段，資金於 Q4 簽約後才會入帳"
+            "type": "tax",
+            "detail": "境內信託較透明但稅務重"
           }
         ],
         "unresolved": [
-          "信託要設境內還是境外，尚未決定",
-          "具體收益率目標與可接受風險區間未明確",
-          "8 億資金在穩定收益與傳承信託之間的分配比例未定",
-          "穩定收益的具體商品或工具未討論",
-          "信託給付條件、時間與金額規劃未討論",
-          "境內外稅務實際負擔與申報風險尚未試算"
+          "信託要選境內還是境外尚未決定",
+          "資金具體配置比例未定",
+          "收益率具體目標未定，僅知比定存好"
         ],
         "rm_commitments": []
       },
@@ -2322,114 +2093,110 @@
         "date": "2024-08-05",
         "life_events": [
           {
-            "type": "健康事件",
-            "detail": "太太最近身體不太好",
-            "timeline": "最近"
+            "type": "inheritance planning",
+            "detail": "因太太近期身體不佳，考慮提早安排傳承",
+            "timeline": "早點/儘早"
           },
           {
-            "type": "傳承",
-            "detail": "因太太身體不佳，考慮早點安排傳承",
-            "timeline": "早點"
-          },
-          {
-            "type": "子女人生里程碑",
-            "detail": "小孩穩定工作、結婚後再逐步給付/傳承",
-            "timeline": "未來分階段"
+            "type": "children life milestones",
+            "detail": "小孩若穩定工作、結婚後再逐步分配財產",
+            "timeline": "視小孩穩定工作與結婚進度"
           }
         ],
         "financial_needs": [
           {
-            "type": "傳承規劃",
-            "detail": "希望分階段傳承；小孩若穩定工作、結婚，再逐步給",
+            "type": "inheritance/succession planning",
+            "detail": "希望提早安排傳承，採分階段逐步給小孩",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "海外置產",
-            "detail": "想用公司名義購買美國那個小孩的房產",
-            "amount": "",
-            "status": "need"
-          },
-          {
-            "type": "稅務規劃",
-            "detail": "購買美國房產前，要先搞清楚稅務",
-            "amount": "",
-            "status": "need"
-          },
-          {
-            "type": "保險",
-            "detail": "曾想過保險，但保額不夠",
+            "type": "insurance",
+            "detail": "曾考慮保險，但認為保額不夠",
             "amount": "",
             "status": "mentioned"
           },
           {
-            "type": "家族辦公室",
-            "detail": "聽起來太複雜，我沒那個精力",
+            "type": "family office",
+            "detail": "聽起來太複雜，沒有精力處理",
             "amount": "",
             "status": "mentioned"
+          },
+          {
+            "type": "overseas property",
+            "detail": "想以公司名義購買美國房產",
+            "amount": "",
+            "status": "need"
+          },
+          {
+            "type": "tax planning",
+            "detail": "購買前需先釐清美國房產以公司名義持有的稅務問題",
+            "amount": "",
+            "status": "need"
           }
         ],
         "locations": [
           {
             "country": "美國",
-            "purpose": "小孩房產；擬以公司名義購買"
+            "purpose": "小孩房產購置/持有"
           }
         ],
         "amounts": [],
         "timeline": [
           {
             "event": "傳承安排",
-            "horizon": "早點（因太太身體不佳觸發）"
+            "horizon": "早點（因太太身體不佳）"
           },
           {
-            "event": "分階段傳承給小孩",
-            "horizon": "小孩穩定工作、結婚後逐步給"
+            "event": "分配財產給小孩",
+            "horizon": "待小孩穩定工作、結婚後逐步給"
           },
           {
-            "event": "美國房產以公司名義購買",
-            "horizon": "需先釐清稅務後進行（未定）"
+            "event": "以公司名義購買美國房產",
+            "horizon": "需先釐清稅務，未明確時間"
           }
         ],
         "risk_signals": [
           {
-            "quote": "保險有想過，但保額不夠",
-            "interpretation": "有風險保障意識，但現有保額不足，可能存在保障缺口"
+            "quote": "分階段吧，小孩如果穩定工作、結婚，再逐步給。",
+            "interpretation": "偏好分階段、有條件的傳承，避免一次全數轉移"
           },
           {
-            "quote": "家族辦公室聽起來太複雜，我沒那個精力",
-            "interpretation": "偏好簡單、低管理負擔的解決方案，對複雜架構接受度低"
+            "quote": "家族辦公室聽起來太複雜，我沒那個精力。",
+            "interpretation": "對複雜架構有抗拒，偏好簡單、低管理負擔的方案"
           },
           {
-            "quote": "分階段吧，小孩如果穩定工作、結婚，再逐步給",
-            "interpretation": "偏好分階段、條件式傳承，避免一次性給付，態度審慎"
+            "quote": "保險有想過，但保額不夠。",
+            "interpretation": "有風險保障意識，但認為現有保額不足"
           }
         ],
         "constraints": [
           {
-            "type": "複雜度/精力",
-            "detail": "家族辦公室太複雜，沒精力管理"
+            "type": "health/urgency",
+            "detail": "太太最近身體不太好，促使希望早點安排傳承"
           },
           {
-            "type": "稅務前置",
-            "detail": "購買美國房產前需先搞清楚稅務"
+            "type": "existing coverage",
+            "detail": "保險保額不夠"
           },
           {
-            "type": "傳承節奏",
-            "detail": "分階段傳承，小孩穩定工作、結婚後再逐步給"
+            "type": "complexity/energy",
+            "detail": "家族辦公室太複雜，沒有精力處理"
           },
           {
-            "type": "保險保障",
-            "detail": "現有保額不夠"
+            "type": "tax clarity",
+            "detail": "以公司名義購買美國房產前，需先搞清楚稅務"
+          },
+          {
+            "type": "conditional gifting",
+            "detail": "小孩需穩定工作、結婚後才逐步給"
           }
         ],
         "unresolved": [
-          "美國房產用公司名義購買的稅務影響尚未釐清",
-          "傳承分階段的具體金額、時間、工具與條件未定",
-          "保險保額不足，是否增補及如何補足未討論",
-          "家族辦公室是否完全排除未定案",
-          "美國房產的具體地點、金額、用途及持有架構未說明",
-          "小孩穩定工作、結婚的定義與觸發時點未定",
-          "傳承總資產規模與分配比例未討論"
+          "美國房產以公司名義購買的稅務處理為何？",
+          "美國房產最終應如何持有與安排？",
+          "傳承分階段的具體金額、條件與時點為何？",
+          "是否需要及如何補足保險保額？"
         ],
         "rm_commitments": []
       },
@@ -2438,32 +2205,27 @@
         "date": "2024-09-25",
         "life_events": [
           {
-            "type": "傳承",
-            "detail": "與太太討論後，決定先進行一部分境內信託作為傳承安排的起步",
-            "timeline": "尚未明確（先試水溫、近期啟動）"
-          },
-          {
-            "type": "稅務合規（跨國）",
-            "detail": "美國端已委任當地會計師，台灣端稅務仍需整合",
-            "timeline": "進行中"
+            "type": "inheritance",
+            "detail": "與太太討論過傳承安排，想先做一部分境內信託，試水溫",
+            "timeline": ""
           }
         ],
         "financial_needs": [
           {
-            "type": "傳承／境內信託",
-            "detail": "想先做一部分境內信託，試水溫",
+            "type": "inheritance",
+            "detail": "先做一部分境內信託，試水溫",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "稅務規劃",
-            "detail": "台灣、美國兩地稅務需整合為一致方案",
+            "type": "tax_planning",
+            "detail": "美國那邊已找當地會計師，但台灣這邊的稅務還是要整合",
             "amount": "",
             "status": "need"
           },
           {
-            "type": "整體資產／傳承架構規劃",
-            "detail": "要求單一整合性方案，不要碎片化建議",
+            "type": "integrated_financial_plan",
+            "detail": "想要一個整體方案，不要每個人給碎片化建議；要看到整體架構，不要只是賣產品",
             "amount": "",
             "status": "need"
           }
@@ -2471,48 +2233,56 @@
         "locations": [
           {
             "country": "美國",
-            "purpose": "稅務申報／已委任當地會計師"
+            "purpose": "稅務/會計師"
           },
           {
             "country": "台灣",
-            "purpose": "稅務整合、境內信託規劃"
+            "purpose": "稅務整合"
           }
         ],
         "amounts": [],
-        "timeline": [],
+        "timeline": [
+          {
+            "event": "跨部門會議",
+            "horizon": "下次"
+          }
+        ],
         "risk_signals": [
           {
-            "quote": "我想要一個整體方案，不要每個人都給我碎片化的建議",
-            "interpretation": "偏好整合式、單一窗口的整體規劃，對多頭提供零散建議感到不滿；重視架構一致性"
+            "quote": "不要每個人都給我碎片化的建議",
+            "interpretation": "偏好整合式、跨部門的整體建議，不喜歡零散方案"
           },
           {
-            "quote": "我要看到整體架構，不要只是賣產品",
-            "interpretation": "對產品推銷有防備，期待以需求為導向的顧問式服務；若僅以單一商品接觸可能導致信任下降"
+            "quote": "不要只是賣產品",
+            "interpretation": "重視整體架構與解決方案，對單純產品銷售有戒心"
           },
           {
             "quote": "想先做一部分境內信託，試水溫",
-            "interpretation": "採小額／階段性試探策略，先驗證服務品質再擴大，決策偏審慎"
+            "interpretation": "態度謹慎，傾向先小規模測試再擴大"
           }
         ],
         "constraints": [
           {
-            "type": "階段性投入",
-            "detail": "只先做「一部分」境內信託，試水溫，非一次性全面移轉"
+            "type": "advisory_style",
+            "detail": "要求整體方案，不要碎片化建議"
           },
           {
-            "type": "服務期待限制",
-            "detail": "不接受碎片化建議與單純產品銷售，須以整體架構呈現"
+            "type": "product_approach",
+            "detail": "不要只是賣產品，要看到整體架構"
+          },
+          {
+            "type": "scope",
+            "detail": "先做一部分境內信託，試水溫"
           }
         ],
         "unresolved": [
-          "台灣端稅務如何與美國端整合，具體作法尚未討論",
-          "境內信託的具體金額、受託機構、受益人安排未定",
-          "跨部門會議時間尚未敲定",
-          "整體架構方案內容與範疇（含哪些部門／專業）尚未定義"
+          "台灣稅務整合的具體方式",
+          "境內信託的資產範圍、金額與架構",
+          "整體方案/架構的具體內容",
+          "跨部門會議的時間"
         ],
         "rm_commitments": [
-          "安排跨部門會議",
-          "於下次會議提出整體架構方案（非單一產品建議）"
+          "安排跨部門會議"
         ]
       }
     ],
@@ -2520,258 +2290,253 @@
       "customer_id": "CUST_005",
       "name": "王國棟",
       "profile": {
-        "life_stage": "企業主，接近退休/已考慮退休；公司出售進行中；子女分居美國與台灣；因太太健康事件加速傳承規劃。",
-        "risk_preference": "保守型（偏低風險）；evidence：C005_3「比定存好就好，我這個年紀不冒險了」、期望穩定收益；C005_4 偏好簡單低管理負擔，但 C005_2/C005_3 願為隱私與稅務考慮信託架構。",
-        "liquidity_need": "出售後需一部分作為退休穩定收益與現金流；短期流動性需求未明確；資金尚未到位（C005_3 Q4 簽約）。",
-        "estimated_capacity": "公司出售價金約 8 億台幣（C005_3）；另有美國購屋與傳承資產規模未提供，整體可規劃資產至少 8 億台幣以上。",
+        "life_stage": "企業主，年紀已到、正處於公司出售與退休過渡期（2024-06 盡調中、預計 Q4 簽約，價金約 8 億台幣）；兩名子女分別長住美國與台灣；2024-08 起因太太身體不佳而提前啟動傳承規劃",
+        "risk_preference": "保守／風險趨避（以近期 2024-06 與 2024-09 訊號主導）：「我這個年紀不冒險了」「比定存好就好」「一部分做穩定收益」，重視本金安全與低波動；惟在資產持有方式上同時追求隱私與境外架構，帶有難以歸類的張力（見 contradictions）",
+        "liquidity_need": "中—高：出售價金需切分為(1)退休用穩定收益現金流與(2)分階段傳承信託，需保留彈性；資金預計 Q4 簽約後入帳，目前尚未實際到位",
+        "estimated_capacity": "約 8 億台幣（公司出售價金；C005_3）。具體配置比例與收益目標未定，僅知「比定存好就好」",
         "locations_of_interest": [
-          "美國",
-          "台灣",
-          "境外（未指定國家，信託選項）"
+          "台灣（稅務整合、境內信託試辦、子女居住）",
+          "美國（子女長住、兒子公司所在地、擬購置房產、當地會計師）",
+          "境外（曾考慮境外信託以取得隱私，但擔心被查）"
         ]
       },
       "needs_timeline": [
         {
-          "need": "公司出售後資金規劃（8億台幣拆分為退休與傳承）",
-          "urgency": "高",
-          "horizon": "2024 Q4 簽約後，資金到位即需配置",
+          "need": "整合式整體財務／傳承方案（跨部門會議、拒絕碎片化建議與單純產品銷售）",
+          "urgency": "high",
+          "horizon": "立即（已約定下次跨部門會議）",
+          "evidence": [
+            "C005_5"
+          ]
+        },
+        {
+          "need": "跨境（美台）稅務整合規劃：美國端已找當地會計師，台灣端稅務仍需整合",
+          "urgency": "high",
+          "horizon": "立即至近中期",
+          "evidence": [
+            "C005_2",
+            "C005_5"
+          ]
+        },
+        {
+          "need": "傳承／接班安排：提早規劃、分階段有條件給子女（穩定工作、結婚後逐步分配）",
+          "urgency": "high",
+          "horizon": "因太太健康不佳而提前（數月至數年、分階段）",
+          "evidence": [
+            "C005_1",
+            "C005_4",
+            "C005_5"
+          ]
+        },
+        {
+          "need": "境內信託設立（先做一部分試水溫）",
+          "urgency": "high",
+          "horizon": "近期，先小規模測試再擴大",
+          "evidence": [
+            "C005_3",
+            "C005_5"
+          ]
+        },
+        {
+          "need": "公司出售後資金配置：穩定收益部位＋信託傳承部位（退休金與傳承切分）",
+          "urgency": "high",
+          "horizon": "Q4 簽約、資金入帳後",
           "evidence": [
             "C005_1",
             "C005_3"
           ]
         },
         {
-          "need": "跨境稅務整合（美國CFIUS、贈與稅、台灣房地合一稅、境內外信託稅務）",
-          "urgency": "高",
-          "horizon": "立即；出售前後與傳承架構同步",
+          "need": "公司出售對外資買家的 CFIUS 審查風險評估",
+          "urgency": "high",
+          "horizon": "Q4 簽約前",
           "evidence": [
-            "C005_1",
+            "C005_2"
+          ]
+        },
+        {
+          "need": "美國房產購置（考慮以公司名義購買／匯款給兒子買房）之持有架構與稅務釐清",
+          "urgency": "medium",
+          "horizon": "中期，須先釐清稅務後才進行",
+          "evidence": [
             "C005_2",
-            "C005_3",
-            "C005_4",
-            "C005_5"
+            "C005_4"
           ]
         },
         {
-          "need": "傳承規劃：境內信託起步、分階段傳承給子女",
-          "urgency": "高",
-          "horizon": "近期啟動一部分境內信託；長期依子女穩定工作/結婚分階段給付",
+          "need": "贈與稅規劃：避免直接匯款給兒子買房所產生的贈與稅曝險",
+          "urgency": "medium",
+          "horizon": "近中期（配合美國房產購置）",
           "evidence": [
-            "C005_1",
-            "C005_3",
-            "C005_4",
-            "C005_5"
+            "C005_2"
           ]
         },
         {
-          "need": "退休規劃與穩定收益配置（報酬優於定存即可）",
-          "urgency": "中",
-          "horizon": "出售資金到位後；中期退休",
+          "need": "隱私性資產持有架構（不欲資產全部曝光，部分以較隱私方式持有）",
+          "urgency": "medium",
+          "horizon": "中期（與信託境內外選擇連動）",
           "evidence": [
-            "C005_1",
+            "C005_2",
             "C005_3"
           ]
         },
         {
-          "need": "美國置產/資助子女購屋（匯款贈與稅與公司名義持有）",
-          "urgency": "中",
-          "horizon": "稅務釐清後；未定",
+          "need": "台灣房地合一稅處理（與公司出售連動）",
+          "urgency": "medium",
+          "horizon": "Q4 簽約前後",
           "evidence": [
-            "C005_2",
-            "C005_4"
+            "C005_2"
           ]
         },
         {
-          "need": "整體資產/傳承架構整合方案（單一窗口、非碎片化）",
-          "urgency": "高",
-          "horizon": "下次跨部門會議/近期",
+          "need": "保險保障缺口檢視（曾考慮保險，但認為保額不夠）",
+          "urgency": "low",
+          "horizon": "未定",
           "evidence": [
-            "C005_5"
-          ]
-        },
-        {
-          "need": "隱私性持有/境內外信託架構權衡",
-          "urgency": "中",
-          "horizon": "與傳承規劃同步；未定",
-          "evidence": [
-            "C005_2",
-            "C005_3",
-            "C005_5"
-          ]
-        },
-        {
-          "need": "保險保障補足（現有保額不足）",
-          "urgency": "低",
-          "horizon": "未定；可待整體架構時檢視",
-          "evidence": [
-            "C005_4"
-          ]
-        },
-        {
-          "need": "美國房產稅務與持有架構前置評估",
-          "urgency": "中",
-          "horizon": "購買前完成稅務評估；未定",
-          "evidence": [
-            "C005_2",
             "C005_4"
           ]
         }
       ],
       "contradictions": [
         {
-          "signal_a": "C005_2/C005_3 高度重視資產隱私，希望部分以較隱私方式持有/考慮境外信託",
-          "signal_b": "C005_5 決定先做一部分境內信託（較透明），且怕被查",
-          "note": "隱私需求與合規/查核風險敏感並存；近期以境內信託試水溫，但不等於放棄隱私考量，需在合規下設計隱私安排。"
+          "signal_a": "偏好簡單、抗拒複雜架構：「家族辦公室聽起來太複雜，我沒那個精力」（C005_4）",
+          "signal_b": "要求整合式整體架構：「想要一個整體方案，不要每個人給碎片化建議，要看到整體架構」（C005_5）",
+          "note": "並非真正矛盾——客戶要的是『單一窗口整合後的簡單架構』，而非多層複雜工具；規劃時須以整合方案呈現，但避免堆疊高複雜度產品（如家族辦公室）。"
         },
         {
-          "signal_a": "C005_2 想直接匯錢給美國兒子買房，擔心贈與稅",
-          "signal_b": "C005_4 想用公司名義購買美國小孩房產",
-          "note": "購屋資金路徑與持有架構構想不一致，需釐清稅務、贈與與公司持有合規性。"
+          "signal_a": "追求隱私：「我不想讓資產全部曝光，希望有一部分可以用比較隱私的方式持有」、考慮境外信託較隱私（C005_2、C005_3）",
+          "signal_b": "合規顧慮：「境外信託怕被查」、需要美國與台灣稅務合規（C005_3、C005_5）",
+          "note": "隱私偏好與法遵/查核風險並存，境內外信託選擇至 2024-09 仍未定案（先做境內試水溫），須保留此張力並提供合規前提下的隱私方案。"
         },
         {
-          "signal_a": "C005_4 家族辦公室太複雜，沒精力",
-          "signal_b": "C005_5 要求單一整合性整體方案，不要碎片化建議",
-          "note": "想要整合式服務但排斥複雜架構；需以簡化、單一窗口、低管理負擔方式呈現整體方案。"
+          "signal_a": "風險趨避：「我這個年紀不冒險了」「比定存好就好」，資金求穩定收益（C005_3）",
+          "signal_b": "偏好境外／較不透明持有架構，可能帶來較高法遵與架構風險（C005_2、C005_3）",
+          "note": "投資風險態度保守，但架構風險偏好（隱私、跨境）較高；兩者非同一維度，須分開處理：投資端保守、架構端在合規範圍內滿足隱私需求。"
         },
         {
-          "signal_a": "C005_3 境內信託較透明但稅務重、境外較隱私但怕被查，未決定",
-          "signal_b": "C005_5 已決定先做一部分境內信託試水溫",
-          "note": "決策有時間演進，非完全矛盾；反映在隱私、稅務成本與查核風險間持續權衡。"
+          "signal_a": "境內信託較透明但稅務重；境外信託較隱私但怕被查（C005_3，未決）",
+          "signal_b": "2024-09 決定『先做一部分境內信託，試水溫』（C005_5）",
+          "note": "境內外信託選擇尚未最終確認，近期訊號顯示傾向先以境內小規模試辦，但境外選項未排除。"
         },
         {
-          "signal_a": "C005_2 表示美國稅務無可靠支援",
-          "signal_b": "C005_5 表示美國端已委任當地會計師",
-          "note": "時間演進：美國端稅務支援已部分補上，台灣端仍需整合。"
+          "signal_a": "早期（2024-01）規劃傳承給『兩個小孩』，美國與台灣各一（C005_1）",
+          "signal_b": "後期（2024-03、08）聚焦於美國兒子的房產購置與匯款（C005_2、C005_4）",
+          "note": "關注焦點由平均傳承轉向美國子女的資產安排，是否造成兩名子女分配比例不均尚未釐清。"
+        },
+        {
+          "signal_a": "公司出售時程明確：盡調中、預計 Q4 簽約（C005_3）",
+          "signal_b": "2024-08 因太太身體不佳希望『早點』安排傳承（C005_4）",
+          "note": "傳承時程被健康因素提前，可能與公司出售／資金入帳時程（Q4）產生先後順序壓力，須協調信託可在資金到位前先行架構化。"
         }
       ]
     },
     "leads": {
       "customer_id": "CUST_005",
-      "generated_at": "2024-09-25",
+      "generated_at": "2026-10-05T00:00:00Z",
       "leads": [
         {
           "lead_id": "L1",
-          "category": "整體傳承與資產架構整合",
-          "rationale": "客戶在 C005_5 明確要求單一整合性方案、不要碎片化建議，並在 C005_4 排斥太複雜的家族辦公室、C005_3 對境內外信託與稅務權衡未決；需以單一窗口整合台灣與美國稅務、信託、投資與保險，降低管理負擔並建立信任。",
-          "suggested_action": "RM 立即安排跨部門會議（稅務、信託、投資、保險、美國端會計師），於會前產出一頁式整體架構藍圖，涵蓋公司出售後資金拆分、傳承時間表、稅務合規與單一聯繫窗口，不以單一產品提案。",
-          "priority": "高",
-          "confidence": 0.92,
+          "category": "Integrated Financial Planning",
+          "rationale": "客戶明確要求整體方案，不要碎片化建議，也不要只是賣產品（C005_5）。他保守且希望簡單，但有多個跨領域需求（稅務、信託、投資）。此 lead 可統籌所有後續行動，符合其顧問風格偏好。",
+          "suggested_action": "安排跨部門會議（稅務、信託、投資、法律），在兩週內向客戶呈現整合式財務與傳承架構。準備一頁式整體架構摘要。",
+          "priority": "high",
+          "confidence": 0.9,
           "supporting_evidence": [
-            "C005_5",
-            "C005_4",
-            "C005_3"
+            "C005_5"
           ],
-          "suggested_products": [
-            "家族財富傳承整合方案",
-            "跨部門顧問會議",
-            "稅務/法律/信託整合服務"
-          ],
+          "suggested_products": [],
           "talking_points": [
-            "王先生，您要的整體架構我們聽到了，下次會議我們會用單一窗口把台灣和美國的稅務、信託與退休金一次整合給您看。"
+            "王先生，我們了解您希望有一個整體規劃，不要碎片化建議。我們已安排跨部門團隊，下週為您呈現整合方案。"
           ]
         },
         {
           "lead_id": "L2",
-          "category": "跨境稅務整合",
-          "rationale": "多通通話顯示客戶出售公司給外資可能涉及美國 CFIUS、台灣房地合一稅，且美國端雖已委任會計師但台灣端仍需整合；C005_2 擔心贈與稅、C005_3 對境內外信託稅務負擔未試算，需在 Q4 簽約前完成稅務地圖。",
-          "suggested_action": "RM 協調台灣稅務顧問與美國會計師，針對公司出售、資金匯出、贈與、美國置產與境內外信託進行稅負試算與申報流程盤點，於 Q4 簽約前提出跨境稅務備忘錄。",
-          "priority": "高",
+          "category": "Cross-border Tax & Legal",
+          "rationale": "客戶已有美國會計師但對美國稅務不放心（C005_2），台灣稅務仍需整合（C005_5），且外資買家可能觸發 CFIUS 審查（C005_1、C005_2）。客戶風險趨避且擔心被查，合規與稅務確定性為其核心約束。",
+          "suggested_action": "協調美國 CPA 與台灣稅務顧問，產出跨境稅務備忘錄，涵蓋：公司出售稅務、CFIUS 審查風險、匯款給兒子、贈與稅、台灣房地合一稅。安排三方聯合會議。",
+          "priority": "high",
           "confidence": 0.95,
           "supporting_evidence": [
             "C005_1",
             "C005_2",
+            "C005_5"
+          ],
+          "suggested_products": [
+            "Cross-border tax planning",
+            "CFIUS advisory"
+          ],
+          "talking_points": [
+            "針對美國與台灣的稅務，我們可以協助整合當地會計師與台灣稅務專家，並評估外資買家的CFIUS審查風險。"
+          ]
+        },
+        {
+          "lead_id": "L3",
+          "category": "Trust & Inheritance",
+          "rationale": "客戶希望先做一部分境內信託試水溫（C005_5），並想分階段、有條件地傳承給子女（C005_4）。太太健康因素促使提前規劃（C005_4）。客戶抗拒複雜架構（C005_4），境內信託小規模試辦是簡單且可控的第一步。",
+          "suggested_action": "與信託專家合作，設計境內信託，包含分階段分配條件（如穩定工作、結婚）。以出售價金的一小部分（如10-20%）作為試辦，並提供信託契約草案。",
+          "priority": "high",
+          "confidence": 0.9,
+          "supporting_evidence": [
             "C005_3",
             "C005_4",
             "C005_5"
           ],
           "suggested_products": [
-            "跨境稅務諮詢",
-            "CFIUS 審查評估",
-            "贈與稅申報規劃",
-            "房地合一稅試算",
-            "境內外信託稅務比較"
+            "Domestic trust",
+            "Inheritance planning"
           ],
           "talking_points": [
-            "美國端會計師已就位很好，我們台灣端會把贈與稅、CFIUS、房地合一稅整合成一張稅務地圖，讓您在 Q4 簽約前先確認。"
-          ]
-        },
-        {
-          "lead_id": "L3",
-          "category": "境內信託與分階段傳承",
-          "rationale": "客戶在 C005_5 決定先做一部分境內信託試水溫，C005_4 希望小孩穩定工作、結婚後再逐步給付，C005_3 不想一次給太多，顯示需要低管理負擔、可保留控制權的分階段信託設計。",
-          "suggested_action": "RM 與信託專家設計小額境內信託先行方案，明定受託人、受益人、給付條件（穩定工作、結婚等）、給付頻率與保留撤銷或修改權，並向客戶確認首筆金額與時程。",
-          "priority": "高",
-          "confidence": 0.9,
-          "supporting_evidence": [
-            "C005_5",
-            "C005_4",
-            "C005_3",
-            "C005_1"
-          ],
-          "suggested_products": [
-            "境內信託",
-            "保險金信託",
-            "分階段給付信託",
-            "遺囑與贈與規劃"
-          ],
-          "talking_points": [
-            "您提到想先做一部分境內信託試水溫，我們可以先設計一個小額、分階段給付的架構，讓您保留控制權又能開始傳承。"
+            "王先生，我們可以先從一部分境內信託開始，設計分階段、有條件的傳承，讓您試水溫，同時符合您不想一次給太多的想法。"
           ]
         },
         {
           "lead_id": "L4",
-          "category": "退休穩定收益與流動性",
-          "rationale": "客戶在 C005_1 與 C005_3 表示出售後一部分資金作為退休用，且 C005_3 明確說「比定存好就好，我這個年紀不冒險了」，風險偏好保守，需在資金到位後配置低波動、穩定現金流且具流動性的退休組合。",
-          "suggested_action": "RM 為客戶準備保守型收益組合建議書，以優利定存、短天期債券、投資級債券與月配息產品組成階梯式流動性，目標報酬略優於定存、最大回撤可控，並與信託及稅務架構對接。",
-          "priority": "中",
-          "confidence": 0.88,
+          "category": "Investment Management",
+          "rationale": "公司出售後約 8 億台幣資金將入帳，客戶需切分為退休用穩定收益與信託傳承兩部分（C005_1、C005_3）。其風險偏好保守：「比定存好就好」「我這個年紀不冒險了」（C005_3），因此需要低波動、收益穩健的投資組合。",
+          "suggested_action": "準備保守型投資提案，預期收益率高於定存，聚焦投資級債券、高股息股票與固定收益產品。依 L3 信託比例分配資金，提供情境分析。",
+          "priority": "high",
+          "confidence": 0.9,
           "supporting_evidence": [
             "C005_1",
             "C005_3"
           ],
           "suggested_products": [
-            "優利定存",
-            "短天期債券",
-            "投資級公司債",
-            "月配息債券基金",
-            "保本型結構產品"
+            "Fixed income portfolio",
+            "Bond funds",
+            "Dividend stocks"
           ],
           "talking_points": [
-            "您說比定存好就好，我們會用保守、低波動的現金流配置，讓退休金在資金到位後先站穩。"
+            "針對您出售公司後的資金，我們可以規劃一部分做穩定收益，比定存好但又不會冒太大風險，另一部分放入信託傳承。"
           ]
         },
         {
           "lead_id": "L5",
-          "category": "美國置產資金路徑與持有架構",
-          "rationale": "C005_2 想直接匯錢給美國兒子買房並擔心贈與稅，C005_4 又提議用公司名義購買美國小孩房產，兩者資金路徑與持有架構不一致；需先釐清贈與、公司持有、稅務與合規影響，才能決定購屋方式。",
-          "suggested_action": "RM 會同美國會計師與台灣稅務顧問，比較「個人匯款贈與」、「公司名義購置」與「境外公司或信託持有」的稅負、申報與控制權差異，並在購屋前提供書面稅務評估與建議架構。",
-          "priority": "中",
+          "category": "Cross-border Real Estate & Gift Tax",
+          "rationale": "客戶考慮匯款給美國兒子買房或以公司名義購買（C005_2、C005_4），並擔心贈與稅與美國稅務問題（C005_2）。其保守性格要求在稅務釐清後才行動。",
+          "suggested_action": "與美國稅務顧問合作，分析最佳持有架構（公司、個人或信託）及贈與稅減免策略（如年度免稅額、借款、信託）。提供比較稅務備忘錄。",
+          "priority": "medium",
           "confidence": 0.85,
           "supporting_evidence": [
             "C005_2",
             "C005_4"
           ],
           "suggested_products": [
-            "美國置產稅務評估",
-            "贈與稅規劃",
-            "公司名義持有架構分析",
-            "跨境資金匯出安排"
+            "US tax planning",
+            "Gift tax mitigation",
+            "Overseas property financing"
           ],
           "talking_points": [
-            "您之前想過直接匯款或公司名義買房，我們會先把兩種路徑的贈與稅和持有稅負算清楚，再決定最合適的美國置產方式。"
+            "關於美國買房，我們可以協助您釐清以公司名義或匯款給兒子的稅務影響，避免贈與稅問題。"
           ]
         }
       ]
     },
     "critic_reviews": [
       {
-        "type": "json_object",
-        "content": {
-          "issues": [],
-          "overall_quality": 0.93,
-          "needs_revision": false,
-          "revision_notes": "所有 leads 的 supporting_evidence 皆引用真實存在的 call_id（C005_1 至 C005_5），rationale 與 suggested_action 均與通話內容一致且具體可執行，無幻覺或不可執行之情形。僅屬用詞、細節補充與優先順序等可優化層級，未達嚴重問題，無須修正。"
-        }
+        "issues": [],
+        "overall_quality": 0.95,
+        "needs_revision": false,
+        "revision_notes": "No serious issues found. All supporting_evidence call_ids exist, rationales are grounded in the provided calls, and suggested_actions are actionable. Minor wording, confidence tuning, or product optimization may be optionally refined but do not require revision."
       }
     ]
   }

@@ -1,0 +1,36 @@
+{
+  "feedbacks": [
+    {
+      "customer_id": "CUST_001",
+      "lead_id": "L1",
+      "action": "adopt",
+      "reason": "",
+      "rm_name": "RM_001",
+      "timestamp": "2026-10-03T16:44:50.091594"
+    },
+    {
+      "customer_id": "CUST_001",
+      "lead_id": "L2",
+      "action": "adopt",
+      "reason": "",
+      "rm_name": "RM_001",
+      "timestamp": "2026-10-03T16:45:02.134489"
+    },
+    {
+      "customer_id": "CUST_001",
+      "lead_id": "L3",
+      "action": "adopt",
+      "reason": "",
+      "rm_name": "RM_001",
+      "timestamp": "2026-10-03T16:45:04.789236"
+    },
+    {
+      "customer_id": "CUST_001",
+      "lead_id": "L5",
+      "action": "reject",
+      "reason": "客戶還是想把錢放在英國市場，但不同的金融產品",
+      "rm_name": "RM_001",
+      "timestamp": "2026-10-03T16:47:42.324759"
+    }
+  ]
+}

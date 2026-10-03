@@ -1,4 +1,8 @@
 # feedback_store.py
+"""
+Persist RM feedback (adopt / reject) into feedback.json.
+Used by graph_pipeline.py (feedback loop) and app.py (UI).
+"""
 import json
 import os
 from datetime import datetime
@@ -26,10 +30,10 @@ def record_feedback(
     rm_name: str = "unknown",
 ) -> dict:
     """
-    記錄 RM 對某個 lead 的回饋。
-    action: adopt（採納）或 reject（不採納）
+    Record RM feedback for a lead.
+    action: "adopt" or "reject"
     """
-    assert action in ("adopt", "reject"), "action 必須是 adopt 或 reject"
+    assert action in ("adopt", "reject"), "action must be 'adopt' or 'reject'"
 
     data = _load()
     entry = {
@@ -46,7 +50,7 @@ def record_feedback(
 
 
 def get_feedback_for_lead(customer_id: str, lead_id: str) -> dict | None:
-    """取得某 lead 的最新回饋（若重複回饋取最新一筆）"""
+    """Get latest feedback for a specific lead (latest if duplicated)."""
     data = _load()
     matches = [
         f for f in data["feedbacks"]
@@ -56,7 +60,7 @@ def get_feedback_for_lead(customer_id: str, lead_id: str) -> dict | None:
 
 
 def get_feedback_summary() -> dict:
-    """統計所有回饋"""
+    """Aggregate all feedback."""
     data = _load()
     feedbacks = data["feedbacks"]
 
@@ -73,7 +77,6 @@ def get_feedback_summary() -> dict:
     adopt = sum(1 for f in feedbacks if f["action"] == "adopt")
     reject = len(feedbacks) - adopt
 
-    # 依 category 統計（需要外部傳 category 進來，這裡先留空）
     recent_rejects = [
         f for f in feedbacks[-20:] if f["action"] == "reject"
     ]
@@ -83,27 +86,29 @@ def get_feedback_summary() -> dict:
         "adopt": adopt,
         "reject": reject,
         "adopt_rate": round(adopt / len(feedbacks), 2),
+        "by_category": {},
         "recent_rejects": recent_rejects,
     }
 
 
 def get_adopted_examples(limit: int = 10) -> list[dict]:
-    """取得最近被採納的 leads，可用於 few-shot 學習"""
+    """Get recently adopted leads (for few-shot learning)."""
     data = _load()
     adopted = [f for f in data["feedbacks"] if f["action"] == "adopt"]
     return adopted[-limit:]
 
 
 def get_rejected_examples(limit: int = 10) -> list[dict]:
-    """取得最近被拒絕的 leads，可用於避免重複生成"""
+    """Get recently rejected leads (to avoid repetition)."""
     data = _load()
     rejected = [f for f in data["feedbacks"] if f["action"] == "reject"]
     return rejected[-limit:]
 
+
 def remove_feedback(customer_id: str, lead_id: str) -> bool:
     """
-    移除某 lead 的所有回饋紀錄（用於撤銷後重新回饋）。
-    回傳 True 表示有移除任何紀錄。
+    Remove all feedback for a lead (for undo + re-feedback).
+    Returns True if any record was removed.
     """
     data = _load()
     before = len(data["feedbacks"])

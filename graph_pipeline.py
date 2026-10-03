@@ -1,10 +1,11 @@
 # graph_pipeline.py
 """
-NBA from Call - LangGraph Agent 版 Pipeline
-- 使用 DeepSeek API
-- 圖狀流程：抽取 → 建檔 → 載入回饋 → 生成 → Critic 審查 →（必要時）修正 → 定稿
-- 含 JSON 解析修復與重試
-- revise 只輸出改動的 leads，避免 max_tokens 截斷
+NBA from Call - LangGraph Agent Pipeline
+- Uses DeepSeek API
+- Graph flow: extract -> profile -> load_feedback -> generate -> critic -> (revise if needed) -> finalize
+- Includes JSON repair and retry
+- revise only outputs modified leads to avoid max_tokens truncation
+- All prompts centralized in prompts.py
 """
 import json
 import operator
@@ -21,11 +22,13 @@ from prompts import (
     EXTRACT_CALL_PROMPT,
     BUILD_PROFILE_PROMPT,
     GENERATE_LEADS_PROMPT,
+    CRITIC_PROMPT,
+    REVISE_PROMPT,
 )
 import feedback_store
 
 # ============================================================
-# 初始化
+# Init
 # ============================================================
 load_dotenv()
 
@@ -39,7 +42,7 @@ MAX_TOKENS = 8192
 
 
 # ============================================================
-# State 定義
+# State Definition
 # ============================================================
 class NBAState(TypedDict):
     customer: dict
@@ -53,25 +56,25 @@ class NBAState(TypedDict):
 
 
 # ============================================================
-# JSON 修復工具
+# JSON repair utility
 # ============================================================
 def _try_fix_json(content: str) -> str | None:
-    """嘗試修復常見的 JSON 語法問題（含截斷）"""
+    """Try to fix common JSON syntax issues (including truncation)."""
     if not content:
         return None
 
     fixed = content.strip()
 
-    # 1. 移除 markdown code fence
+    # 1. Remove markdown code fence
     if fixed.startswith("```"):
         lines = fixed.split("\n")
         lines = [l for l in lines if not l.strip().startswith("```")]
         fixed = "\n".join(lines).strip()
 
-    # 2. 移除尾隨逗號
+    # 2. Remove trailing commas
     fixed = re.sub(r",\s*([}\]])", r"\1", fixed)
 
-    # 3. 檢查是否有未閉合的字串
+    # 3. Check for unclosed strings
     in_string = False
     escaped = False
     for ch in fixed:
@@ -84,14 +87,14 @@ def _try_fix_json(content: str) -> str | None:
         if ch == '"':
             in_string = not in_string
 
-    # 4. 若字串未閉合（被截斷），補上閉合引號
+    # 4. Close unclosed string (truncated)
     if in_string:
         fixed += '"'
 
-    # 5. 移除尾端不完整的逗號
+    # 5. Remove incomplete trailing comma
     fixed = fixed.rstrip().rstrip(",")
 
-    # 6. 補上未閉合的括號
+    # 6. Close unmatched braces
     open_braces = fixed.count("{") - fixed.count("}")
     open_brackets = fixed.count("[") - fixed.count("]")
 
@@ -103,7 +106,7 @@ def _try_fix_json(content: str) -> str | None:
 
 
 # ============================================================
-# LLM 呼叫（含重試與修復）
+# LLM call (with retry and repair)
 # ============================================================
 def call_llm(
     prompt: str,
@@ -125,7 +128,7 @@ def call_llm(
             content = resp.choices[0].message.content or ""
             last_content = content
 
-            # Debug: token 用量
+            # Debug: token usage
             if hasattr(resp, "usage") and resp.usage:
                 print(
                     f"      [tokens] prompt={resp.usage.prompt_tokens}, "
@@ -134,13 +137,13 @@ def call_llm(
                 )
 
             if not content.strip():
-                print(f"    ⚠️ 空回應（{attempt + 1}/{max_retries}），重試...")
+                print(f"    [WARN] Empty response ({attempt + 1}/{max_retries}), retrying...")
                 time.sleep(1)
                 continue
 
             finish_reason = resp.choices[0].finish_reason
             if finish_reason == "length":
-                print(f"    ⚠️ 回應被截斷（{len(content)} 字元），嘗試修復...")
+                print(f"    [WARN] Response truncated ({len(content)} chars), attempting repair...")
                 fixed = _try_fix_json(content)
                 if fixed:
                     try:
@@ -153,8 +156,8 @@ def call_llm(
             return json.loads(content)
 
         except json.JSONDecodeError as e:
-            print(f"    ⚠️ JSON 解析失敗（{attempt + 1}/{max_retries}）：{e}")
-            print(f"       結尾：...{last_content[-150:]}")
+            print(f"    [WARN] JSON parse failed ({attempt + 1}/{max_retries}): {e}")
+            print(f"       tail: ...{last_content[-150:]}")
             fixed = _try_fix_json(last_content)
             if fixed:
                 try:
@@ -164,18 +167,19 @@ def call_llm(
             time.sleep(1)
 
     raise ValueError(
-        f"連續 {max_retries} 次無法解析 JSON，最後回應結尾：...{last_content[-200:]}"
+        f"Failed to parse JSON after {max_retries} retries. "
+        f"Last response tail: ...{last_content[-200:]}"
     )
 
 
 # ============================================================
-# Node 1: 抽取所有通話
+# Node 1: Extract all calls
 # ============================================================
 def extract_all_calls(state: NBAState) -> dict:
     customer = state["customer"]
     extractions = []
     for call in customer["calls"]:
-        print(f"    抽取 {call['call_id']}...")
+        print(f"    Extracting {call['call_id']}...")
         prompt = EXTRACT_CALL_PROMPT.replace("{transcript}", call["transcript"])
         result = call_llm(prompt)
         result["call_id"] = call["call_id"]
@@ -185,10 +189,10 @@ def extract_all_calls(state: NBAState) -> dict:
 
 
 # ============================================================
-# Node 2: 建立客戶檔案
+# Node 2: Build customer profile
 # ============================================================
 def build_customer_profile(state: NBAState) -> dict:
-    print(f"    建立客戶檔案...")
+    print(f"    Building customer profile...")
     prompt = BUILD_PROFILE_PROMPT.replace(
         "{extractions}",
         json.dumps(state["extractions"], ensure_ascii=False, indent=2),
@@ -200,13 +204,13 @@ def build_customer_profile(state: NBAState) -> dict:
 
 
 # ============================================================
-# Node 3: 載入 RM 回饋作為 context
+# Node 3: Load RM feedback as context
 # ============================================================
 def load_feedback_context(state: NBAState) -> dict:
     adopted = feedback_store.get_adopted_examples(limit=5)
     rejected = feedback_store.get_rejected_examples(limit=5)
     if adopted or rejected:
-        print(f"    載入回饋：{len(adopted)} 採納、{len(rejected)} 拒絕")
+        print(f"    Loaded feedback: {len(adopted)} adopted, {len(rejected)} rejected")
     return {
         "feedback_context": {
             "adopted_examples": adopted,
@@ -216,20 +220,20 @@ def load_feedback_context(state: NBAState) -> dict:
 
 
 # ============================================================
-# Node 4: 生成 leads（考慮回饋）
+# Node 4: Generate leads (with feedback awareness)
 # ============================================================
 def generate_leads_node(state: NBAState) -> dict:
-    print(f"    生成 leads...")
+    print(f"    Generating leads...")
     feedback = state.get("feedback_context", {})
     feedback_hint = ""
 
     if feedback.get("adopted_examples"):
-        feedback_hint += "\n【RM 過去採納的 leads（可作為風格參考）】\n"
+        feedback_hint += "\n[RM's previously ADOPTED leads (for style reference)]\n"
         feedback_hint += json.dumps(
             feedback["adopted_examples"], ensure_ascii=False, indent=2
         )
     if feedback.get("rejected_examples"):
-        feedback_hint += "\n【RM 過去拒絕的 leads（避免類似類型或補強證據）】\n"
+        feedback_hint += "\n[RM's previously REJECTED leads (avoid similar patterns or strengthen evidence)]\n"
         feedback_hint += json.dumps(
             feedback["rejected_examples"], ensure_ascii=False, indent=2
         )
@@ -247,45 +251,10 @@ def generate_leads_node(state: NBAState) -> dict:
 
 
 # ============================================================
-# Node 5: 自我審查（Critic Agent）- 放寬標準
+# Node 5: Self-review (Critic Agent)
 # ============================================================
-CRITIC_PROMPT = """你是財富管理品質審查員。
-請審查以下 leads。
-
-【判斷標準 - 只在「嚴重問題」時才要求修正】
-嚴重問題（needs_revision = true）：
-- supporting_evidence 引用了不存在的 call_id
-- rationale 完全無通話依據（明顯幻覺）
-- suggested_action 完全不可執行或不明確
-
-可接受（needs_revision = false）：
-- 用詞可以更好
-- 可以補充更多細節
-- 信心度可以微調
-- 順序可以調整
-- 產品建議可以優化
-
-【原則】
-寧可放過小問題，也不要過度要求修正。只有在確實有嚴重問題時才回傳 needs_revision = true。
-
-輸出 JSON：
-{
-  "issues": [{"lead_id": "", "issue": "", "severity": "high|medium|low"}],
-  "overall_quality": 0.0,
-  "needs_revision": false,
-  "revision_notes": ""
-}
-
-Leads：
-{leads}
-
-原始通話證據：
-{extractions}
-"""
-
-
 def critic_node(state: NBAState) -> dict:
-    print(f"    Critic 審查...")
+    print(f"    Critic review...")
     prompt = CRITIC_PROMPT.replace(
         "{leads}",
         json.dumps(state["leads"], ensure_ascii=False, indent=2),
@@ -297,52 +266,15 @@ def critic_node(state: NBAState) -> dict:
     quality = review.get("overall_quality", "N/A")
     needs_rev = review.get("needs_revision", False)
     issues = review.get("issues", [])
-    print(f"      品質分數：{quality}，需修正：{needs_rev}（{len(issues)} 個問題）")
+    print(f"      Quality: {quality}, Needs revision: {needs_rev} ({len(issues)} issues)")
     return {"review_notes": [review]}
 
 
 # ============================================================
-# Node 6: 修正 leads（只輸出改動部分，避免截斷）
+# Node 6: Revise leads (only output modified ones)
 # ============================================================
-REVISE_PROMPT = """你是財富管理顧問。
-根據品質審查員的意見，修正以下 leads。
-
-【審查意見】
-{review}
-
-【原始 leads】
-{leads}
-
-【原始通話證據】
-{extractions}
-
-【輸出要求 - 非常重要】
-1. 只輸出「有修改」的 leads，沒改的不要重複輸出
-2. 若某個 lead 審查員認為沒問題，不要包含在輸出中
-3. 若所有 lead 都不需要修正，回傳空陣列
-4. 每個輸出的 lead 必須包含完整欄位（lead_id, category, rationale, suggested_action, priority, confidence, supporting_evidence, suggested_products, talking_points）
-
-輸出 JSON：
-{{
-  "revised_leads": [
-    {{
-      "lead_id": "L1",
-      "category": "...",
-      "rationale": "...",
-      "suggested_action": "...",
-      "priority": "高|中|低",
-      "confidence": 0.0,
-      "supporting_evidence": ["C001_2"],
-      "suggested_products": [],
-      "talking_points": []
-    }}
-  ]
-}}
-"""
-
-
 def revise_node(state: NBAState) -> dict:
-    print(f"    修正 leads...")
+    print(f"    Revising leads...")
     review = state["review_notes"][-1]
     prompt = REVISE_PROMPT.replace(
         "{review}",
@@ -356,7 +288,7 @@ def revise_node(state: NBAState) -> dict:
     )
     result = call_llm(prompt, temperature=0.3, max_tokens=8192)
 
-    # 合併：修正版覆蓋原版，沒改的保留
+    # Merge: revised versions overwrite originals, unchanged kept
     revised_leads = result.get("revised_leads", [])
     original_container = state["leads"]
     original = (
@@ -367,12 +299,12 @@ def revise_node(state: NBAState) -> dict:
 
     if not revised_leads:
         merged = original_container
-        print(f"      （無改動）")
+        print(f"      (no changes)")
     else:
         revised_map = {l.get("lead_id"): l for l in revised_leads}
         merged_leads = [revised_map.get(l.get("lead_id"), l) for l in original]
         merged = {**original_container, "leads": merged_leads}
-        print(f"      （修正了 {len(revised_leads)}/{len(original)} 個 leads）")
+        print(f"      (revised {len(revised_leads)}/{len(original)} leads)")
 
     return {
         "final_leads": merged,
@@ -382,23 +314,23 @@ def revise_node(state: NBAState) -> dict:
 
 
 # ============================================================
-# 路由決策
+# Routing decision
 # ============================================================
 def route_after_critic(state: NBAState) -> str:
     review = state["review_notes"][-1]
     needs_rev = review.get("needs_revision", False)
     iteration = state.get("iteration", 0)
 
-    # 最多迭代 3 次（含初次生成），避免無限迴圈
+    # Max 3 iterations (including initial generation) to avoid infinite loop
     if needs_rev and iteration < 3:
         return "revise"
     if needs_rev:
-        print(f"      ⚠️ 已達最大迭代次數（{iteration}），強制定稿")
+        print(f"      [WARN] Max iterations reached ({iteration}), forcing finalize")
     return "finalize"
 
 
 # ============================================================
-# Node 7: 定稿
+# Node 7: Finalize
 # ============================================================
 def finalize_node(state: NBAState) -> dict:
     if state.get("final_leads"):
@@ -407,7 +339,7 @@ def finalize_node(state: NBAState) -> dict:
 
 
 # ============================================================
-# 建立 Graph
+# Build Graph
 # ============================================================
 def build_graph():
     graph = StateGraph(NBAState)
@@ -438,7 +370,7 @@ def build_graph():
 
 
 # ============================================================
-# 主流程
+# Main pipeline
 # ============================================================
 def run_graph_pipeline(data_path: str = "data/synthetic_calls.json") -> dict:
     with open(data_path, encoding="utf-8") as f:
@@ -450,7 +382,7 @@ def run_graph_pipeline(data_path: str = "data/synthetic_calls.json") -> dict:
 
     for idx, customer in enumerate(data["customers"], 1):
         cid = customer["customer_id"]
-        print(f"\n=== [{idx}/{total}] [LangGraph] 處理 {cid} {customer['name']} ===")
+        print(f"\n=== [{idx}/{total}] [LangGraph] Processing {cid} {customer['name']} ===")
 
         initial_state: NBAState = {
             "customer": customer,
@@ -478,9 +410,9 @@ def run_graph_pipeline(data_path: str = "data/synthetic_calls.json") -> dict:
                 else 0
             )
 
-            print(f"  ✅ 完成，產出 {n_leads} 個 leads")
-            print(f"     品質分數：{review.get('overall_quality', 'N/A')}")
-            print(f"     修正次數：{max(0, final_state.get('iteration', 0) - 1)}")
+            print(f"  [OK] Done, generated {n_leads} leads")
+            print(f"       Quality: {review.get('overall_quality', 'N/A')}")
+            print(f"       Revisions: {max(0, final_state.get('iteration', 0) - 1)}")
 
             results[cid] = {
                 "customer": customer,
@@ -491,8 +423,8 @@ def run_graph_pipeline(data_path: str = "data/synthetic_calls.json") -> dict:
             }
 
         except Exception as e:
-            # 單一客戶失敗不中斷整個流程
-            print(f"  ❌ {cid} 處理失敗：{e}")
+            # Single customer failure should not break the whole run
+            print(f"  [FAIL] {cid} failed: {e}")
             results[cid] = {
                 "customer": customer,
                 "extractions": [],
@@ -505,11 +437,11 @@ def run_graph_pipeline(data_path: str = "data/synthetic_calls.json") -> dict:
     with open("output_results.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    # 統計
+    # Summary
     success = sum(1 for r in results.values() if "error" not in r)
-    print(f"\n✅ LangGraph pipeline 完成")
-    print(f"   成功：{success}/{total}")
-    print(f"   結果寫入 output_results.json")
+    print(f"\n[OK] LangGraph pipeline complete")
+    print(f"     Success: {success}/{total}")
+    print(f"     Results written to output_results.json")
     return results
 
 
