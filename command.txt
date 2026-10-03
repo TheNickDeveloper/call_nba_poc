@@ -1,0 +1,109 @@
+========================================
+Financial Knowledge Agent — Command Cheatsheet
+========================================
+
+----------------------------------------
+1. Launch the Streamlit App
+----------------------------------------
+streamlit run app.py
+
+Notes:
+- Run from the project root directory (the folder containing app.py)
+- Default URL: http://localhost:8501
+- If port 8501 is occupied, specify another port:
+  streamlit run app.py --server.port=9876
+
+
+----------------------------------------
+2. Activate the Virtual Environment (Windows PowerShell)
+----------------------------------------
+python -m venv poc_env
+.\poc_env\Scripts\Activate.ps1
+
+Notes:
+- Must be run from the project root directory
+- On success, the terminal prompt will show (poc_env) at the beginning
+- If you get an "execution policy" error, run this first:
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+  Then type Y to confirm
+
+Activation on other platforms:
+- Windows CMD:        .\poc_env\Scripts\activate.bat
+- macOS / Linux:      source poc_env/bin/activate
+
+
+----------------------------------------
+3. Export the Current pip Package List
+----------------------------------------
+pip freeze > requirements.txt
+
+Notes:
+- Writes all installed packages and versions in the current environment to requirements.txt
+- Run this with the virtual environment activated to avoid mixing in global packages
+- To export only "top-level dependencies" instead of all transitive ones:
+  pip install pipreqs
+  pipreqs . --force
+
+
+----------------------------------------
+4. Install All Packages from requirements.txt
+----------------------------------------
+pip install -r requirements.txt
+
+Notes:
+- Installs every package and version listed in requirements.txt
+- Activate the virtual environment before running
+- If you hit version conflicts during install, try:
+  pip install -r requirements.txt --upgrade
+
+
+----------------------------------------
+5. Full First-Time Startup Sequence (Recommended Order)
+----------------------------------------
+# Step 1: Navigate to the project directory
+cd C:\Users\ZhuanZ（无密码）\Desktop\financial_rag_agent_poc
+
+# Step 2: Activate the virtual environment
+.\poc_env\Scripts\Activate.ps1
+
+# Step 3: Install dependencies (first time or on a new machine)
+pip install -r requirements.txt
+
+# Step 4: Launch the app
+streamlit run app.py
+
+
+----------------------------------------
+6. Common Troubleshooting
+----------------------------------------
+Issue: ModuleNotFoundError
+Fix: Confirm the virtual environment is activated, or re-run pip install -r requirements.txt
+
+Issue: LLMConfigError: API key not set
+Fix: Create a .env file in the project root and add:
+     DEEPSEEK_API_KEY=your_key_here
+     or
+     OPENAI_API_KEY=your_key_here
+
+Issue: ChromaDB batch size error
+Fix: Ensure ingest_directory in rag_engine.py uses batched insertion (batch_size=5000)
+
+Issue: FastEmbed model download hangs
+Fix: Set SPECIFIC_MODEL_PATH in rag_engine.py to point to a local model folder
+
+Issue: Streamlit port already in use
+Fix: streamlit run app.py --server.port=9876
+
+
+----------------------------------------
+7. Environment Info
+----------------------------------------
+Check Python version:       python --version
+Check pip version:          pip --version
+List installed packages:    pip list
+Check a specific package:   pip show fastembed
+
+
+========================================
+End of File
+========================================
