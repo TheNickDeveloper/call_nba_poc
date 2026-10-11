@@ -10,7 +10,7 @@ Centralized LLM prompts for NBA from Call POC.
 """
 
 # ============================================================
-# Core pipeline prompts (shared by pipeline.py and graph_pipeline.py)
+# Core pipeline prompts (used by graph_pipeline.py)
 # ============================================================
 
 EXTRACT_CALL_PROMPT = """You are a wealth management call analyst.
@@ -99,7 +99,9 @@ Generate actionable leads for the RM (Relationship Manager) based on the custome
 3. rationale should explain WHY this lead, linking to customer's risk preference and constraints.
 4. suggested_action must be specific enough for the RM to know the next step.
 5. Generate at most 5 leads, sorted by priority.
-6. confidence reflects evidence strength: multiple calls supporting -> high; single mention -> medium.
+6. confidence: your own evidence-strength estimate as a float in [0, 1]. The pipeline
+   recomputes the value that ships, deterministically, from supporting_evidence, so give
+   your honest estimate here; it is preserved as `confidence_llm` for comparison.
 
 【Output Format】Output JSON only:
 {
@@ -203,3 +205,46 @@ Output JSON:
   ]
 }
 """
+
+
+# ============================================================
+# Output language contract (appended to EVERY prompt)
+# ============================================================
+# The source transcripts stay in their original language (Chinese), but every
+# field the LLM produces must be English. talking_points is the one deliberate
+# exception: those are lines the RM actually says to a Chinese-speaking
+# customer. Flip KEEP_TALKING_POINTS_ORIGINAL to False to translate them too.
+KEEP_TALKING_POINTS_ORIGINAL = True
+
+_TP_RULE = (
+    '- EXCEPTION \u2014 "talking_points": these are lines the RM actually says to the\n'
+    "  customer, so keep them in the customer's original language (Chinese).\n"
+    "  Every other field must still be English.\n"
+    if KEEP_TALKING_POINTS_ORIGINAL else
+    '- "talking_points" must also be written in English.\n'
+)
+
+LANGUAGE_RULE = (
+    "\n\n\u3010Output Language \u2014 STRICT\u3011\n"
+    "- Write EVERY free-text value in English, even though the call transcript is in\n"
+    "  Chinese. Translate your understanding into English; never copy Chinese wording\n"
+    "  through into a field value.\n"
+    "- This applies to every free-text field, including: category, rationale,\n"
+    "  suggested_action, detail, interpretation, type, need, horizon, note,\n"
+    "  signal_a, signal_b, issue, revision_notes, purpose, value, name, occupation.\n"
+    "- Keep JSON KEYS exactly as written in the schema above. Do NOT translate keys.\n"
+    "- Keep enum values exactly as written: \"high\"|\"medium\"|\"low\",\n"
+    "  \"need\"|\"mentioned\". Never output Chinese such as \u9ad8/\u4e2d/\u4f4e.\n"
+    "- Quotes taken from the transcript: put an English translation in \"quote\", and\n"
+    "  the original wording in \"quote_original\".\n"
+    "- Proper nouns and place names: use the English/romanised form\n"
+    '  (e.g. "Taipei", "the UK", "Canada").\n'
+    + _TP_RULE +
+    "- Mixed-language output is a failure, not a partial success.\n"
+)
+
+EXTRACT_CALL_PROMPT += LANGUAGE_RULE
+BUILD_PROFILE_PROMPT += LANGUAGE_RULE
+GENERATE_LEADS_PROMPT += LANGUAGE_RULE
+CRITIC_PROMPT += LANGUAGE_RULE
+REVISE_PROMPT += LANGUAGE_RULE

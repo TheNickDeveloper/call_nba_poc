@@ -49,8 +49,7 @@ results = load_results()
 if not results:
     st.error(
         "`output_results.json` not found.\n\n"
-        "Please run one of the following first:\n"
-        "- `python pipeline.py` (simple version)\n"
+        "Please run the following first:\n"
         "- `python graph_pipeline.py` (LangGraph agent version)"
     )
     st.stop()
@@ -113,6 +112,14 @@ if eval_report:
         st.sidebar.metric(
             "Hallucination Risk",
             f"{stats.get('hallucination_rate', 0) * 100:.0f}%",
+        )
+        st.sidebar.metric(
+            "English Compliance",
+            f"{stats.get('language_compliance_rate', 1.0) * 100:.0f}%",
+        )
+        st.sidebar.metric(
+            "Priority Consistency",
+            f"{stats.get('priority_consistency_rate', 1.0) * 100:.0f}%",
         )
 else:
     st.sidebar.info("No evaluation report yet.\nRun `python evaluate.py`.")
@@ -183,9 +190,7 @@ with col1:
     if needs_timeline:
         for n in needs_timeline:
             urgency = n.get("urgency", "medium")
-            urgency_icon = {
-                "high": "🔴", "中": "🟡", "medium": "🟡", "low": "🟢"
-            }.get(urgency, "⚪")
+            urgency_icon = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(urgency, "⚪")
             st.markdown(
                 f"{urgency_icon} **{n.get('need', '-')}**  \n"
                 f"  Urgency: {urgency} | Horizon: {n.get('horizon', '-')}  \n"
@@ -240,15 +245,15 @@ with col2:
         st.info("No leads generated for this customer yet.")
     else:
         # Sort by priority: high > medium > low
-        priority_order = {"high": 0, "高": 0, "medium": 1, "中": 1, "low": 2, "低": 2}
+        priority_order = {"high": 0, "medium": 1, "low": 2}
         leads_sorted = sorted(
             leads,
             key=lambda x: priority_order.get(x.get("priority"), 3),
         )
 
-        n_high = sum(1 for l in leads if l.get("priority") in ("high", "高"))
-        n_mid = sum(1 for l in leads if l.get("priority") in ("medium", "中"))
-        n_low = sum(1 for l in leads if l.get("priority") in ("low", "低"))
+        n_high = sum(1 for l in leads if l.get("priority") == "high")
+        n_mid = sum(1 for l in leads if l.get("priority") == "medium")
+        n_low = sum(1 for l in leads if l.get("priority") == "low")
 
         m1, m2, m3, m4 = st.columns(4)
         m1.metric("Total Leads", len(leads))
@@ -264,12 +269,9 @@ with col2:
             priority = lead.get("priority", "medium")
             confidence = lead.get("confidence", 0.0)
 
-            # Map both English and Chinese priority for display
-            priority_display = {
-                "high": "high", "高": "high",
-                "medium": "medium", "中": "medium",
-                "low": "low", "低": "low",
-            }.get(priority, "medium")
+            priority_display = (
+                priority if priority in ("high", "medium", "low") else "medium"
+            )
             priority_icon = {
                 "high": "🔴", "medium": "🟡", "low": "🟢"
             }.get(priority_display, "⚪")

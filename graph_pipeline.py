@@ -26,6 +26,7 @@ from prompts import (
     REVISE_PROMPT,
 )
 import feedback_store
+from confidence import apply_computed_confidence, latest_call_id
 
 # ============================================================
 # Init
@@ -106,6 +107,40 @@ def _try_fix_json(content: str) -> str | None:
 
 
 # ============================================================
+# English-output guard (deterministic, not prompt-dependent)
+# ============================================================
+# Keys intentionally kept in the customer's original language.
+_ORIGINAL_LANGUAGE_KEYS = {"quote_original", "talking_points"}
+
+_HAN = re.compile(r"[\u4e00-\u9fff]")
+
+CORRECTION_SUFFIX = (
+    "\n\n\u3010CORRECTION\u3011Your previous answer contained Chinese characters. "
+    "Re-output the ENTIRE JSON in English only. Keep all JSON keys unchanged."
+)
+
+
+def _find_non_english(obj, path: str = "") -> list:
+    """Return the JSON paths whose string value contains CJK characters.
+
+    Keys in _ORIGINAL_LANGUAGE_KEYS are skipped by design.
+    """
+    hits = []
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k in _ORIGINAL_LANGUAGE_KEYS:
+                continue
+            hits += _find_non_english(v, f"{path}.{k}")
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            hits += _find_non_english(v, f"{path}[{i}]")
+    elif isinstance(obj, str) and _HAN.search(obj):
+        hits.append(path)
+    return hits
+
+
+
+# ============================================================
 # LLM call (with retry and repair)
 # ============================================================
 def call_llm(
@@ -115,12 +150,23 @@ def call_llm(
     max_tokens: int = MAX_TOKENS,
 ) -> dict:
     last_content = ""
+    correction = ""
+
+    def _is_english(parsed) -> bool:
+        """False (and arms a correction prompt) if the payload leaked Chinese."""
+        nonlocal correction
+        leaks = _find_non_english(parsed)
+        if leaks:
+            print(f"    [WARN] Non-English output at {len(leaks)} path(s): {leaks[:5]}")
+            correction = CORRECTION_SUFFIX
+            return False
+        return True
 
     for attempt in range(max_retries):
         try:
             resp = client.chat.completions.create(
                 model=MODEL,
-                messages=[{"role": "user", "content": prompt}],
+                messages=[{"role": "user", "content": prompt + correction}],
                 response_format={"type": "json_object"},
                 temperature=temperature,
                 max_tokens=max_tokens,
@@ -147,13 +193,19 @@ def call_llm(
                 fixed = _try_fix_json(content)
                 if fixed:
                     try:
-                        return json.loads(fixed)
+                        parsed = json.loads(fixed)
                     except json.JSONDecodeError:
-                        pass
+                        parsed = None
+                    if parsed is not None and _is_english(parsed):
+                        return parsed
                 time.sleep(1)
                 continue
 
-            return json.loads(content)
+            parsed = json.loads(content)
+            if _is_english(parsed):
+                return parsed
+            time.sleep(1)
+            continue
 
         except json.JSONDecodeError as e:
             print(f"    [WARN] JSON parse failed ({attempt + 1}/{max_retries}): {e}")
@@ -161,13 +213,15 @@ def call_llm(
             fixed = _try_fix_json(last_content)
             if fixed:
                 try:
-                    return json.loads(fixed)
+                    parsed = json.loads(fixed)
                 except json.JSONDecodeError:
-                    pass
+                    parsed = None
+                if parsed is not None and _is_english(parsed):
+                    return parsed
             time.sleep(1)
 
     raise ValueError(
-        f"Failed to parse JSON after {max_retries} retries. "
+        f"Failed after {max_retries} retries (JSON parse or English-language check). "
         f"Last response tail: ...{last_content[-200:]}"
     )
 
@@ -220,6 +274,19 @@ def load_feedback_context(state: NBAState) -> dict:
 
 
 # ============================================================
+# Deterministic confidence
+# ============================================================
+def _apply(leads_container, state: NBAState) -> None:
+    """Recompute confidence/priority from evidence on a leads container."""
+    if isinstance(leads_container, dict):
+        apply_computed_confidence(
+            leads_container.get("leads"),
+            state.get("extractions", []),
+            latest_call_id(state.get("customer", {})),
+        )
+
+
+# ============================================================
 # Node 4: Generate leads (with feedback awareness)
 # ============================================================
 def generate_leads_node(state: NBAState) -> dict:
@@ -247,6 +314,7 @@ def generate_leads_node(state: NBAState) -> dict:
     ) + feedback_hint
 
     leads = call_llm(prompt)
+    _apply(leads, state)
     return {"leads": leads, "iteration": state.get("iteration", 0) + 1}
 
 
@@ -306,6 +374,8 @@ def revise_node(state: NBAState) -> dict:
         merged = {**original_container, "leads": merged_leads}
         print(f"      (revised {len(revised_leads)}/{len(original)} leads)")
 
+    _apply(merged, state)
+
     return {
         "final_leads": merged,
         "leads": merged,
@@ -335,7 +405,9 @@ def route_after_critic(state: NBAState) -> str:
 def finalize_node(state: NBAState) -> dict:
     if state.get("final_leads"):
         return {}
-    return {"final_leads": state["leads"]}
+    leads = state["leads"]
+    _apply(leads, state)
+    return {"final_leads": leads}
 
 
 # ============================================================

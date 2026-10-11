@@ -4,339 +4,387 @@
       {
         "customer_id": "CUST_001",
         "lead_id": "L1",
-        "category": "Education Fund Planning",
-        "priority": "high",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.09,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_001",
-        "lead_id": "L2",
-        "category": "Investment Rebalancing / De-risking",
-        "priority": "high",
-        "confidence": 0.75,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.08,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_001",
-        "lead_id": "L3",
-        "category": "Liquidity & Emergency Reserve",
+        "category": "Liquidity & Risk Alignment",
         "priority": "high",
         "confidence": 0.8,
         "evidence_valid": true,
         "invalid_citations": [],
-        "grounded_score": 0.06,
-        "grounded": false,
+        "grounded_score": 0.68,
+        "grounded": true,
         "hallucination_risk": false,
-        "suspicious_numbers": []
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_001",
+        "lead_id": "L2",
+        "category": "Education Fund Planning",
+        "priority": "medium",
+        "confidence": 0.75,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.56,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_001",
+        "lead_id": "L3",
+        "category": "De-risking & Stable Income",
+        "priority": "low",
+        "confidence": 0.6,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.74,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
       },
       {
         "customer_id": "CUST_001",
         "lead_id": "L4",
         "category": "Overseas Property Financing",
-        "priority": "medium",
-        "confidence": 0.85,
+        "priority": "low",
+        "confidence": 0.55,
         "evidence_valid": true,
         "invalid_citations": [],
-        "grounded_score": 0.18,
-        "grounded": false,
+        "grounded_score": 0.74,
+        "grounded": true,
         "hallucination_risk": false,
-        "suspicious_numbers": []
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
       },
       {
         "customer_id": "CUST_001",
         "lead_id": "L5",
-        "category": "Asset Diversification",
-        "priority": "medium",
-        "confidence": 0.85,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.12,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_002",
-        "lead_id": "L1",
-        "category": "海外置產融資與台灣資產處分決策",
+        "category": "Asset Reallocation & Diversification",
         "priority": "high",
-        "confidence": 0.92,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.25,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_002",
-        "lead_id": "L2",
-        "category": "跨境稅務規劃",
-        "priority": "high",
-        "confidence": 0.82,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.1,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_002",
-        "lead_id": "L3",
-        "category": "匯率規劃與分批換匯",
-        "priority": "high",
-        "confidence": 0.82,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.25,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_002",
-        "lead_id": "L4",
-        "category": "店面現金流與流動性防護",
-        "priority": "high",
-        "confidence": 0.88,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.14,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_002",
-        "lead_id": "L5",
-        "category": "移民與子女教育資金時程規劃",
-        "priority": "medium",
-        "confidence": 0.72,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.12,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_003",
-        "lead_id": "L1",
-        "category": "企業出售/事業退出規劃",
-        "priority": "high",
-        "confidence": 0.95,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.42,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_003",
-        "lead_id": "L2",
-        "category": "美國購房/跨境資金安排",
-        "priority": "high",
-        "confidence": 0.95,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.09,
-        "grounded": false,
-        "hallucination_risk": true,
-        "suspicious_numbers": [
-          "800,000"
-        ]
-      },
-      {
-        "customer_id": "CUST_003",
-        "lead_id": "L3",
-        "category": "跨境稅務規劃（台灣與美國）",
-        "priority": "high",
-        "confidence": 0.75,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.33,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_003",
-        "lead_id": "L4",
-        "category": "穩定收益/保守資產配置",
-        "priority": "medium",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.38,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_003",
-        "lead_id": "L5",
-        "category": "傳承/贈與與資產簡化",
-        "priority": "medium",
-        "confidence": 0.85,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.3,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_004",
-        "lead_id": "L1",
-        "category": "教育基金規劃（歐洲MBA學費現金流）",
-        "priority": "high",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.15,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_004",
-        "lead_id": "L2",
-        "category": "股票獲利了結與資產重配置",
-        "priority": "high",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.27,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_004",
-        "lead_id": "L3",
-        "category": "分批換匯策略（留學費用外幣準備）",
-        "priority": "high",
-        "confidence": 0.7,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.21,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_004",
-        "lead_id": "L4",
-        "category": "投資教育與防詐信任建立／分散投資啟蒙",
-        "priority": "medium",
-        "confidence": 0.6,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.33,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_004",
-        "lead_id": "L5",
-        "category": "歐洲置產規劃（小公寓，自住兼出租）",
-        "priority": "low",
-        "confidence": 0.5,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.2,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_005",
-        "lead_id": "L1",
-        "category": "整合性財富規劃架構（單一藍圖）",
-        "priority": "high",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.33,
-        "grounded": true,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_005",
-        "lead_id": "L2",
-        "category": "境內信託試點與分階段條件式傳承",
-        "priority": "high",
-        "confidence": 0.9,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.03,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_005",
-        "lead_id": "L3",
-        "category": "台美跨境稅務整合（單一窗口）",
-        "priority": "high",
-        "confidence": 0.85,
-        "evidence_valid": true,
-        "invalid_citations": [],
-        "grounded_score": 0.23,
-        "grounded": false,
-        "hallucination_risk": false,
-        "suspicious_numbers": []
-      },
-      {
-        "customer_id": "CUST_005",
-        "lead_id": "L4",
-        "category": "美國置產架構與贈與稅規劃（含公司名義購置）",
-        "priority": "medium",
         "confidence": 0.8,
         "evidence_valid": true,
         "invalid_citations": [],
-        "grounded_score": 0.17,
-        "grounded": false,
+        "grounded_score": 0.77,
+        "grounded": true,
         "hallucination_risk": false,
-        "suspicious_numbers": []
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
       },
       {
-        "customer_id": "CUST_005",
+        "customer_id": "CUST_002",
+        "lead_id": "L1",
+        "category": "FX and cross-border tax planning",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.62,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_002",
+        "lead_id": "L2",
+        "category": "Funding structure for the Canada property purchase",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.68,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_002",
+        "lead_id": "L3",
+        "category": "Cross-border asset allocation plan",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.76,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_002",
+        "lead_id": "L4",
+        "category": "Canada pre-move short stay and education-driven relocation roadmap",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.69,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_002",
         "lead_id": "L5",
-        "category": "穩定收益型資產配置與退休現金流",
+        "category": "Retained Taiwan rental property cash flow structuring",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.66,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_003",
+        "lead_id": "L1",
+        "category": "Overseas property financing & funding plan (United States)",
         "priority": "medium",
         "confidence": 0.75,
         "evidence_valid": true,
         "invalid_citations": [],
-        "grounded_score": 0.27,
-        "grounded": false,
-        "hallucination_risk": true,
-        "suspicious_numbers": [
-          "8 億"
-        ]
+        "grounded_score": 0.55,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_003",
+        "lead_id": "L2",
+        "category": "Cross-border Taiwan-US tax planning",
+        "priority": "low",
+        "confidence": 0.55,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.46,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_003",
+        "lead_id": "L3",
+        "category": "Company sale proceeds allocation and liquidity staging",
+        "priority": "medium",
+        "confidence": 0.75,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.57,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_003",
+        "lead_id": "L4",
+        "category": "Business succession / exit planning",
+        "priority": "low",
+        "confidence": 0.55,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.6,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_003",
+        "lead_id": "L5",
+        "category": "Retirement funding and wealth transfer to children, designed for simplicity",
+        "priority": "medium",
+        "confidence": 0.75,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.53,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_004",
+        "lead_id": "L1",
+        "category": "Asset allocation rebalancing — reduce concentrated equity exposure",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.63,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_004",
+        "lead_id": "L2",
+        "category": "Education fund planning — Europe MBA (UK / France)",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.68,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_004",
+        "lead_id": "L3",
+        "category": "Phased foreign exchange conversion for study funds",
+        "priority": "low",
+        "confidence": 0.6,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.54,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_004",
+        "lead_id": "L4",
+        "category": "Overseas property purchase — budget, financing and cross-border funds",
+        "priority": "low",
+        "confidence": 0.55,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.57,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_004",
+        "lead_id": "L5",
+        "category": "Investment education and trust-building engagement",
+        "priority": "low",
+        "confidence": 0.55,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.43,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_005",
+        "lead_id": "L1",
+        "category": "Cross-border tax planning for company sale",
+        "priority": "high",
+        "confidence": 0.95,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.7,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_005",
+        "lead_id": "L2",
+        "category": "Integrated holistic wealth plan",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.68,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_005",
+        "lead_id": "L3",
+        "category": "Domestic trust for staged wealth transfer",
+        "priority": "high",
+        "confidence": 0.8,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.78,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_005",
+        "lead_id": "L4",
+        "category": "Stable-income investment of sale proceeds",
+        "priority": "low",
+        "confidence": 0.55,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.7,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
+      },
+      {
+        "customer_id": "CUST_005",
+        "lead_id": "L5",
+        "category": "US property purchase and gift-tax-efficient remittance to son",
+        "priority": "medium",
+        "confidence": 0.75,
+        "evidence_valid": true,
+        "invalid_citations": [],
+        "grounded_score": 0.69,
+        "grounded": true,
+        "hallucination_risk": false,
+        "suspicious_numbers": [],
+        "english_ok": true,
+        "priority_consistent": true
       }
     ],
     "stats": {
       "total_leads": 25,
       "evidence_valid_rate": 1.0,
-      "grounded_rate": 0.24,
-      "hallucination_rate": 0.08,
-      "avg_confidence": 0.82
+      "grounded_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "avg_confidence": 0.72,
+      "language_compliance_rate": 1.0,
+      "priority_consistency_rate": 1.0
     }
   },
   "feedback_summary": {
@@ -348,19 +396,19 @@
     "recent_rejects": []
   },
   "category_stats": {
+    "Liquidity & Risk Alignment": {
+      "total": 1,
+      "adopt": 0,
+      "reject": 0,
+      "adopt_rate": 0.0
+    },
     "Education Fund Planning": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "Investment Rebalancing / De-risking": {
-      "total": 1,
-      "adopt": 0,
-      "reject": 0,
-      "adopt_rate": 0.0
-    },
-    "Liquidity & Emergency Reserve": {
+    "De-risking & Stable Income": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
@@ -372,127 +420,127 @@
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "Asset Diversification": {
+    "Asset Reallocation & Diversification": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "海外置產融資與台灣資產處分決策": {
+    "FX and cross-border tax planning": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "跨境稅務規劃": {
+    "Funding structure for the Canada property purchase": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "匯率規劃與分批換匯": {
+    "Cross-border asset allocation plan": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "店面現金流與流動性防護": {
+    "Canada pre-move short stay and education-driven relocation roadmap": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "移民與子女教育資金時程規劃": {
+    "Retained Taiwan rental property cash flow structuring": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "企業出售/事業退出規劃": {
+    "Overseas property financing & funding plan (United States)": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "美國購房/跨境資金安排": {
+    "Cross-border Taiwan-US tax planning": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "跨境稅務規劃（台灣與美國）": {
+    "Company sale proceeds allocation and liquidity staging": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "穩定收益/保守資產配置": {
+    "Business succession / exit planning": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "傳承/贈與與資產簡化": {
+    "Retirement funding and wealth transfer to children, designed for simplicity": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "教育基金規劃（歐洲MBA學費現金流）": {
+    "Asset allocation rebalancing — reduce concentrated equity exposure": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "股票獲利了結與資產重配置": {
+    "Education fund planning — Europe MBA (UK / France)": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "分批換匯策略（留學費用外幣準備）": {
+    "Phased foreign exchange conversion for study funds": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "投資教育與防詐信任建立／分散投資啟蒙": {
+    "Overseas property purchase — budget, financing and cross-border funds": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "歐洲置產規劃（小公寓，自住兼出租）": {
+    "Investment education and trust-building engagement": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "整合性財富規劃架構（單一藍圖）": {
+    "Cross-border tax planning for company sale": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "境內信託試點與分階段條件式傳承": {
+    "Integrated holistic wealth plan": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "台美跨境稅務整合（單一窗口）": {
+    "Domestic trust for staged wealth transfer": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "美國置產架構與贈與稅規劃（含公司名義購置）": {
+    "Stable-income investment of sale proceeds": {
       "total": 1,
       "adopt": 0,
       "reject": 0,
       "adopt_rate": 0.0
     },
-    "穩定收益型資產配置與退休現金流": {
+    "US property purchase and gift-tax-efficient remittance to son": {
       "total": 1,
       "adopt": 0,
       "reject": 0,

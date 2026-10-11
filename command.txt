@@ -1,5 +1,5 @@
 ========================================
-Financial Knowledge Agent — Command Cheatsheet
+Next Best Action from Call — Command Cheatsheet
 ========================================
 
 ----------------------------------------
@@ -61,7 +61,7 @@ Notes:
 5. Full First-Time Startup Sequence (Recommended Order)
 ----------------------------------------
 # Step 1: Navigate to the project directory
-cd C:\Users\ZhuanZ（无密码）\Desktop\financial_rag_agent_poc
+cd C:\Users\ZhuanZ（无密码）\Desktop\call_nba_poc
 
 # Step 2: Activate the virtual environment
 .\poc_env\Scripts\Activate.ps1
@@ -85,11 +85,11 @@ Fix: Create a .env file in the project root and add:
      or
      OPENAI_API_KEY=your_key_here
 
-Issue: ChromaDB batch size error
-Fix: Ensure ingest_directory in rag_engine.py uses batched insertion (batch_size=5000)
+Issue: LangGraph state key error
+Fix: Confirm NBAState declares every key a node writes (extractions, profile, leads, ...)
 
-Issue: FastEmbed model download hangs
-Fix: Set SPECIFIC_MODEL_PATH in rag_engine.py to point to a local model folder
+Issue: DeepSeek API timeout during lead generation
+Fix: call_llm already retries 3x with JSON repair; raise max_retries in graph_pipeline.py
 
 Issue: Streamlit port already in use
 Fix: streamlit run app.py --server.port=9876
@@ -101,7 +101,7 @@ Fix: streamlit run app.py --server.port=9876
 Check Python version:       python --version
 Check pip version:          pip --version
 List installed packages:    pip list
-Check a specific package:   pip show fastembed
+Check a specific package:   pip show langgraph
 
 
 ========================================
